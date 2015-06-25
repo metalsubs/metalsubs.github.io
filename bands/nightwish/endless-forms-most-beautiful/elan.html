@@ -1,0 +1,29 @@
+---
+layout: default
+title: Nightwish - Élan
+---
+
+<div class="">
+    <video id="player" class="video-js vjs-default-skin vjs-big-play-centered">
+    </video>
+</div>
+
+<script>
+videojs('player', {
+    controls: true,
+    nativeControlsForTouch: false,
+    width: 800,
+    height: 480,
+    plugins: {
+        ass: {
+            src: [
+                "nightwish-elan.ass"
+            ],
+            delay: -0.45
+        }
+    },
+    techOrder: ["youtube"],
+    src: "https://www.youtube.com/watch?v=zPonioDYnoY",
+    poster: false
+});
+</script>
