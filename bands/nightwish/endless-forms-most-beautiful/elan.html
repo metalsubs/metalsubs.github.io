@@ -1,46 +1,8 @@
 ---
 layout: video
 title: Nightwish - Élan
-video_id: zPonioDYnoY
 description: "Video oficial con la lyric original y traducida al español."
+# Video meta
+video_id: zPonioDYnoY
+font_name: Kaushan+Script::latin
 ---
-
-<div class="">
-    <video id="player" class="video-js vjs-default-skin vjs-big-play-centered">
-    </video>
-</div>
-
-<script>
-videojs('player', {
-    controls: true,
-    nativeControlsForTouch: false,
-    width: 800,
-    height: 480,
-    plugins: {
-        ass: {
-            src: [
-                "nightwish-elan.ass"
-            ],
-            delay: -0.45
-        }
-    },
-    techOrder: ["youtube"],
-    src: "https://www.youtube.com/watch?v=zPonioDYnoY",
-    poster: false
-});
-</script>
-
-<script type="text/javascript">
-WebFontConfig = {
-    google: { families: [ 'Kaushan+Script::latin' ] }
-};
-(function() {
-    var wf = document.createElement('script');
-    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-    '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-    wf.type = 'text/javascript';
-    wf.async = 'true';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(wf, s);
-})();
-</script>
