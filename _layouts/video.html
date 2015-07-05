@@ -10,6 +10,9 @@ layout: default
   <article class="post-content">
       <div class="">
           <video id="player" class="video-js vjs-default-skin vjs-big-play-centered">
+              {% if page.local_video %}
+              <source src="{{ page.local_video }}" />
+              {% endif %}
           </video>
       </div>
 
@@ -27,9 +30,11 @@ layout: default
                   delay: -0.45
               }
           },
+          {% unless page.local_video %}
           techOrder: ["youtube"],
           src: "https://www.youtube.com/watch?v={{ page.video_id }}",
           poster: false
+          {% endunless %}
       });
       </script>
 
