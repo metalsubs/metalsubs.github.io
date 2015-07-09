@@ -27,7 +27,11 @@ layout: default
                   src: [
                       "{{ page.subtitle }}"
                   ],
+                  {% if page.subtitles_delay %}
+                  delay: {{ page.subtitles_delay }}
+                  {% else %}
                   delay: -0.45
+                  {% endif %}
               }
           },
           {% unless page.local_video %}
@@ -40,7 +44,7 @@ layout: default
 
       <script type="text/javascript">
       WebFontConfig = {
-          google: { families: [ '{{ page.font_name}}' ] }
+          google: { families: {{ page.font_names}} }
       };
       (function() {
           var wf = document.createElement('script');
