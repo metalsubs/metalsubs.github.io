@@ -1,0 +1,197 @@
+<!DOCTYPE >
+<html>
+  <head>
+    <title>AAA</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Gochi+Hand&family=Kalam&display=swap"
+      rel="stylesheet"
+    />
+    <link href="video-js.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!--
+    <div class="libassjs-canvas-parent" style="position: relative">
+      <canvas
+        id="subs"
+        class="libassjs-canvas"
+        style="
+          display: block;
+          position: absolute;
+          width: 628px;
+          height: 460px;
+          top: 0px;
+          left: 106px;
+          pointer-events: none;
+        "
+        width="628"
+        height="460"
+      ></canvas>
+    </div>
+    -->
+    <video
+      id="test"
+      class="video-js"
+      controls
+      autoplay
+      preload="auto"
+      width="840"
+      height="460"
+    >
+      <source
+        src="https://www.youtube.com/watch?v=kObI4XuTR2o"
+        type="video/youtube"
+      />
+
+      <source src="./flag-in-the-ground.mp4" type="video/mp4" />
+      <p class="vjs-no-js">
+        To view this video please enable JavaScript, and consider upgrading to a
+        web browser that
+        <a href="http://videojs.com/html5-video-support/" target="_blank"
+          >supports HTML5 video</a
+        >
+      </p>
+    </video>
+    <div id="canvas-parent" class="libassjs-canvas-parent">
+      <canvas
+        id="subs"
+        width="840"
+        height="460"
+        class = "libassjs-canvas"
+        style="
+          display: block;
+          position: absolute;
+          width: 628px;
+          height: 460px;
+          top: 0px;
+          left: 106px;
+          pointer-events: none;
+        "
+      ></canvas>
+    </div>
+    <script src="subtitles-octopus.js"></script>
+    <script src="video.js"></script>
+
+    <script src="Youtube.js"></script>
+
+    <script>
+      var player = videojs("#test", {
+        techOrder: ["html5", "youtube"],
+      });
+      player.ready(function () {
+        // This would look more nice as a plugin but is's just as showcase of using with custom players
+        // var video = this.player;
+        var video = this.tech_.el_;
+        window.configurePlayer = function () {
+          var timeupdate = function () {
+            window.octopusInstance.setCurrentTime(
+              player.currentTime() + window.octopusInstance.timeOffset
+            );
+          };
+          // player.on("timeupdate", () => window.octopusInstance.setCurrentTime(player.currentTime() + window.octopusInstance.timeOffset));
+          player.on("timeupdate", timeupdate);
+          player.on(
+            "playing",
+            function () {
+              window.octopusInstance.setIsPaused(false, player.currentTime() + window.octopusInstance.timeOffset);
+            }
+          );
+          player.on(
+            "pause",
+            function () {
+              window.octopusInstance.setIsPaused(true, player.currentTime() + window.octopusInstance.timeOffset);
+            }
+          );
+          player.on(
+            "seeking",
+            function () {
+              player.off("timeupdate", timeupdate);
+            }
+          );
+          player.on(
+            "seeked",
+            function () {
+              player.on("timeupdate", timeupdate);
+              window.octopusInstance.setCurrentTime(player.currentTime() + window.octopusInstance.timeOffset);
+            }
+          );
+          player.on(
+            "ratechange",
+            function () {
+              window.octopusInstance.setRate(player.playbackRate());
+            }
+          );
+          player.on(
+            "timeupdate",
+            function () {
+              window.octopusInstance.setCurrentTime(player.currentTime() + window.octopusInstance.timeOffset);
+            }
+          );
+          player.on(
+            "waiting",
+            function () {
+              window.octopusInstance.setIsPaused(true, player.currentTime() + window.octopusInstance.timeOffset);
+            }
+          );
+
+          document.addEventListener(
+            "fullscreenchange",
+            window.octopusInstance.resizeWithTimeout
+          );
+          document.addEventListener(
+            "mozfullscreenchange",
+            window.octopusInstance.resizeWithTimeout
+          );
+          document.addEventListener(
+            "webkitfullscreenchange",
+            window.octopusInstance.resizeWithTimeout
+          );
+          document.addEventListener(
+            "msfullscreenchange",
+            window.octopusInstance.resizeWithTimeout
+          );
+          // window.addEventListener("resize", window.octopusInstance.resizeWithTimeout);
+
+          // Support Element Resize Observer
+          // if (typeof ResizeObserver !== "undefined") {
+          //   self.ro = new ResizeObserver(window.octopusInstance.resizeWithTimeout);
+          //   self.ro.observe(self.video);
+          // }
+
+          if (player.videoWidth() > 0) {
+            window.octopusInstance.resize(840, 460, 0, 0);
+          } else {
+            player.on(
+              "loadedmetadata",
+              function (e) {
+                e.target.removeEventListener(e.type, arguments.callee);
+                window.octopusInstance.resize(840, 460, 0, 0);
+              }
+            );
+          }
+        };
+        window.SubtitlesOctopusOnLoad = function () {
+          var options = {
+            // video: video,
+            canvas: document.getElementById("subs"),
+            subUrl: "flag-in-the-ground.ass",
+            /*
+            onReady: function onReadyFunction(data) {
+              console.log("ready", data);
+            },
+            */
+            debug: true,
+            onError: function (err) {
+              console.log(err);
+            },
+            workerUrl: "subtitles-octopus-worker.js",
+          };
+          window.octopusInstance = new SubtitlesOctopus(options); // You can experiment in console
+          window.configurePlayer();
+        };
+        if (SubtitlesOctopus) {
+          SubtitlesOctopusOnLoad();
+        }
+      });
+    </script>
+  </body>
+</html>
