@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>AAA</title>
-    <link href="test/video-js.css" rel="stylesheet" />
+    <link href="video-js.css" rel="stylesheet" />
   </head>
   <body>
     <video
@@ -25,10 +25,8 @@
         >
       </p>
     </video>
-    <script src="test/subtitles-octopus.js"></script>
-    <script src="test/video.js"></script>
-
-    <script src="test/Youtube.js"></script>
+    <script src="subtitles-octopus.js"></script>
+    <script src="video.js"></script>
 
     <script>
       var player = videojs("#test", {
@@ -204,7 +202,7 @@
             onError: function (err) {
               console.log(err);
             },
-            workerUrl: "test/subtitles-octopus-worker.js",
+            workerUrl: "subtitles-octopus-worker.js",
           };
           window.octopusInstance = new SubtitlesOctopus(options); // You can experiment in console
           window.configurePlayer();
