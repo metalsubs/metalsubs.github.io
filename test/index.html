@@ -1,0 +1,216 @@
+<!DOCTYPE >
+<html>
+  <head>
+    <title>AAA</title>
+    <link href="video-js.css" rel="stylesheet" />
+  </head>
+  <body>
+    <video
+      id="test"
+      class="video-js"
+      controls
+      preload="auto"
+      width="840"
+      height="460"
+    >
+      <source
+        src="https://www.youtube.com/watch?v=kObI4XuTR2o"
+        type="video/youtube"
+      />
+      <p class="vjs-no-js">
+        To view this video please enable JavaScript, and consider upgrading to a
+        web browser that
+        <a href="http://videojs.com/html5-video-support/" target="_blank"
+          >supports HTML5 video</a
+        >
+      </p>
+    </video>
+    <script src="subtitles-octopus.js"></script>
+    <script src="video.js"></script>
+
+    <script>
+      var player = videojs("#test", {
+        techOrder: ["html5", "youtube"],
+        youtube: {
+          ytControls: 0
+        }
+      });
+      player.ready(function () {
+        // This would look more nice as a plugin but is's just as showcase of using with custom players
+        var video = this.tech_.el_;
+        var canvas = document.createElement("canvas");
+        var canvasParent = document.createElement("div");
+
+        window.configurePlayer = function () {
+          // test_youtube_api
+
+          var timeupdate = function () {
+            window.octopusInstance.setCurrentTime(
+              player.currentTime() + window.octopusInstance.timeOffset
+            );
+          };
+          // player.on("timeupdate", () => window.octopusInstance.setCurrentTime(player.currentTime() + window.octopusInstance.timeOffset));
+          player.on("timeupdate", timeupdate);
+          player.on("playing", function () {
+            window.octopusInstance.setIsPaused(
+              false,
+              player.currentTime() + window.octopusInstance.timeOffset
+            );
+          });
+          player.on("pause", function () {
+            window.octopusInstance.setIsPaused(
+              true,
+              player.currentTime() + window.octopusInstance.timeOffset
+            );
+          });
+          player.on("seeking", function () {
+            player.off("timeupdate", timeupdate);
+          });
+          player.on("seeked", function () {
+            player.on("timeupdate", timeupdate);
+            window.octopusInstance.setCurrentTime(
+              player.currentTime() + window.octopusInstance.timeOffset
+            );
+          });
+          player.on("ratechange", function () {
+            window.octopusInstance.setRate(player.playbackRate());
+          });
+          player.on("timeupdate", function () {
+            window.octopusInstance.setCurrentTime(
+              player.currentTime() + window.octopusInstance.timeOffset
+            );
+          });
+          player.on("waiting", function () {
+            window.octopusInstance.setIsPaused(
+              true,
+              player.currentTime() + window.octopusInstance.timeOffset
+            );
+          });
+
+          document.addEventListener(
+            "fullscreenchange",
+            () => {
+              console.log(">>> fullscreenchange");
+              window.resizePlayerWithTimeout();
+            }
+            // window.octopusInstance.resizeWithTimeout
+          );
+          document.addEventListener(
+            "mozfullscreenchange",
+            () => {
+              console.log(">>> mozfullscreenchange");
+              window.resizePlayerWithTimeout();
+            }
+            // window.octopusInstance.resizeWithTimeout
+          );
+          document.addEventListener(
+            "webkitfullscreenchange",
+            () => {
+              console.log(">>> webkitfullscreenchange");
+              window.resizePlayerWithTimeout();
+            }
+            // window.octopusInstance.resizeWithTimeout
+          );
+          document.addEventListener(
+            "msfullscreenchange",
+            () => {
+              console.log(">>> msfullscreenchange");
+              window.resizePlayerWithTimeout();
+            }
+            // window.octopusInstance.resizeWithTimeout
+          );
+          window.addEventListener(
+            "resize",
+            () => {
+              console.log(">>> resize");
+              window.resizePlayerWithTimeout();
+            }
+            // window.octopusInstance.resizeWithTimeout
+          );
+
+          // Support Element Resize Observer
+          // if (typeof ResizeObserver !== "undefined") {
+          //   self.ro = new ResizeObserver(window.octopusInstance.resizeWithTimeout);
+          //   self.ro.observe(self.video);
+          // }
+
+          if (player.videoWidth() > 0) {
+            // window.octopusInstance.resize(840, 460, 0, 0);
+            window.resizePlayerWithTimeout();
+          } else {
+            player.on("loadedmetadata", function (e) {
+              e.target.removeEventListener(e.type, arguments.callee);
+              // window.octopusInstance.resize(840, 460, 0, 0);
+              console.log(">>> loadedmetadata", e);
+              window.resizePlayerWithTimeout();
+            });
+          }
+        };
+        window.SubtitlesOctopusOnLoad = function () {
+          window.resizePlayer = function () {
+            canvasParent.style.position = "relative";
+            canvas.style.display = "block";
+            canvas.style.position = "absolute";
+            canvas.style.width = player.el_.offsetWidth + "px";
+            canvas.style.height = player.el_.offsetHeight + "px";
+            canvas.style.top = player.el_.offsetTop + "px";
+            canvas.style.left = player.el_.offsetLeft + "px";
+            canvas.style.pointerEvents = "none";
+
+            console.log({
+              offsetWidth: player.el_.offsetWidth,
+              offsetHeight: player.el_.offsetHeight,
+              offsetTop: player.el_.offsetTop,
+              offsetLeft: player.el_.offsetLeft
+            });
+
+            window.octopusInstance.resize(
+              player.el_.offsetWidth,
+              player.el_.offsetHeight,
+              player.el_.offsetTop,
+              player.el_.offsetLeft
+            );
+          };
+
+          window.resizePlayerWithTimeout = function () {
+            window.resizePlayer();
+            setTimeout(window.resizePlayer, 100);
+          }
+          canvas.className = "libassjs-canvas";
+          canvas.style.display = "none";
+
+          canvasParent.className = "libassjs-canvas-parent";
+          canvasParent.appendChild(canvas);
+
+          var video = document.getElementById("test_youtube_api");
+
+          if (video.nextSibling) {
+            video.parentNode.insertBefore(canvasParent, video.nextSibling);
+          } else {
+            video.parentNode.appendChild(canvasParent);
+          }
+
+          var options = {
+            canvas,
+            subUrl: "flag-in-the-ground.ass.br",
+            fonts: [
+              'Kalam-Regular.ttf',
+              'GochiHand-Regular.ttf',
+              'FjallaOne-Regular.ttf',
+            ],
+            debug: false,
+            onError: function (err) {
+              console.log(err);
+            },
+            workerUrl: "subtitles-octopus-worker.js",
+          };
+          window.octopusInstance = new SubtitlesOctopus(options); // You can experiment in console
+          window.configurePlayer();
+        };
+        if (SubtitlesOctopus) {
+          SubtitlesOctopusOnLoad();
+        }
+      });
+    </script>
+  </body>
+</html>

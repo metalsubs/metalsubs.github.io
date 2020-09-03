@@ -1,0 +1,206 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+/**
+ * Copyright 2015 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/*
+@import '../../material-design-lite/src/_color-definitions.scss';
+
+$color-primary: $palette-blue-grey-900;
+$color-primary-dark: $palette-red-900;
+$color-accent: $palette-grey-900;
+$color-primary-contrast: $color-light-contrast;
+$color-accent-contrast: $color-light-contrast;
+@import '../../material-design-lite/src/material-design-lite';
+
+
+html, body {
+    font-family: 'Roboto', 'Helvetica', sans-serif;
+    font-size: 14px;
+	font-weight: 300;
+	line-height: 80px;
+    background-color: rgba(224,224,224,255);
+}
+
+
+.mdl-layout {
+
+}
+
+.mdl-layout__header,
+.mdl-layout__header a,
+.mdl-layout__header a:visited {
+    color: white;
+}
+
+.mdl-layout__header {
+    margin-bottom: 0px;
+}
+
+.mdl-layout__header .mdl-layout__tab .is-active {
+    color: white;
+}
+
+
+.mdl-layout .mdl-layout__content {
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+}
+
+.mdl-layout__content {
+
+}
+
+.video-section {
+    background-color: black;
+    .mdl-card__media {
+        background-color: black;
+    }
+}
+
+.blog__posts {
+    max-width: 1281px;
+    padding: 0;
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    flex-shrink: 0;
+
+    .mdl-card {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        min-height: 360px;
+
+        .mdl-card__media {
+            box-sizing: border-box;
+            background-size: cover;
+            padding: 24px;
+            display: flex;
+            flex-grow: 1;
+            flex-direction: row;
+            //align-items: flex-end;
+            align-items: center;
+            justify-content: center;
+            //cursor: pointer;
+
+            //background: url(http://img.youtube.com/vi/zPonioDYnoY/hqdefault.jpg) center / cover;
+
+            > a > .material-icons {
+                font-size: 5rem;
+
+                &:hover {
+                    font-size: 4rem;
+                }
+            }
+
+            a {
+                color: inherit;
+            }
+        }
+    }
+
+    .mdl-card__supporting-text {
+        width: 100%;
+        padding: 12px 16px;
+        min-height: 48px;
+        display: flex;
+        align-items: center;
+
+        strong {
+            font-weight: 700;
+            font-size: 24px;
+            display: block;
+            padding-bottom: 10px;
+        }
+
+        span {
+            font-size: 18px;
+        }
+
+        &~.mdl-card__supporting-text {
+            min-height: 64px;
+        }
+
+        &:not(:last-child) {
+            box-sizing: border-box;
+            min-height: 76px;
+        }
+    }
+}
+
+
+.video {
+    background-color: black;
+}
+*/
+/*
+section.section--center {
+    max-width: 860px;
+}
+
+section > header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section > .section__play-btn {
+  min-height: 350px;
+}
+
+header > .material-icons {
+ font-size: 5rem;
+}
+
+section > button {
+  position: absolute;
+  z-index: 99;
+  top: 8px;
+  right: 8px;
+}
+
+.demo-card-event.mdl-card {
+    width: 256px;
+    height: 256px;
+    background: #3E4EB8;
+}
+.mdl-card__actions {
+    //border-color: rgba(255, 255, 255, 0.2);
+}
+//.demo-card-event > .mdl-card__title,
+
+.mdl-card__actions {
+    //background-color: $color-primary !important;
+}
+
+.mdl-card__actions > .mdl-button {
+    //color: #fff;
+}
+
+.mdl-card__actions {
+    height: 70px;
+    padding: 16px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.mdl-layout__content section:not(:last-of-type) {
+  position: relative;
+  margin-bottom: 48px;
+}
+*/
