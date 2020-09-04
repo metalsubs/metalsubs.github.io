@@ -4,13 +4,26 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
+import Player from "../components/player.jsx"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
+    <Player
+      controls
+      sources={[
+        // {
+        //   src: "https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/1080/Big_Buck_Bunny_1080_10s_1MB.mp4",
+        //   type: "video/mp4"
+        // },
+        {
+          src: "https://www.youtube.com/watch?v=v8amfLYjf9w",
+          type: "video/youtube",
+        },
+      ]}
+      onPlay={() => {}}
+      playsInline
+    />
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
     </div>
