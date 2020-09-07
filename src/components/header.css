@@ -1,0 +1,36 @@
+.header-container {
+    position: fixed;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    z-index: 2020;
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+    background-color: black;
+    max-height: 56px;
+    height: 100%;
+    display: flex;
+    -webkit-box-shadow: 0px 4px 30px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 4px 30px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 4px 30px 0px rgba(0,0,0,0.75);
+}
+
+.header-content {
+    margin: 0 1rem;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.header-content h1 {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.header-content h1 a {
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+}
