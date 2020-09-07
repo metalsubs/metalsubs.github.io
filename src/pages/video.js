@@ -2,7 +2,6 @@ import React from "react"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 import Player from "../components/player.jsx"
 
@@ -39,11 +38,15 @@ const IndexPage = () => (
         />
       </div>
     </div>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+    <div
+      style={{
+        margin: "1rem 2rem",
+        color: "#fff",
+        fontSize: "2rem",
+      }}
+    >
+      <p>Wisdom - Marching for Liberty</p>
     </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
   </Layout>
 )
 

@@ -7,13 +7,13 @@
     z-index: 2020;
     transform: translateY(0);
     transition: transform 0.3s ease;
-    background-color: black;
+    background-color: #191B1C;
     max-height: 56px;
     height: 100%;
     display: flex;
-    -webkit-box-shadow: 0px 4px 30px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 4px 30px 0px rgba(0,0,0,0.75);
-    box-shadow: 0px 4px 30px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 4px 30px 0px rgba(25,27,28,1);
+    -moz-box-shadow: 0px 4px 30px 0px rgba(25,27,28,1);
+    box-shadow: 0px 4px 30px 0px rgba(25,27,28,1);
 }
 
 .header-content {
