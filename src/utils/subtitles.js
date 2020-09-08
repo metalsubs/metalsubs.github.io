@@ -1,6 +1,6 @@
 import libass from 'libass-wasm'
 
-function configure(player) {
+function configure(player, subtitle, fonts) {
   function configurePlayer(instance, player) {
       function resizePlayer() {
         // canvasParent.style.position = "relative"
@@ -122,17 +122,13 @@ function configure(player) {
 
   var options = {
     canvas,
-    subUrl: "marching-for-liberty.ass",
-    fonts: [
-      "UnifrakturMaguntia-Book.ttf",
-      "BilboSwashCaps-Regular.ttf",
-      "StardosStencil-Regular.ttf",
-    ],
+    subUrl: subtitle,
+    fonts,
     debug: false,
     onError: function (err) {
       console.log(err)
     },
-    workerUrl: "subtitles-octopus-worker.js",
+    workerUrl: "/subtitles-octopus-worker.js",
   }
 
   const octopusInstance = new libass(options)

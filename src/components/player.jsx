@@ -7,6 +7,7 @@ import subtitles from '../utils/subtitles'
 class Player extends React.Component {
   componentDidMount() {
     // Extend the options with some defaults.
+    console.log(">>> player props", this.props)
     const options = {
       html5: {
         hls: {
@@ -24,7 +25,11 @@ class Player extends React.Component {
     this.player.on("play", this.props.onPlay)
     this.player.on("ready", () => {
       console.log('Player is ready');
-      subtitles(this.player);
+      subtitles(
+        this.player,
+        this.props.sources[0].subtitle,
+        this.props.sources[0].fonts,
+      )
     })
   }
 
