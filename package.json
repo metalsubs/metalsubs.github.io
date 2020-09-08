@@ -12,6 +12,7 @@
     "gatsby-plugin-react-helmet": "^3.3.10",
     "gatsby-plugin-sharp": "^2.6.28",
     "gatsby-source-filesystem": "^2.3.25",
+    "gatsby-transformer-json": "^2.4.11",
     "gatsby-transformer-sharp": "^2.5.13",
     "libass-wasm": "git+https://github.com/Dador/JavascriptSubtitlesOctopus.git#4.0.0",
     "prop-types": "^15.7.2",
