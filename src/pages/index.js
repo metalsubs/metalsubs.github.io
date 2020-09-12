@@ -5,6 +5,21 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+const Song = ({ url, band, title }) => (
+  <div style={{ display: "flex" }}>
+    <Link
+      style={{ display: "block" }}
+      key={url}
+      to={url}
+    >
+      <img
+        src={`/bands${url}/cover.jpg`}
+        alt={`${band} - ${title}`}
+      />
+    </Link>
+  </div>
+)
+
 const IndexPage = ({
   data: {
     allBandsJson: { edges: songs },
@@ -12,16 +27,11 @@ const IndexPage = ({
 }) => (
   <Layout>
     <SEO title="Home" />
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
+    <div style={{ marginBottom: `1.45rem` }}>
       {songs.map(song => (
-        <Link
-          key={song.node.url}
-          to={song.node.url}
-        >{`${song.node.band} - ${song.node.title}`}</Link>
+        <Song url={song.node.url} band={song.node.band} title={song.node.title} />
       ))}
     </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
   </Layout>
 )
 
