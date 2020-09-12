@@ -15,6 +15,7 @@ const IndexPage = ({
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       {songs.map(song => (
         <Link
+          key={song.node.url}
           to={song.node.url}
         >{`${song.node.band} - ${song.node.title}`}</Link>
       ))}

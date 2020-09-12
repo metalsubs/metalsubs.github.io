@@ -12,12 +12,12 @@ function configure(player, subtitle, fonts) {
         canvas.style.left = "0px" // player.el_.offsetLeft + "px";
         canvas.style.pointerEvents = "none"
 
-        console.log({
-          offsetWidth: player.el_.offsetWidth,
-          offsetHeight: player.el_.offsetHeight,
-          offsetTop: player.el_.offsetTop,
-          offsetLeft: player.el_.offsetLeft,
-        })
+        // console.log({
+        //   offsetWidth: player.el_.offsetWidth,
+        //   offsetHeight: player.el_.offsetHeight,
+        //   offsetTop: player.el_.offsetTop,
+        //   offsetLeft: player.el_.offsetLeft,
+        // })
 
         instance.resize(
           player.el_.offsetWidth,
@@ -66,23 +66,23 @@ function configure(player, subtitle, fonts) {
     })
 
     document.addEventListener("fullscreenchange", () => {
-      console.log(">>> fullscreenchange")
+      // console.log(">>> fullscreenchange")
       resizePlayerWithTimeout()
     })
     document.addEventListener("mozfullscreenchange", () => {
-      console.log(">>> mozfullscreenchange")
+      // console.log(">>> mozfullscreenchange")
       resizePlayerWithTimeout()
     })
     document.addEventListener("webkitfullscreenchange", () => {
-      console.log(">>> webkitfullscreenchange")
+      // console.log(">>> webkitfullscreenchange")
       resizePlayerWithTimeout()
     })
     document.addEventListener("msfullscreenchange", () => {
-      console.log(">>> msfullscreenchange")
+      // console.log(">>> msfullscreenchange")
       resizePlayerWithTimeout()
     })
     window.addEventListener("resize", () => {
-      console.log(">>> resize")
+      // console.log(">>> resize")
       resizePlayerWithTimeout()
     })
 
@@ -99,12 +99,12 @@ function configure(player, subtitle, fonts) {
       player.on("loadedmetadata", function (e) {
         // e.target.removeEventListener(e.type, arguments.callee)
         // instance.resize(840, 460, 0, 0);
-        console.log(">>> loadedmetadata", e)
         resizePlayerWithTimeout()
       })
     }
   }
-  const video = document.getElementById("vjs_video_3_youtube_api")
+  // const video = document.getElementById("vjs_video_3_youtube_api")
+  const video = document.querySelector("iframe[id^='vjs_video']")
   const canvas = document.createElement("canvas")
   const canvasParent = document.createElement("div")
 
@@ -133,6 +133,8 @@ function configure(player, subtitle, fonts) {
 
   const octopusInstance = new libass(options)
   configurePlayer(octopusInstance, player)
+
+  return octopusInstance;
 }
 
 export default configure

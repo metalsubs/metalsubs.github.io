@@ -6,8 +6,6 @@ import subtitles from '../utils/subtitles'
 
 class Player extends React.Component {
   componentDidMount() {
-    // Extend the options with some defaults.
-    console.log(">>> player props", this.props)
     const options = {
       html5: {
         hls: {
@@ -20,12 +18,13 @@ class Player extends React.Component {
       // console.log('onPlayerReady', this);
     })
 
+    this.subtitles = null;
+
     this.player.addClass(`vjs-theme-${this.props.themeName}`)
 
     this.player.on("play", this.props.onPlay)
     this.player.on("ready", () => {
-      console.log('Player is ready');
-      subtitles(
+      this.subtitles = subtitles(
         this.player,
         this.props.sources[0].subtitle,
         this.props.sources[0].fonts,
@@ -36,6 +35,13 @@ class Player extends React.Component {
   componentWillUnmount() {
     if (this.player) {
       this.player.dispose()
+      console.log(">>> Player is dispose")
+    }
+
+    if (this.subtitles) {
+      this.subtitles.dispose()
+      this.subtitles = null;
+      console.log('>>> Subs are dispose');
     }
   }
 
