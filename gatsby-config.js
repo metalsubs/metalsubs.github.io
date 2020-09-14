@@ -18,11 +18,18 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `songs`,
-        path: `${__dirname}/content/bands`
+        path: `${__dirname}/content/bands`,
       },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        displayName: true,
+        fileName: true,
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

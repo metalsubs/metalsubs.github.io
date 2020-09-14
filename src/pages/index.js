@@ -1,23 +1,44 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { Link } from "gatsby"
+import { Link as GatsbyLink } from "gatsby"
+import styled from 'styled-components'
 
-import Layout from "../components/layout"
+// import Layout from "../components/layout"
+import MainLayout from "../layouts/MainLayout.jsx"
 import SEO from "../components/seo"
 
+const SongsContainer = styled.div`
+  /*
+  margin-bottom: 1.45rem;
+  */
+  display: flex;
+`
+
+const Link = styled(GatsbyLink)`
+  display: block;
+  
+`
+
+Link.displayName = 'Link'
+
+const SongContainer = styled.div`
+  
+`
+
+const Picture = styled.img`
+  width: 100%;
+`
+
 const Song = ({ url, band, title }) => (
-  <div style={{ display: "flex" }}>
-    <Link
-      style={{ display: "block" }}
-      key={url}
-      to={url}
-    >
-      <img
+  <SongContainer data-name="SongContainer">
+    <Link to={url} data-name="Link">
+      <Picture
         src={`/bands${url}/cover.jpg`}
         alt={`${band} - ${title}`}
+        data-name="Picture"
       />
     </Link>
-  </div>
+  </SongContainer>
 )
 
 const IndexPage = ({
@@ -25,14 +46,20 @@ const IndexPage = ({
     allBandsJson: { edges: songs },
   },
 }) => (
-  <Layout>
+  <MainLayout>
     <SEO title="Home" />
-    <div style={{ marginBottom: `1.45rem` }}>
+    <SongsContainer data-name="SongsContainer">
       {songs.map(song => (
-        <Song url={song.node.url} band={song.node.band} title={song.node.title} />
+        <Song
+          key={song.node.url}
+          url={song.node.url}
+          band={song.node.band}
+          title={song.node.title}
+          data-name="Song"
+        />
       ))}
-    </div>
-  </Layout>
+    </SongsContainer>
+  </MainLayout>
 )
 
 export const pageQuery = graphql`
