@@ -128,7 +128,7 @@ function configure(player, subtitle, fonts) {
     onError: function (err) {
       console.log(err)
     },
-    workerUrl: "/subtitles-octopus-worker.js",
+    workerUrl: "/octopus/subtitles-octopus-worker.js",
   }
 
   const octopusInstance = new libass(options)

@@ -46,6 +46,7 @@ const VideoTemplate = ({
                 type: "video/youtube",
                 subtitle,
                 fonts,
+                url,
               },
             ]}
             onPlay={() => {}}
