@@ -1,24 +1,42 @@
-import libass from 'libass-wasm'
+import libass from "libass-wasm"
 
 function configure(player, subtitle, fonts) {
   function configurePlayer(instance, player) {
-      function resizePlayer() {
-        // canvasParent.style.position = "relative"
-        canvas.style.display = "block"
-        canvas.style.position = "absolute"
-        canvas.style.width = player.el_.offsetWidth + "px"
-        canvas.style.height = player.el_.offsetHeight + "px"
-        canvas.style.top = "0px" //player.el_.offsetTop + "px";
-        canvas.style.left = "0px" // player.el_.offsetLeft + "px";
-        canvas.style.pointerEvents = "none"
+    function resizePlayer() {
+      // canvasParent.style.position = "relative"
+      canvas.style.display = "block"
+      canvas.style.position = "absolute"
 
-        // console.log({
-        //   offsetWidth: player.el_.offsetWidth,
-        //   offsetHeight: player.el_.offsetHeight,
-        //   offsetTop: player.el_.offsetTop,
-        //   offsetLeft: player.el_.offsetLeft,
-        // })
+      if (player && player.el_) {
+        if (player.el_.offsetWidth) {
+          canvas.style.width = player.el_.offsetWidth + "px"
+        }
 
+        if (player.el_.offsetHeight) {
+          canvas.style.height = player.el_.offsetHeight + "px"
+        }
+      }
+
+      canvas.style.height = player.el_.offsetHeight + "px"
+      canvas.style.top = "0px" //player.el_.offsetTop + "px";
+      canvas.style.left = "0px" // player.el_.offsetLeft + "px";
+      canvas.style.pointerEvents = "none"
+
+      // console.log({
+      //   offsetWidth: player.el_.offsetWidth,
+      //   offsetHeight: player.el_.offsetHeight,
+      //   offsetTop: player.el_.offsetTop,
+      //   offsetLeft: player.el_.offsetLeft,
+      // })
+
+      if (
+        player &&
+        player.el_ &&
+        player.el_.offsetWidth &&
+        player.el_.offsetHeight &&
+        player.el_.offsetTop &&
+        player.el_.offsetLeft
+      ) {
         instance.resize(
           player.el_.offsetWidth,
           player.el_.offsetHeight,
@@ -26,6 +44,7 @@ function configure(player, subtitle, fonts) {
           player.el_.offsetLeft
         )
       }
+    }
     function resizePlayerWithTimeout() {
       resizePlayer()
       setTimeout(resizePlayer, 100)
@@ -65,26 +84,11 @@ function configure(player, subtitle, fonts) {
       instance.setIsPaused(true, player.currentTime() + instance.timeOffset)
     })
 
-    document.addEventListener("fullscreenchange", () => {
-      // console.log(">>> fullscreenchange")
-      resizePlayerWithTimeout()
-    })
-    document.addEventListener("mozfullscreenchange", () => {
-      // console.log(">>> mozfullscreenchange")
-      resizePlayerWithTimeout()
-    })
-    document.addEventListener("webkitfullscreenchange", () => {
-      // console.log(">>> webkitfullscreenchange")
-      resizePlayerWithTimeout()
-    })
-    document.addEventListener("msfullscreenchange", () => {
-      // console.log(">>> msfullscreenchange")
-      resizePlayerWithTimeout()
-    })
-    window.addEventListener("resize", () => {
-      // console.log(">>> resize")
-      resizePlayerWithTimeout()
-    })
+    document.addEventListener("fullscreenchange", resizePlayerWithTimeout);
+    document.addEventListener("mozfullscreenchange", resizePlayerWithTimeout);
+    document.addEventListener("webkitfullscreenchange", resizePlayerWithTimeout);
+    document.addEventListener("msfullscreenchange", resizePlayerWithTimeout);
+    window.addEventListener("resize", resizePlayerWithTimeout);
 
     // Support Element Resize Observer
     // if (typeof ResizeObserver !== "undefined") {
@@ -102,6 +106,32 @@ function configure(player, subtitle, fonts) {
         resizePlayerWithTimeout()
       })
     }
+
+    return {
+      dispose: function dispose() {
+        if (octopusInstance) {
+          octopusInstance.dispose()
+        }
+
+        document.removeEventListener(
+          "fullscreenchange",
+          resizePlayerWithTimeout
+        )
+        document.removeEventListener(
+          "mozfullscreenchange",
+          resizePlayerWithTimeout
+        )
+        document.removeEventListener(
+          "webkitfullscreenchange",
+          resizePlayerWithTimeout
+        )
+        document.removeEventListener(
+          "msfullscreenchange",
+          resizePlayerWithTimeout
+        )
+        window.removeEventListener("resize", resizePlayerWithTimeout)
+      },
+    };
   }
   // const video = document.getElementById("vjs_video_3_youtube_api")
   const video = document.querySelector("iframe[id^='vjs_video']")
@@ -132,9 +162,7 @@ function configure(player, subtitle, fonts) {
   }
 
   const octopusInstance = new libass(options)
-  configurePlayer(octopusInstance, player)
-
-  return octopusInstance;
+  return configurePlayer(octopusInstance, player)
 }
 
 export default configure

@@ -1,10 +1,10 @@
 import React from "react"
-import Layout from "../components/layout"
+import VideoLayout from "../layouts/VideLayout"
 import SEO from "../components/seo"
 import Player from "../components/player.jsx"
 
 const VideoTemplate = ({
-  pageContext: { band, title, youtubeID, subtitle, fonts, url },
+  pageContext: { band, title, youtubeID, subtitle, fonts, url, cover },
 }) => (
   <>
     {/*
@@ -23,7 +23,7 @@ const VideoTemplate = ({
           </Post>
         </MainLayout>
         */}
-    <Layout>
+    <VideoLayout>
       <SEO title="Player" pathname={url} />
       <div
         style={{
@@ -63,19 +63,15 @@ const VideoTemplate = ({
       >
         <div style={{ display: "flex" }}>
           <div>
-            <img
-              alt=""
-              src="https://t2.genius.com/unsafe/220x220/https%3A%2F%2Fimages.genius.com%2F88049b21f6e85d30030c6697a2c9d6ce.480x480x1.jpg"
-            />
+            <img alt="" src={require(`../images/bands${cover}`)} />
           </div>
           <div>
             <p>{title}</p>
             <p>{band}</p>
-            <p>The Holographic Principle</p>
           </div>
         </div>
       </div>
-    </Layout>
+    </VideoLayout>
   </>
 )
 

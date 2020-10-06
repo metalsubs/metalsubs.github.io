@@ -26,7 +26,8 @@ exports.createPages = ({ graphql, actions }) => {
               fonts,
               title
               url
-              youtubeID
+              youtubeID,
+              cover
             }
           }
         }
@@ -54,6 +55,7 @@ exports.createPages = ({ graphql, actions }) => {
           subtitle: song.node.subtitle,
           fonts: song.node.fonts,
           url: song.node.url,
+          cover: song.node.cover,
         },
         internal: {
           type: 'Song'

@@ -61,7 +61,7 @@ class Player extends React.Component {
           {/* eslint-disable jsx-a11y/media-has-caption */}
           <video
             ref={node => (this.videoNode = node)}
-            className="video-js vjs-16-9"
+            className="video-js vjs-16-9 vjs-big-play-centered"
             playsInline={this.props.playsInline}
           />
         </div>

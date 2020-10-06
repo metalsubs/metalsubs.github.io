@@ -13,10 +13,7 @@ const Container = styled.header`
   transform: translateY(0);
   transition: transform 0.3s ease;
   background-color: #191b1c;
-  background-color: ${p => {
-    console.log('>>> p', p);
-    return 'red'; // p.theme.colors.backgroundSecondary;
-  }};
+  background-color: ${p => p.theme.colors.backgroundSecondary};
   max-height: 56px;
   height: 100%;
   display: flex;
@@ -37,9 +34,11 @@ const TitleContainer = styled.h1`
 `
 
 const Title = styled(Link)`
-  font-size: 1rem;
+  font-size: 1.3rem;
   color: white;
   text-decoration: none;
+  font-family: "Cardo";
+  font-family: "Holtwood One SC";
 `
 
 const Header = ({ siteTitle }) => (
