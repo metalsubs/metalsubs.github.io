@@ -110,15 +110,6 @@ const IndexPage = ({
   )
 }
 
-const IndexPage2 = () => {
-  return (
-    <MainLayout>
-      <SEO title="Home" />
-      <div>Hello</div>
-    </MainLayout>
-  )
-}
-
 export const pageQuery = graphql`
   query IndexQuery {
     site {
