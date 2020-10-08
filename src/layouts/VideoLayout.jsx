@@ -1,10 +1,16 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { ThemeProvider } from "styled-components"
+import styled, { ThemeProvider } from "styled-components"
 
 import GlobalStyles from "../components/GlobalStyles"
 import Header from "../components/header"
 import theme from '../utils/theme'
+
+const Main = styled.main`
+  margin-top: 56px;
+  display: flex;
+  flex-direction: column;
+`
 
 const VideoLayout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -21,7 +27,7 @@ const VideoLayout = ({ children }) => {
     <ThemeProvider theme={theme}>
       <GlobalStyles />
         <Header siteTitle={data.site.siteMetadata.title} />
-        <main style={{ marginTop: "56px" }}>{children}</main>
+        <Main>{children}</Main>
         <footer>
           © {new Date().getFullYear()}, Built with
           {` `}

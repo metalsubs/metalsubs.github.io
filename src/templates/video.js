@@ -1,25 +1,47 @@
 import React from "react"
+import styled from 'styled-components'
 import VideoLayout from "../layouts/VideoLayout"
 import SEO from "../components/seo"
 import Player from "../components/player.jsx"
+
+const Container = styled.div`
+  background-color: black;
+`
+
+const PlayerContainer = styled.div`
+  margin: 0 auto;
+  max-width: ${p => p.theme.breakpoints.xl};
+  padding: 0;
+`
+
+const Meta = styled.div`
+  margin: 1rem 2rem;
+  color: #fff;
+  font-size: 2rem;
+
+  display: flex;
+  justify-content: center;
+`
+
+const InfoContainer = styled.div`
+  display: flex;
+  max-width: ${p => p.theme.breakpoints.xl};
+
+  width: 100%;
+  display: flex;
+`
+
+const Cover = styled.div``
+const Info = styled.div`
+  margin-left: 1rem;
+`
 
 const VideoTemplate = ({ pageContext: { meta, page } }) => (
   <>
     <VideoLayout>
       <SEO title="Player" pathname={page.url} />
-      <div
-        style={{
-          backgroundColor: "black",
-        }}
-      >
-        <div
-          style={{
-            margin: `0 auto`,
-            maxWidth: 1440,
-            padding: 0,
-            backgroundColor: "black",
-          }}
-        >
+      <Container>
+        <PlayerContainer>
           <Player
             controls
             sources={[
@@ -34,28 +56,22 @@ const VideoTemplate = ({ pageContext: { meta, page } }) => (
             onPlay={() => {}}
             playsInline
           />
-        </div>
-      </div>
-      <div
-        style={{
-          margin: "1rem 2rem",
-          color: "#fff",
-          fontSize: "2rem",
-        }}
-      >
-        <div style={{ display: "flex" }}>
-          <div>
+        </PlayerContainer>
+      </Container>
+      <Meta>
+        <InfoContainer>
+          <Cover>
             <img
               alt=""
               src={require(`../images/bands/${meta.bandID}/${meta.covers.album}`)}
             />
-          </div>
-          <div>
-            <p>{meta.song}</p>
-            <p>{meta.band}</p>
-          </div>
-        </div>
-      </div>
+          </Cover>
+          <Info>
+            <h1>{meta.song}</h1>
+            <h2>{meta.band}</h2>
+          </Info>
+        </InfoContainer>
+      </Meta>
     </VideoLayout>
   </>
 )
