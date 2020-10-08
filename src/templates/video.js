@@ -4,27 +4,15 @@ import SEO from "../components/seo"
 import Player from "../components/player.jsx"
 
 const VideoTemplate = ({
-  pageContext: { band, title, youtubeID, subtitle, fonts, url, cover },
+  // pageContext: { band, title, youtubeID, subtitle, fonts, url, cover },
+  pageContext: { 
+    meta,
+    page
+   },
 }) => (
   <>
-    {/*
-        <MainLayout>
-          <SiteMetadata pathname={post.frontmatter.path} />
-          <Post>
-            <PostMeta></PostMeta>
-            <PostContent
-              /*
-              FIX ME
-              eslint react/no-danger: 0
-              *
-              /
-              dangerouslySetInnerHTML={{ __html: post.html }}
-            />
-          </Post>
-        </MainLayout>
-        */}
     <VideoLayout>
-      <SEO title="Player" pathname={url} />
+      <SEO title="Player" pathname={page.url} />
       <div
         style={{
           backgroundColor: "black",
@@ -42,11 +30,11 @@ const VideoTemplate = ({
             controls
             sources={[
               {
-                src: `https://www.youtube.com/watch?v=${youtubeID}`,
+                src: `https://www.youtube.com/watch?v=${meta.youtubeID}`,
                 type: "video/youtube",
-                subtitle,
-                fonts,
-                url,
+                subtitle: `/subtitles/${meta.bandID}/${meta.songID}.ass`,//meta.subtitle,
+                fonts: meta.fonts,
+                url: page.url,
               },
             ]}
             onPlay={() => {}}
@@ -63,11 +51,11 @@ const VideoTemplate = ({
       >
         <div style={{ display: "flex" }}>
           <div>
-            <img alt="" src={require(`../images/bands${cover}`)} />
+            {/* <img alt="" src={require(`../images/bands${cover}`)} /> */}
           </div>
           <div>
-            <p>{title}</p>
-            <p>{band}</p>
+            <p>{meta.song}</p>
+            <p>{meta.band}</p>
           </div>
         </div>
       </div>

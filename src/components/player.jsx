@@ -26,7 +26,8 @@ class Player extends React.Component {
     this.player.on("ready", () => {
       this.subtitles = subtitles(
         this.player,
-        `/bands${this.props.sources[0].url}/subtitle.ass`,
+        // `/bands${this.props.sources[0].url}/subtitle.ass`,
+        this.props.sources[0].subtitle,
         this.props.sources[0].fonts.map(font => `/fonts/${font}`)
       )
     })

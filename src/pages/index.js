@@ -7,7 +7,7 @@ import styled from "styled-components"
 import MainLayout from "../layouts/MainLayout.jsx"
 import SEO from "../components/seo"
 
-import coverImage from "../images/bands/wisdom/marching-for-liberty/cover.jpg"
+// import coverImage from "../images/bands/wisdom/marching-for-liberty/cover.jpg"
 
 const SongsContainer = styled.div`
   display: flex;
@@ -33,23 +33,14 @@ const Link = styled(GatsbyLink)`
   justify-content: center;
   align-items: center;
   align-content: center;
-
-  /* background-image: url(https://i.ytimg.com/vi/v8amfLYjf9w/maxresdefault.jpg);
-  background-size: cover;
-  background-position: center;
-  opacity: 1; */
-
   margin: 10px;
   z-index: 10;
 `
 
 const BackgroundLayer = styled.div`
-  /* background-image: url(https://i.ytimg.com/vi/v8amfLYjf9w/maxresdefault.jpg); */
-  background-image: url(${coverImage});
+  background-image: url(${p => p.image});
   background-size: cover;
   background-position: center;
-
-  /* background-color: red; */
   opacity: 0.3;
   position: absolute;
   top: 0%;
@@ -62,8 +53,6 @@ const BackgroundLayer = styled.div`
 const Picture = styled.img`
   display: block;
   width: 100%;
-  /* flex: 0 1 auto; */
-  /* border: 1px solid purple; */
   z-index: 14;
 `
   
@@ -80,40 +69,52 @@ const Description = styled.div`
   margin: 10px;
 `
 
-const Song = ({ url, band, title }) => {
-  const image = require(`../images/bands${url}/cover.jpg`)
+const Song = ({ url, bandID, songID, title, cover }) => {
+  const image = require(`../images/bands/${bandID}/${songID}.jpg`)
   return (
-    <SongContainer data-name="SongContainer" image={image}>
+    <SongContainer data-name="SongContainer">
       <Link to={url} data-name="Link">
-        <Picture src={image} alt={`${band} - ${title}`} data-name="Picture" />
-        <Description>{`${band} - ${title}`}</Description>
+        <Picture src={image} alt={title} data-name="Picture" />
+        <Description>{title}</Description>
         <BackgroundLayer data-name="BackgroundLayer" image={image} />
       </Link>
     </SongContainer>
   )
 }
 
-const data = [...Array(4).keys()]
-
 const IndexPage = ({
   data: {
-    allBandsJson: { edges: songs },
+    allMarkdownRemark: { nodes: songs },
   },
 }) => {
+  console.log("songs", songs)
   return (
     <MainLayout>
       <SEO title="Home" />
+
       <SongsContainer data-name="SongsContainer">
         {songs.map(song => (
           <Song
-            key={song.node.url}
-            url={song.node.url}
-            band={song.node.band}
-            title={song.node.title}
+            key={song.frontmatter.path}
+            url={song.frontmatter.path}
+            band={song.frontmatter.band}
+            title={song.frontmatter.title}
+            bandID={song.frontmatter.bandID}
+            songID={song.frontmatter.songID}
+            covers={song.frontmatter.covers}
             data-name="Song"
           />
         ))}
       </SongsContainer>
+    </MainLayout>
+  )
+}
+
+const IndexPage2 = () => {
+  return (
+    <MainLayout>
+      <SEO title="Home" />
+      <div>Hello</div>
     </MainLayout>
   )
 }
@@ -125,15 +126,20 @@ export const pageQuery = graphql`
         title
       }
     }
-    allBandsJson(limit: 1000, sort: { order: DESC, fields: [band] }) {
-      edges {
-        node {
-          band
-          id
-          subtitle
+    allMarkdownRemark(
+      limit: 1000
+      sort: { order: DESC, fields: [frontmatter___date] }
+    ) {
+      nodes {
+        frontmatter {
           title
-          url
-          youtubeID
+          path
+          covers {
+            song
+          }
+          bandID
+          songID
+          date
         }
       }
     }

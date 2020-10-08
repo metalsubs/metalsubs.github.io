@@ -6,71 +6,122 @@
 
 // You can delete this file if you're not using it
 const path = require(`path`)
-const { createFilePath } = require(`gatsby-source-filesystem`)
+
+const createImageQuery = imagePath => `
+{
+  allFile(filter: {relativePath: {eq: "${imagePath}"}}) {
+    edges {
+      node {
+        absolutePath
+        relativeDirectory
+        relativePath
+        dir
+        publicURL
+        base
+        childImageSharp {
+          fluid(grayscale: true) {
+            originalName
+            src
+          }
+        }
+      }
+    }
+  }
+}
+`
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
-  const videoComponent = path.resolve(`./src/templates/video.js`)
-  // const quote = path.resolve(`./src/templates/video.jsx`)
+  const pageTemplate = path.resolve(`./src/templates/video.js`)
 
   return graphql(
     `
       {
-        allBandsJson {
+        allMarkdownRemark(
+          # filter: { frontmatter: { layout: { eq: "post" } } }
+          sort: { fields: [frontmatter___date], order: DESC }
+          limit: 1000
+        ) {
           edges {
             node {
-              band
-              id
-              subtitle,
-              fonts,
-              title
-              url
-              youtubeID,
-              cover
+              # fields {
+              #  slug
+              # }
+              html
+              frontmatter {
+                layout
+                title
+                description
+                date
+                creation_date
+                path
+                draft
+                band
+                song
+                bandID
+                songID
+                subtitle
+                fonts
+                youtubeID
+                covers {
+                  album
+                  song
+                }
+              }
             }
           }
         }
       }
     `
-  ).then(result => {
+  ).then(async result => {
     if (result.errors) {
       throw result.errors
     }
 
-    // Create blog posts pages.
-    const songs = result.data.allBandsJson.edges
+    const posts = result.data.allMarkdownRemark.edges
 
-    songs.forEach((song, index) => {
-      // const previous = index === posts.length - 1 ? null : posts[index + 1].node
-      // const next = index === 0 ? null : posts[index - 1].node
+    posts.forEach(async (post, index) => {
 
-      createPage({
-        path: song.node.url,
-        component: videoComponent,
-        context: {
-          band: song.node.band,
-          title: song.node.title,
-          youtubeID: song.node.youtubeID,
-          subtitle: song.node.subtitle,
-          fonts: song.node.fonts,
-          url: song.node.url,
-          cover: song.node.cover,
-        },
-        internal: {
-          type: 'Song'
-        }
-      })
+      if (post.node.frontmatter.layout === "video") {
+        createPage({
+          component: pageTemplate,
+          path: post.node.frontmatter.path,
+          context: {
+            page: {
+              url: post.node.frontmatter.path,
+              layout: post.node.frontmatter.layout,
+              title: post.node.frontmatter.title,
+              description: post.node.frontmatter.description,
+              date: post.node.frontmatter.date,
+              creation_date: post.node.frontmatter.creation_date,
+              path: post.node.frontmatter.path,
+              draft: post.node.frontmatter.draft,
+            },
+            meta: {
+              band: post.node.frontmatter.band,
+              song: post.node.frontmatter.song,
+              bandID: post.node.frontmatter.bandID,
+              songID: post.node.frontmatter.songID,
+              subtitle: post.node.frontmatter.subtitle,
+              fonts: post.node.frontmatter.fonts,
+              youtubeID: post.node.frontmatter.youtubeID,
+              covers: {
+                album: post.node.frontmatter.covers.album,
+                song: post.node.frontmatter.covers.song,
+              },
+            },
+          },
+        })
+      }
     })
 
     return null
   })
 }
-
-exports.onCreateNode = ({ node, actions, getNode }) => {
+/*
+exports.onCreateNode = ({ node, actions }) => {
   const { createNodeField } = actions
-
-  console.log(">>> node to create", node);
 
   if (node.internal.type === `MarkdownRemark`) {
     const value = node.frontmatter.path
@@ -81,14 +132,5 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       value,
     })
   }
-
-  if (node.internal.type === `BandsJson`) {
-    const value = node.url
-
-    createNodeField({
-      name: `slug`,
-      node,
-      value,
-    })
-  }
 }
+*/

@@ -6,7 +6,7 @@ import GlobalStyles from "../components/GlobalStyles"
 import Header from "../components/header"
 import theme from '../utils/theme'
 
-console.log(">>> theme", theme)
+// console.log(">>> theme", theme)
 
 const Main = styled.main`
   margin-top: 100px;
