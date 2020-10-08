@@ -69,8 +69,8 @@ const Description = styled.div`
   margin: 10px;
 `
 
-const Song = ({ url, bandID, songID, title, cover }) => {
-  const image = require(`../images/bands/${bandID}/${songID}.jpg`)
+const Song = ({ url, bandID, songID, title, covers }) => {
+  const image = require(`../images/bands/${bandID}/${covers.song}`)
   return (
     <SongContainer data-name="SongContainer">
       <Link to={url} data-name="Link">

@@ -17,6 +17,6 @@ fonts:
 youtubeID: zPonioDYnoY
 covers: 
     album: album-endless-forms-most-beautiful.jpg
-    song: cover.jpg
+    song: elan.jpg
 ---
 

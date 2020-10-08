@@ -18,5 +18,5 @@ fonts:
 youtubeID: EhGgb1E3HpQ
 covers: 
     album: album-the-holographic-principle.jpg
-    song: cover.jpg
+    song: beyond-the-matrix.jpg
 ---

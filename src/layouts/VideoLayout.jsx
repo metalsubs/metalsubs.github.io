@@ -6,7 +6,7 @@ import GlobalStyles from "../components/GlobalStyles"
 import Header from "../components/header"
 import theme from '../utils/theme'
 
-const VideLayout = ({ children }) => {
+const VideoLayout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query VideoTitleQuery {
       site {
@@ -31,4 +31,4 @@ const VideLayout = ({ children }) => {
   )
 }
 
-export default VideLayout
+export default VideoLayout

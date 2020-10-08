@@ -1,15 +1,9 @@
 import React from "react"
-import VideoLayout from "../layouts/VideLayout"
+import VideoLayout from "../layouts/VideoLayout"
 import SEO from "../components/seo"
 import Player from "../components/player.jsx"
 
-const VideoTemplate = ({
-  // pageContext: { band, title, youtubeID, subtitle, fonts, url, cover },
-  pageContext: { 
-    meta,
-    page
-   },
-}) => (
+const VideoTemplate = ({ pageContext: { meta, page } }) => (
   <>
     <VideoLayout>
       <SEO title="Player" pathname={page.url} />
@@ -32,7 +26,7 @@ const VideoTemplate = ({
               {
                 src: `https://www.youtube.com/watch?v=${meta.youtubeID}`,
                 type: "video/youtube",
-                subtitle: `/subtitles/${meta.bandID}/${meta.songID}.ass`,//meta.subtitle,
+                subtitle: `/subtitles/${meta.bandID}/${meta.songID}.ass`, //meta.subtitle,
                 fonts: meta.fonts,
                 url: page.url,
               },
@@ -51,7 +45,10 @@ const VideoTemplate = ({
       >
         <div style={{ display: "flex" }}>
           <div>
-            {/* <img alt="" src={require(`../images/bands${cover}`)} /> */}
+            <img
+              alt=""
+              src={require(`../images/bands/${meta.bandID}/${meta.covers.album}`)}
+            />
           </div>
           <div>
             <p>{meta.song}</p>
