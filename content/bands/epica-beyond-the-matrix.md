@@ -11,10 +11,11 @@ band: Epica
 song: Beyond the Matrix
 bandID: epica
 songID: beyond-the-matrix
-subtitle: beyond-the-matrix.ass
+subtitle: beyond-the-matrix.br
 fonts:
     - AnavioSmallCapitals.ttf
     - edo.ttf
+    - Norican-Regular.ttf
 youtubeID: EhGgb1E3HpQ
 covers: 
     album: album-the-holographic-principle.jpg

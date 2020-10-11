@@ -48,7 +48,7 @@ const VideoTemplate = ({ pageContext: { meta, page } }) => (
               {
                 src: `https://www.youtube.com/watch?v=${meta.youtubeID}`,
                 type: "video/youtube",
-                subtitle: `/subtitles/${meta.bandID}/${meta.songID}.ass`, //meta.subtitle,
+                subtitle: `/subtitles/${meta.bandID}/${meta.songID}.br`, //meta.subtitle,
                 fonts: meta.fonts,
                 url: page.url,
               },
