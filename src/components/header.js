@@ -3,6 +3,8 @@ import PropTypes from "prop-types"
 import React from "react"
 import styled from 'styled-components'
 
+import media from "../utils/media-query"
+
 const Container = styled.header`
   position: fixed;
   top: 0;
@@ -39,6 +41,9 @@ const Title = styled(Link)`
   text-decoration: none;
   font-family: "Cardo";
   font-family: "Holtwood One SC";
+  ${media.lessThan("md")`
+    font-size: 2.5rem;
+  `}
 `
 
 const Header = ({ siteTitle }) => (
