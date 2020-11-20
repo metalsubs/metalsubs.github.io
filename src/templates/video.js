@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import VideoLayout from "../layouts/VideoLayout"
 import SEO from "../components/seo"
 import Player from "../components/player.jsx"
+import media from "../utils/media-query"
 
 const Container = styled.div`
   background-color: black;
@@ -17,6 +18,10 @@ const PlayerContainer = styled.div`
 
 const Meta = styled.div`
   margin: 1rem 2rem;
+
+  ${media.lessThan("md")`
+    margin: 1rem;
+  `}
   color: #fff;
   font-size: 2rem;
 
@@ -27,9 +32,13 @@ const Meta = styled.div`
 const InfoContainer = styled.div`
   display: flex;
   max-width: ${p => p.theme.breakpoints.xl};
-
   width: 100%;
   display: flex;
+  align-items: center;
+  ${media.lessThan("md")`
+    flex-direction: column;
+    text-align: center;
+  `}
 `
 
 const Cover = styled.div``
@@ -46,17 +55,30 @@ const Info = styled.div`
 const SongTitle = styled.h1`
   font-size: 4rem;
   margin: 0;
+
+  ${media.lessThan("md")`
+    margin: 0.5rem;
+    font-size: 3rem;
+  `}
 `
 
 const SongArtist = styled.h1`
   font-size: 3rem;
   margin: 1rem 0;
+
+  ${media.lessThan("md")`
+    font-size: 2.5rem;
+  `}
 `
 
 const Comments = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
+
+  ${media.lessThan("md")`
+    margin: 1rem;
+  `}
 
   > div {
     width: 100%;
