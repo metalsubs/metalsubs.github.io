@@ -6,6 +6,7 @@ import styled from "styled-components"
 // import Layout from "../components/layout"
 import MainLayout from "../layouts/MainLayout.jsx"
 import SEO from "../components/seo"
+import media from "../utils/media-query"
 
 // import coverImage from "../images/bands/wisdom/marching-for-liberty/cover.jpg"
 
@@ -20,7 +21,13 @@ const SongsContainer = styled.div`
 const SongContainer = styled.div`
   /* outline: 1px solid blue; */
   position: relative;
+
   flex: 0 1 50%;
+
+  ${media.lessThan("md")`
+    flex: 0 1 100%;
+  `}
+
   display: flex;
   /* margin: 0 px; */
 `
@@ -59,6 +66,11 @@ const Picture = styled.img`
 
 const Description = styled.div`
   position: absolute;
+  ${media.lessThan("md")`
+    position: relative;
+    font-size: 2.5rem;
+    text-align: center;
+  `}
   bottom: 0;
   left: 0;
   color: white;
