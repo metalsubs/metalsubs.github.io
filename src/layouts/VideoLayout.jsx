@@ -4,6 +4,7 @@ import styled, { ThemeProvider } from "styled-components"
 
 import GlobalStyles from "../components/GlobalStyles"
 import Header from "../components/header"
+import Footer from "../components/Footer"
 import theme from '../utils/theme'
 
 const Main = styled.main`
@@ -28,11 +29,7 @@ const VideoLayout = ({ children }) => {
       <GlobalStyles />
         <Header siteTitle={data.site.siteMetadata.title} />
         <Main>{children}</Main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+        <Footer />
     </ThemeProvider>
   )
 }

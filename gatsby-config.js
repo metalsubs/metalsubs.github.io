@@ -24,7 +24,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-transformer-remark`
+      resolve: `gatsby-transformer-remark`,
     },
     {
       resolve: `gatsby-plugin-styled-components`,
@@ -33,18 +33,38 @@ module.exports = {
         fileName: true,
       },
     },
+    // {
+    //   resolve: `gatsby-plugin-prefetch-google-fonts`,
+    //   options: {
+    //     fonts: [
+    //       {
+    //         family: `Cardo:wght`,
+    //         variants: [`400`, `700`],
+    //       },
+    //       {
+    //         family: `Holtwood One SC`,
+    //       },
+    //     ],
+    //   },
+    // },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-webfonts`,
       options: {
-        fonts: [
-          {
-            family: `Cardo:wght`,
-            variants: [`400`, `700`],
-          },
-          {
-            family: `Holtwood One SC`,
-          },
-        ],
+        fonts: {
+          google: [
+            {
+              family: `Cardo:wght`,
+              variants: [`400`, `700`],
+            },
+            {
+              family: `Holtwood One SC`,
+            }
+          ],
+        },
+        formats: ['woff2', 'woff'],
+        useMinify: true,
+        usePreload: true,
+        usePreconnect: false,
       },
     },
     {

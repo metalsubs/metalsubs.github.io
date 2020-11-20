@@ -4,6 +4,7 @@ import styled, { ThemeProvider } from "styled-components"
 
 import GlobalStyles from "../components/GlobalStyles"
 import Header from "../components/header"
+import Footer from "../components/Footer"
 import theme from '../utils/theme'
 
 // console.log(">>> theme", theme)
@@ -38,6 +39,7 @@ const MainLayout = ({ children }) => {
       <Main>
         <Content>{children}</Content>
       </Main>
+      <Footer />
     </ThemeProvider>
   )
 }

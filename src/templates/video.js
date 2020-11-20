@@ -1,4 +1,5 @@
 import React from "react"
+import { DiscussionEmbed } from "disqus-react"
 import styled from 'styled-components'
 import VideoLayout from "../layouts/VideoLayout"
 import SEO from "../components/seo"
@@ -32,8 +33,35 @@ const InfoContainer = styled.div`
 `
 
 const Cover = styled.div``
+
+const Image = styled.img`
+  width: 10rem;
+  height: 10rem;
+`
+
 const Info = styled.div`
   margin-left: 1rem;
+`
+
+const SongTitle = styled.h1`
+  font-size: 4rem;
+  margin: 0;
+`
+
+const SongArtist = styled.h1`
+  font-size: 3rem;
+  margin: 1rem 0;
+`
+
+const Comments = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  > div {
+    width: 100%;
+    max-width: ${p => p.theme.breakpoints.xl};
+  }
 `
 
 const VideoTemplate = ({ pageContext: { meta, page } }) => (
@@ -61,17 +89,26 @@ const VideoTemplate = ({ pageContext: { meta, page } }) => (
       <Meta>
         <InfoContainer>
           <Cover>
-            <img
+            <Image
               alt=""
               src={require(`../images/bands/${meta.bandID}/${meta.covers.album}`)}
             />
           </Cover>
           <Info>
-            <h1>{meta.song}</h1>
-            <h2>{meta.band}</h2>
+            <SongTitle>{meta.song}</SongTitle>
+            <SongArtist>{meta.band}</SongArtist>
           </Info>
         </InfoContainer>
       </Meta>
+      <Comments>
+        <DiscussionEmbed
+          shortname={"metalsubs"}
+          config={{
+            identifier: page.url,
+            title: page.title,
+          }}
+        />
+      </Comments>
     </VideoLayout>
   </>
 )
