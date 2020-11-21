@@ -58,13 +58,20 @@ module.exports = {
             },
             {
               family: `Holtwood One SC`,
-            }
+            },
           ],
         },
-        formats: ['woff2', 'woff'],
+        formats: ["woff2", "woff"],
         useMinify: true,
         usePreload: true,
         usePreconnect: false,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-98315944-3",
+        head: false,
       },
     },
     {
