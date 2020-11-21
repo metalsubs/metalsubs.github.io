@@ -26,7 +26,7 @@ const createImageQuery = imagePath => `
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
-  const pageTemplate = path.resolve(`./src/templates/video.js`)
+  const pageTemplate = path.resolve(`./src/templates/Video.jsx`)
 
   return graphql(
     `

@@ -2,8 +2,8 @@ import React from "react"
 import { DiscussionEmbed } from "disqus-react"
 import styled from 'styled-components'
 import VideoLayout from "../layouts/VideoLayout"
-import SEO from "../components/seo"
-import Player from "../components/player.jsx"
+import SEO from "../components/SEO"
+import Player from "../components/Player"
 import media from "../utils/media-query"
 
 const Container = styled.div`
@@ -134,6 +134,5 @@ const VideoTemplate = ({ pageContext: { meta, page } }) => (
     </VideoLayout>
   </>
 )
-
 
 export default VideoTemplate

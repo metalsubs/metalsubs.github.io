@@ -5,7 +5,7 @@ import styled from "styled-components"
 
 // import Layout from "../components/layout"
 import MainLayout from "../layouts/MainLayout.jsx"
-import SEO from "../components/seo"
+import SEO from "../components/SEO"
 import media from "../utils/media-query"
 
 // import coverImage from "../images/bands/wisdom/marching-for-liberty/cover.jpg"

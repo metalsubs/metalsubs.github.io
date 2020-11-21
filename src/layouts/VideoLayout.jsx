@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import styled, { ThemeProvider } from "styled-components"
 
 import GlobalStyles from "../components/GlobalStyles"
-import Header from "../components/header"
+import Header from "../components/Header"
 import Footer from "../components/Footer"
 import theme from '../utils/theme'
 
