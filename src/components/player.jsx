@@ -21,13 +21,15 @@ class Player extends React.Component {
       // Noob
     });
 
-    this.player.landscapeFullscreen({
-      fullscreen: {
-        enterOnRotate: true,
-        alwaysInLandscapeMode: true,
-        iOS: true,
-      },
-    });
+    if (this.player && this.player.landscapeFullscreen) {
+      this.player.landscapeFullscreen({
+        fullscreen: {
+          enterOnRotate: true,
+          alwaysInLandscapeMode: true,
+          iOS: true,
+        },
+      });
+    }
 
     this.subtitles = null;
 
