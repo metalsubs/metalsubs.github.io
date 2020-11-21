@@ -1,7 +1,7 @@
 ---
 layout: video
-title: Sonata Arctica - Flag in the Ground
-description: Sonata Arctica - Flag in the Ground
+title: Wisdom - Marching for Liberty
+description: Wisdom - Marching for Liberty
 date: 2020-09-25T11:13:00.00Z
 creation_date: 2020-09-25T11:13:00.00Z
 path: /wisdom/marching-for-liberty
