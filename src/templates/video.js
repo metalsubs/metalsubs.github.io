@@ -89,7 +89,7 @@ const Comments = styled.div`
 const VideoTemplate = ({ pageContext: { meta, page } }) => (
   <>
     <VideoLayout>
-      <SEO title="Player" pathname={page.url} />
+      <SEO title={page.title} pathname={page.url} />
       <Container>
         <PlayerContainer>
           <Player
