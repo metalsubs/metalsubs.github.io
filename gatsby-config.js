@@ -68,7 +68,7 @@ module.exports = {
         background_color: `#191B1C`,
         theme_color: `#2d2d2d`,
         display: `minimal-ui`,
-        icon: `src/images/metalsubs-logo.svg`,
+        icon: `src/images/metalsubs-logo.png`,
       },
     },
   ],
