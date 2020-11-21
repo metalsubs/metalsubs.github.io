@@ -11,4 +11,6 @@
 
 /*! @name @videojs/vhs-utils @version 2.2.1 @license MIT */
 
+/*! @name videojs-landscape-fullscreen @version 11.1.0 @license ISC */
+
 /*! ieee754. BSD-3-Clause License. Feross Aboukhadijeh <https://feross.org/opensource> */

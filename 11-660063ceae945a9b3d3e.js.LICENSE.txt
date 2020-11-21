@@ -1,1 +1,0 @@
-/*! @name videojs-landscape-fullscreen @version 11.1.0 @license ISC */
