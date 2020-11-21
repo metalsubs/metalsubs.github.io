@@ -3,7 +3,6 @@ import libass from "libass-wasm"
 function configure(player, subtitle, fonts) {
   function configurePlayer(instance, player) {
     function resizePlayer() {
-      // canvasParent.style.position = "relative"
       canvas.style.display = "block"
       canvas.style.position = "absolute"
 
@@ -21,13 +20,6 @@ function configure(player, subtitle, fonts) {
       canvas.style.top = "0px" //player.el_.offsetTop + "px";
       canvas.style.left = "0px" // player.el_.offsetLeft + "px";
       canvas.style.pointerEvents = "none"
-
-      // console.log({
-      //   offsetWidth: player.el_.offsetWidth,
-      //   offsetHeight: player.el_.offsetHeight,
-      //   offsetTop: player.el_.offsetTop,
-      //   offsetLeft: player.el_.offsetLeft,
-      // })
 
       if (
         player &&

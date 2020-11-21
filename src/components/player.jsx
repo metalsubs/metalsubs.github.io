@@ -1,8 +1,11 @@
 import React from "react"
 import videojs from "video.js"
-import 'videojs-youtube'
+import "videojs-youtube"
 import "video.js/dist/video-js.css"
-import subtitles from '../utils/subtitles'
+import loadable from "@loadable/component"
+import subtitles from "../utils/subtitles"
+
+loadable(() => import("videojs-landscape-fullscreen"))
 
 class Player extends React.Component {
   componentDidMount() {
@@ -15,8 +18,16 @@ class Player extends React.Component {
       ...this.props,
     }
     this.player = videojs(this.videoNode, options, function onPlayerReady() {
-      // console.log('onPlayerReady', this);
-    })
+      // Noob
+    });
+
+    this.player.landscapeFullscreen({
+      fullscreen: {
+        enterOnRotate: true,
+        alwaysInLandscapeMode: true,
+        iOS: true,
+      },
+    });
 
     this.subtitles = null;
 
@@ -26,7 +37,6 @@ class Player extends React.Component {
     this.player.on("ready", () => {
       this.subtitles = subtitles(
         this.player,
-        // `/bands${this.props.sources[0].url}/subtitle.ass`,
         this.props.sources[0].subtitle,
         this.props.sources[0].fonts.map(font => `/fonts/${font}`)
       )
@@ -35,14 +45,12 @@ class Player extends React.Component {
 
   componentWillUnmount() {
     if (this.player) {
-      this.player.dispose()
-      console.log(">>> Player is dispose")
+      this.player.dispose();
     }
 
     if (this.subtitles) {
       this.subtitles.dispose()
       this.subtitles = null;
-      console.log('>>> Subs are dispose');
     }
   }
 
