@@ -24,10 +24,10 @@ function configure(player, subtitle, fonts) {
       if (
         player &&
         player.el_ &&
-        player.el_.offsetWidth &&
-        player.el_.offsetHeight &&
-        player.el_.offsetTop &&
-        player.el_.offsetLeft
+        player.el_.offsetWidth !== undefined &&
+        player.el_.offsetHeight !== undefined &&
+        player.el_.offsetTop !== undefined &&
+        player.el_.offsetLeft !== undefined
       ) {
         instance.resize(
           player.el_.offsetWidth,
