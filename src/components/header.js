@@ -39,6 +39,7 @@ const Title = styled(Link)`
   font-size: 1.3rem;
   color: white;
   text-decoration: none;
+  font-weight: normal;
   font-family: "Cardo";
   font-family: "Holtwood One SC";
   ${media.lessThan("md")`
