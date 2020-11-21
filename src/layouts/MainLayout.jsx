@@ -7,8 +7,6 @@ import Header from "../components/header"
 import Footer from "../components/Footer"
 import theme from '../utils/theme'
 
-// console.log(">>> theme", theme)
-
 const Main = styled.main`
   margin-top: 100px;
   display: flex;

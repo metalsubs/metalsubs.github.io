@@ -148,7 +148,7 @@ function configure(player, subtitle, fonts) {
     fonts,
     debug: false,
     onError: function (err) {
-      console.log(err)
+      console.error(err)
     },
     workerUrl: "/octopus/subtitles-octopus-worker.js",
   }

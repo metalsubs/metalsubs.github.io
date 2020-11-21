@@ -14,7 +14,6 @@ import media from '../utils/media-query'
 const GlobalStyle = createGlobalStyle`
 html {
     background-color: ${p => {
-      // console.log(JSON.stringify(p.theme, null, 2));
       return p.theme.colors.backgroundPrimary;
     }};
     font-size: ${p => p.theme.fonts.sizes.base};

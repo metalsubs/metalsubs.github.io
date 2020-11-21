@@ -99,7 +99,6 @@ const IndexPage = ({
     allMarkdownRemark: { nodes: songs },
   },
 }) => {
-  console.log("songs", songs)
   return (
     <MainLayout>
       <SEO title="Home" />
