@@ -55,6 +55,10 @@ exports.createPages = ({ graphql, actions }) => {
                 bandID
                 songID
                 subtitle
+                size {
+                  width
+                  height
+                }
                 fonts
                 youtubeID
                 covers {
@@ -75,7 +79,6 @@ exports.createPages = ({ graphql, actions }) => {
     const posts = result.data.allMarkdownRemark.edges
 
     posts.forEach(async (post, index) => {
-
       if (post.node.frontmatter.layout === "video") {
         createPage({
           component: pageTemplate,
@@ -97,6 +100,10 @@ exports.createPages = ({ graphql, actions }) => {
               bandID: post.node.frontmatter.bandID,
               songID: post.node.frontmatter.songID,
               subtitle: post.node.frontmatter.subtitle,
+              size: {
+                width: post.node.frontmatter.size.width,
+                height: post.node.frontmatter.size.height,
+              },
               fonts: post.node.frontmatter.fonts,
               youtubeID: post.node.frontmatter.youtubeID,
               covers: {
@@ -111,4 +118,19 @@ exports.createPages = ({ graphql, actions }) => {
 
     return null
   })
+}
+
+exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
+  if (stage === "build-html") {
+    actions.setWebpackConfig({
+      module: {
+        rules: [
+          {
+            test: /videojs-landscape-fullscreen/,
+            use: loaders.null(),
+          },
+        ],
+      },
+    })
+  }
 }

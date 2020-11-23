@@ -12,6 +12,9 @@ song: Beyond the Matrix
 bandID: epica
 songID: beyond-the-matrix
 subtitle: beyond-the-matrix.br
+size:
+    width: 1920
+    height: 1080
 fonts:
     - AnavioSmallCapitals.ttf
     - edo.ttf

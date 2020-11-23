@@ -12,6 +12,9 @@ song: Marching for Liberty
 bandID: wisdom
 songID: marching-for-liberty
 subtitle: marching-for-liberty.ass
+size:
+    width: 1920
+    height: 1080
 fonts:
 - UnifrakturMaguntia-Book.ttf
 - BilboSwashCaps-Regular.ttf

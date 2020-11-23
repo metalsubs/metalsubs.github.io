@@ -12,6 +12,9 @@ song: Flag in the Ground
 bandID: sonata-arctica
 songID: flag-in-the-ground
 subtitle: flag-in-the-ground.ass
+size:
+    width: 1920
+    height: 1080
 fonts:
     - Kalam-Regular.ttf
     - GochiHand-Regular.ttf

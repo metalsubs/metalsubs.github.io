@@ -2,10 +2,8 @@ import React from "react"
 import videojs from "video.js"
 import "videojs-youtube"
 import "video.js/dist/video-js.css"
-import loadable from "@loadable/component"
+import "videojs-landscape-fullscreen"
 import subtitles from "../utils/subtitles"
-
-loadable(() => import("videojs-landscape-fullscreen"))
 
 class Player extends React.Component {
   componentDidMount() {
@@ -21,15 +19,13 @@ class Player extends React.Component {
       // Noob
     });
 
-    if (this.player && this.player.landscapeFullscreen) {
-      this.player.landscapeFullscreen({
-        fullscreen: {
-          enterOnRotate: true,
-          alwaysInLandscapeMode: true,
-          iOS: true,
-        },
-      });
-    }
+    this.player.landscapeFullscreen({
+      fullscreen: {
+        enterOnRotate: true,
+        alwaysInLandscapeMode: true,
+        iOS: true,
+      },
+    });
 
     this.subtitles = null;
 
@@ -40,6 +36,7 @@ class Player extends React.Component {
       this.subtitles = subtitles(
         this.player,
         this.props.sources[0].subtitle,
+        this.props.sources[0].size,
         this.props.sources[0].fonts.map(font => `/fonts/${font}`)
       )
     })
@@ -67,7 +64,7 @@ class Player extends React.Component {
   }
   render() {
     return (
-      <div>
+      
         <div data-vjs-player>
           {/* eslint-disable jsx-a11y/media-has-caption */}
           <video
@@ -76,7 +73,7 @@ class Player extends React.Component {
             playsInline={this.props.playsInline}
           />
         </div>
-      </div>
+      
     )
   }
 }

@@ -1,6 +1,6 @@
 import libass from "libass-wasm"
 
-function configure(player, subtitle, fonts) {
+function configure(player, subtitle, size, fonts) {
   function configurePlayer(instance, player) {
     function resizePlayer() {
       canvas.style.display = "block"
@@ -30,10 +30,10 @@ function configure(player, subtitle, fonts) {
         player.el_.offsetLeft !== undefined
       ) {
         instance.resize(
-          player.el_.offsetWidth,
-          player.el_.offsetHeight,
-          player.el_.offsetTop,
-          player.el_.offsetLeft
+          size.width, //player.el_.offsetWidth,
+          size.height, //player.el_.offsetHeight,
+          0, // player.el_.offsetTop,
+          0 // player.el_.offsetLeft
         )
       }
     }
@@ -132,6 +132,7 @@ function configure(player, subtitle, fonts) {
 
   canvas.className = "libassjs-canvas"
   canvas.style.display = "none"
+  canvas.style.border = "1px solid green";
 
   canvasParent.className = "libassjs-canvas-parent"
   canvasParent.appendChild(canvas)

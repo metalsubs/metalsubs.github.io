@@ -100,6 +100,7 @@ const VideoTemplate = ({ pageContext: { meta, page } }) => (
                 type: "video/youtube",
                 subtitle: `/subtitles/${meta.bandID}/${meta.songID}.br`, //meta.subtitle,
                 fonts: meta.fonts,
+                size: meta.size,
                 url: page.url,
               },
             ]}

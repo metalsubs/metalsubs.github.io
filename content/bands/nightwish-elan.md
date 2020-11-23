@@ -12,6 +12,9 @@ song: Élan
 bandID: nightwish
 songID: elan
 subtitle: elan.ass
+size:
+    width: 1920
+    height: 1080
 fonts:
     - KaushanScript-Regular.ttf
 youtubeID: zPonioDYnoY
