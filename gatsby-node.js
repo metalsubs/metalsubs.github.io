@@ -125,7 +125,15 @@ exports.createPages = ({ graphql, actions }) => {
                   label: "<English>",
                   selected: true,
                 },
-              ],
+              ].concat(
+                frontmatter.translations
+                  ? frontmatter.translations.map(translation => ({
+                      src: `${siteMetadata.subtitleBaseURL}${frontmatter.bandID}/${frontmatter.songID}.${translation}.br`,
+                      label: translation,
+                      selected: false,
+                    }))
+                  : []
+              ),
               octopus: {
                 debug: false,
                 workerUrl: siteMetadata.octopusWorkerURL,
