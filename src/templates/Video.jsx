@@ -1,6 +1,6 @@
 import React from "react"
 import { DiscussionEmbed } from "disqus-react"
-import styled from 'styled-components'
+import styled from "styled-components"
 import VideoLayout from "../layouts/VideoLayout"
 import SEO from "../components/SEO"
 import Player from "../components/Player"
@@ -86,54 +86,54 @@ const Comments = styled.div`
   }
 `
 
-const VideoTemplate = ({ pageContext: { meta, page } }) => (
-  <>
-    <VideoLayout>
-      <SEO title={page.title} pathname={page.url} />
-      <Container>
-        <PlayerContainer>
-          <Player
-            controls
-            sources={[
-              {
-                src: `https://www.youtube.com/watch?v=${meta.youtubeID}`,
-                type: "video/youtube",
-                subtitle: `/subtitles/${meta.bandID}/${meta.songID}.br`, //meta.subtitle,
-                fonts: meta.fonts,
-                size: meta.size,
-                url: page.url,
-              },
-            ]}
-            onPlay={() => {}}
-            playsInline
-          />
-        </PlayerContainer>
-      </Container>
-      <Meta>
-        <InfoContainer>
-          <Cover>
-            <Image
-              alt=""
-              src={require(`../images/bands/${meta.bandID}/${meta.covers.album}`)}
+const VideoTemplate = ({
+  pageContext: { meta, page, sources, videoJsASSSubtitlesSwitcher },
+}) => {
+  console.log("videoJsASSSubtitlesSwitcher", videoJsASSSubtitlesSwitcher);
+  return (
+    <>
+      <VideoLayout>
+        <SEO title={page.title} pathname={page.url} />
+        <Container>
+          <PlayerContainer>
+            <Player
+              controls
+              videoJsASSSubtitlesSwitcher={videoJsASSSubtitlesSwitcher}
+              sources={sources}
+              onPlay={() => {}}
+              playsInline
             />
-          </Cover>
-          <Info>
-            <SongTitle>{meta.song}</SongTitle>
-            <SongArtist>{meta.band}</SongArtist>
-          </Info>
-        </InfoContainer>
-      </Meta>
-      <Comments>
-        <DiscussionEmbed
-          shortname={"metalsubs"}
-          config={{
-            identifier: page.url,
-            title: page.title,
-          }}
-        />
-      </Comments>
-    </VideoLayout>
-  </>
-)
+          </PlayerContainer>
+        </Container>
+        <Meta>
+          <InfoContainer>
+            <Cover>
+              <Image
+                alt=""
+                src={require(`../images/bands/${meta.bandID}/${meta.covers.album}`)}
+              />
+            </Cover>
+            <Info>
+              <SongTitle>{meta.song}</SongTitle>
+              <SongArtist>{meta.band}</SongArtist>
+            </Info>
+          </InfoContainer>
+        </Meta>
+        <pre>{JSON.stringify(page, null, 2)}</pre>
+        <pre>{JSON.stringify(meta, null, 2)}</pre>
+        <pre>{JSON.stringify(videoJsASSSubtitlesSwitcher, null, 2)}</pre>
+        <Comments>
+          <DiscussionEmbed
+            shortname={"metalsubs"}
+            config={{
+              identifier: page.url,
+              title: page.title,
+            }}
+          />
+        </Comments>
+      </VideoLayout>
+    </>
+  )
+}
 
 export default VideoTemplate

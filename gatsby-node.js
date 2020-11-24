@@ -1,28 +1,5 @@
 const path = require(`path`)
 
-const createImageQuery = imagePath => `
-{
-  allFile(filter: {relativePath: {eq: "${imagePath}"}}) {
-    edges {
-      node {
-        absolutePath
-        relativeDirectory
-        relativePath
-        dir
-        publicURL
-        base
-        childImageSharp {
-          fluid(grayscale: true) {
-            originalName
-            src
-          }
-        }
-      }
-    }
-  }
-}
-`
-
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
@@ -31,6 +8,18 @@ exports.createPages = ({ graphql, actions }) => {
   return graphql(
     `
       {
+        allSite {
+          nodes {
+            siteMetadata {
+              title
+              youtubeBaseURL
+              subtitleBaseURL
+              octopusWorkerURL
+              fontsBaseURL
+              videoSelector
+            }
+          }
+        }
         allMarkdownRemark(
           # filter: { frontmatter: { layout: { eq: "post" } } }
           sort: { fields: [frontmatter___date], order: DESC }
@@ -55,6 +44,7 @@ exports.createPages = ({ graphql, actions }) => {
                 bandID
                 songID
                 subtitle
+                translations
                 size {
                   width
                   height
@@ -76,39 +66,72 @@ exports.createPages = ({ graphql, actions }) => {
       throw result.errors
     }
 
-    const posts = result.data.allMarkdownRemark.edges
+    const {
+      allMarkdownRemark: { edges: posts },
+      allSite: {
+        nodes: {
+          0: { siteMetadata },
+        },
+      },
+    } = result.data
 
-    posts.forEach(async (post, index) => {
-      if (post.node.frontmatter.layout === "video") {
+    posts.forEach(async (post) => {
+      const { frontmatter } = post.node
+      if (frontmatter.layout === "video") {
         createPage({
           component: pageTemplate,
-          path: post.node.frontmatter.path,
+          path: frontmatter.path,
           context: {
             page: {
-              url: post.node.frontmatter.path,
-              layout: post.node.frontmatter.layout,
-              title: post.node.frontmatter.title,
-              description: post.node.frontmatter.description,
-              date: post.node.frontmatter.date,
-              creation_date: post.node.frontmatter.creation_date,
-              path: post.node.frontmatter.path,
-              draft: post.node.frontmatter.draft,
+              url: frontmatter.path,
+              layout: frontmatter.layout,
+              title: frontmatter.title,
+              description: frontmatter.description,
+              date: frontmatter.date,
+              creation_date: frontmatter.creation_date,
+              path: frontmatter.path,
+              draft: frontmatter.draft,
             },
             meta: {
-              band: post.node.frontmatter.band,
-              song: post.node.frontmatter.song,
-              bandID: post.node.frontmatter.bandID,
-              songID: post.node.frontmatter.songID,
-              subtitle: post.node.frontmatter.subtitle,
+              band: frontmatter.band,
+              song: frontmatter.song,
+              bandID: frontmatter.bandID,
+              songID: frontmatter.songID,
+              subtitle: frontmatter.subtitle,
+              translations: frontmatter.translations,
               size: {
-                width: post.node.frontmatter.size.width,
-                height: post.node.frontmatter.size.height,
+                width: frontmatter.size.width,
+                height: frontmatter.size.height,
               },
-              fonts: post.node.frontmatter.fonts,
-              youtubeID: post.node.frontmatter.youtubeID,
+              fonts: frontmatter.fonts,
+              youtubeID: frontmatter.youtubeID,
               covers: {
-                album: post.node.frontmatter.covers.album,
-                song: post.node.frontmatter.covers.song,
+                album: frontmatter.covers.album,
+                song: frontmatter.covers.song,
+              },
+              octopusWorkerURL: siteMetadata.octopusWorkerURL,
+            },
+            sources: [
+              {
+                src: `${siteMetadata.youtubeBaseURL}${frontmatter.youtubeID}`,
+                type: "video/youtube",
+              },
+            ],
+            videoJsASSSubtitlesSwitcher: {
+              videoSelector: siteMetadata.videoSelector,
+              subtitles: [
+                {
+                  src: `${siteMetadata.subtitleBaseURL}${frontmatter.bandID}/${frontmatter.songID}.br`,
+                  label: "<English>",
+                  selected: true,
+                },
+              ],
+              octopus: {
+                debug: false,
+                workerUrl: siteMetadata.octopusWorkerURL,
+                fonts: frontmatter.fonts.map(
+                  font => `${siteMetadata.fontsBaseURL}${font}`
+                ),
               },
             },
           },
@@ -131,6 +154,6 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
           },
         ],
       },
-    })
+    });
   }
 }

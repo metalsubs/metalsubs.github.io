@@ -3,6 +3,11 @@ module.exports = {
     title: `MetalSubs`,
     description: `Home of karaokes for metal songs`,
     author: `@metalsubs`,
+    youtubeBaseURL: "https://www.youtube.com/watch?v=",
+    octopusWorkerURL: "/octopus/subtitles-octopus-worker.js",
+    subtitleBaseURL: "/subtitles/",
+    fontsBaseURL: "/fonts/",
+    videoSelector: "iframe[id^='vjs_video']",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

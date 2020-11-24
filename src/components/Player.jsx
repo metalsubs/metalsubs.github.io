@@ -1,19 +1,26 @@
 import React from "react"
-import videojs from "video.js"
+
 import "videojs-youtube"
 import "video.js/dist/video-js.css"
 import "videojs-landscape-fullscreen"
-import subtitles from "../utils/subtitles"
+import "../utils/videojs-ass-subtitles-switcher"
+import videojs from "video.js"
 
 class Player extends React.Component {
   componentDidMount() {
+    const { videoJsASSSubtitlesSwitcher, ...rest } = this.props
+
     const options = {
       html5: {
         hls: {
           overrideNative: !videojs.browser.IS_SAFARI,
         },
       },
-      ...this.props,
+      plugins: {
+        videoJsASSSubtitlesSwitcher
+      },
+      muted: true,
+      ...rest,
     }
     this.player = videojs(this.videoNode, options, function onPlayerReady() {
       // Noob
@@ -33,35 +40,16 @@ class Player extends React.Component {
 
     this.player.on("play", this.props.onPlay)
     this.player.on("ready", () => {
-      this.subtitles = subtitles(
-        this.player,
-        this.props.sources[0].subtitle,
-        this.props.sources[0].size,
-        this.props.sources[0].fonts.map(font => `/fonts/${font}`)
-      )
     })
   }
 
   componentWillUnmount() {
     if (this.player) {
+      this.player.videoJsASSSubtitlesSwitcher().dispose();
       this.player.dispose();
     }
-
-    if (this.subtitles) {
-      this.subtitles.dispose()
-      this.subtitles = null;
-    }
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.themeName !== this.props.themeName) {
-      this.player.removeClass(`vjs-theme-${this.props.themeName}`)
-      this.player.addClass(`vjs-theme-${nextProps.themeName}`)
-
-      this.player.src(nextProps.sources)
-      this.player.poster(nextProps.poster)
-    }
-  }
   render() {
     return (
       
