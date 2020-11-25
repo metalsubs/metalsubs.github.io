@@ -3,13 +3,15 @@ import React from "react"
 import "videojs-youtube"
 import "video.js/dist/video-js.css"
 import "videojs-landscape-fullscreen"
+// import "videojs-contrib-quality-levels"
+// import "videojs-hls-quality-selector"
 import "../utils/videojs-ass-subtitles-switcher"
+import "../utils/videojs-ass-subtitles-switcher.css"
 import videojs from "video.js"
 
 class Player extends React.Component {
   componentDidMount() {
     const { videoJsASSSubtitlesSwitcher, ...rest } = this.props
-
     const options = {
       html5: {
         hls: {
@@ -17,9 +19,8 @@ class Player extends React.Component {
         },
       },
       plugins: {
-        videoJsASSSubtitlesSwitcher
+        videoJsASSSubtitlesSwitcher,
       },
-      muted: true,
       ...rest,
     }
     this.player = videojs(this.videoNode, options, function onPlayerReady() {

@@ -128,6 +128,6 @@ const VideoTemplate = ({
       </Comments>
     </VideoLayout>
   </>
-);
+)
 
 export default VideoTemplate

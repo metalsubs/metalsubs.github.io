@@ -3,6 +3,17 @@ const path = require(`path`)
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
+  const languages = [
+    {
+      code: 'us',
+      language: 'English'
+    },
+    {
+      code: 'es',
+      language: 'Spanish'
+    }
+  ]
+
   const pageTemplate = path.resolve(`./src/templates/Video.jsx`)
 
   return graphql(
@@ -77,6 +88,7 @@ exports.createPages = ({ graphql, actions }) => {
 
     posts.forEach(async (post) => {
       const { frontmatter } = post.node
+
       if (frontmatter.layout === "video") {
         createPage({
           component: pageTemplate,
@@ -121,15 +133,19 @@ exports.createPages = ({ graphql, actions }) => {
               videoSelector: siteMetadata.videoSelector,
               subtitles: [
                 {
-                  src: `${siteMetadata.subtitleBaseURL}${frontmatter.bandID}/${frontmatter.songID}.br`,
-                  label: "<English>",
+                  src: `${siteMetadata.subtitleBaseURL}${frontmatter.bandID}/${frontmatter.songID}.ass`,
+                  label: "Song Language",
+                  value: "song",
                   selected: true,
                 },
               ].concat(
                 frontmatter.translations
                   ? frontmatter.translations.map(translation => ({
-                      src: `${siteMetadata.subtitleBaseURL}${frontmatter.bandID}/${frontmatter.songID}.${translation}.br`,
-                      label: translation,
+                      src: `${siteMetadata.subtitleBaseURL}${frontmatter.bandID}/${frontmatter.songID}.${translation}.ass`,
+                      label: languages.find(l =>
+                        new RegExp(`^${l.code}-[A-Z]+$`).test(translation)
+                      ).language,
+                      value: translation,
                       selected: false,
                     }))
                   : []

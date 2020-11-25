@@ -12,6 +12,8 @@ song: Élan
 bandID: nightwish
 songID: elan
 subtitle: elan.ass
+translations:
+    - es-MX
 size:
     width: 1920
     height: 1080
