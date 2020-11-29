@@ -130,7 +130,7 @@ exports.createPages = ({ graphql, actions }) => {
               },
             ],
             videoJsASSSubtitlesSwitcher: {
-              videoSelector: siteMetadata.videoSelector,
+              // videoSelector: siteMetadata.videoSelector,
               subtitles: [
                 {
                   src: `${siteMetadata.subtitleBaseURL}${frontmatter.bandID}/${frontmatter.songID}.ass`,
@@ -151,6 +151,7 @@ exports.createPages = ({ graphql, actions }) => {
                   : []
               ),
               octopus: {
+                videoSelector: siteMetadata.videoSelector,
                 debug: false,
                 workerUrl: siteMetadata.octopusWorkerURL,
                 fonts: frontmatter.fonts.map(
