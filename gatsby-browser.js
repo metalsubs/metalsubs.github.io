@@ -5,4 +5,11 @@
  */
 
 // You can delete this file if you're not using it
-require("normalize.css");
+import videojs from 'video.js'
+import ASSSubtitlesSwitcher from "./src/utils/videojs-ass-subtitles-switcher"
+import Octopus from "./src/utils/videojs-octopus"
+require("normalize.css")
+
+videojs.log.level("off")
+videojs.registerPlugin("ASSSubtitlesSwitcher", ASSSubtitlesSwitcher)
+videojs.registerPlugin("Octopus", Octopus)

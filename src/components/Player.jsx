@@ -3,10 +3,7 @@ import React from "react"
 import "videojs-youtube"
 import "video.js/dist/video-js.css"
 import "videojs-landscape-fullscreen"
-// import "videojs-contrib-quality-levels"
-// import "videojs-hls-quality-selector"
 import "../utils/videojs-ass-subtitles-switcher"
-import "../utils/videojs-ass-subtitles-switcher.css"
 import videojs from "video.js"
 
 class Player extends React.Component {
@@ -18,13 +15,16 @@ class Player extends React.Component {
           overrideNative: !videojs.browser.IS_SAFARI,
         },
       },
-      plugins: {
-        videoJsASSSubtitlesSwitcher,
-      },
+      plugins: {},
       ...rest,
     }
+
     this.player = videojs(this.videoNode, options, function onPlayerReady() {
       // Noob
+      this.ASSSubtitlesSwitcher({
+        subtitles: videoJsASSSubtitlesSwitcher.subtitles,
+      })
+      this.Octopus(videoJsASSSubtitlesSwitcher.octopus)
     });
 
     this.player.landscapeFullscreen({
@@ -46,7 +46,6 @@ class Player extends React.Component {
 
   componentWillUnmount() {
     if (this.player) {
-      this.player.videoJsASSSubtitlesSwitcher().dispose();
       this.player.dispose();
     }
   }

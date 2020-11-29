@@ -130,7 +130,6 @@ exports.createPages = ({ graphql, actions }) => {
               },
             ],
             videoJsASSSubtitlesSwitcher: {
-              // videoSelector: siteMetadata.videoSelector,
               subtitles: [
                 {
                   src: `${siteMetadata.subtitleBaseURL}${frontmatter.bandID}/${frontmatter.songID}.ass`,
