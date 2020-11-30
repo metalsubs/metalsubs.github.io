@@ -23,6 +23,6 @@ fonts:
     - Norican-Regular.ttf
 youtubeID: EhGgb1E3HpQ
 covers: 
-    album: album-the-holographic-principle.jpg
-    song: beyond-the-matrix.jpg
+    album: ../../src/images/bands/epica/album-the-holographic-principle.jpg
+    song: ../../src/images/bands/epica/beyond-the-matrix.jpg
 ---

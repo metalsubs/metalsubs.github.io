@@ -21,7 +21,7 @@ fonts:
     - KaushanScript-Regular.ttf
 youtubeID: zPonioDYnoY
 covers: 
-    album: album-endless-forms-most-beautiful.jpg
-    song: elan.jpg
+    album: ../../src/images/bands/nightwish/album-endless-forms-most-beautiful.jpg
+    song: ../../src/images/bands/nightwish/elan.jpg
 ---
 

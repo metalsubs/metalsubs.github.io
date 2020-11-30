@@ -21,6 +21,6 @@ fonts:
     - FjallaOne-Regular.ttf
 youtubeID: kObI4XuTR2o
 covers: 
-    album: album-the-days-of-grays.jpg
-    song: flag-in-the-ground.jpg
+    album: ../../src/images/bands/sonata-arctica/album-the-days-of-grays.jpg
+    song: ../../src/images/bands/sonata-arctica/flag-in-the-ground.jpg
 ---

@@ -1,10 +1,13 @@
 import React from "react"
 import { DiscussionEmbed } from "disqus-react"
-import styled from 'styled-components'
+import styled from "styled-components"
+import Img from 'gatsby-image'
 import VideoLayout from "../layouts/VideoLayout"
 import SEO from "../components/SEO"
 import Player from "../components/Player"
 import media from "../utils/media-query"
+import prepareInfo from "../utils/video-info"
+import { graphql } from "gatsby"
 
 const Container = styled.div`
   background-color: black;
@@ -86,48 +89,111 @@ const Comments = styled.div`
   }
 `
 
-const VideoTemplate = ({
-  pageContext: { meta, page, sources, videoJsASSSubtitlesSwitcher },
-}) => (
-  <>
-    <VideoLayout>
-      <SEO title={page.title} pathname={page.url} />
-      <Container>
-        <PlayerContainer>
-          <Player
-            controls
-            videoJsASSSubtitlesSwitcher={videoJsASSSubtitlesSwitcher}
-            sources={sources}
-            onPlay={() => {}}
-            playsInline
-          />
-        </PlayerContainer>
-      </Container>
-      <Meta>
-        <InfoContainer>
-          <Cover>
-            <Image
-              alt=""
-              src={require(`../images/bands/${meta.bandID}/${meta.covers.album}`)}
+const VideoTemplate = (data) => {
+  const { meta, page, sources, videoJsASSSubtitlesSwitcher } = prepareInfo(data)
+  return (
+    <>
+      <VideoLayout>
+        <SEO title={page.title} pathname={page.path} />
+        <Container>
+          <PlayerContainer>
+            <Player
+              controls
+              videoJsASSSubtitlesSwitcher={videoJsASSSubtitlesSwitcher}
+              sources={sources}
+              onPlay={() => {}}
+              playsInline
             />
-          </Cover>
-          <Info>
-            <SongTitle>{meta.song}</SongTitle>
-            <SongArtist>{meta.band}</SongArtist>
-          </Info>
-        </InfoContainer>
-      </Meta>
-      <Comments>
-        <DiscussionEmbed
-          shortname={"metalsubs"}
-          config={{
-            identifier: page.url,
-            title: page.title,
-          }}
-        />
-      </Comments>
-    </VideoLayout>
-  </>
+          </PlayerContainer>
+        </Container>
+        <Meta>
+          <InfoContainer>
+            <Cover>
+              <Img fluid={meta.covers.album} />
+            </Cover>
+            <Info>
+              <SongTitle>{meta.song}</SongTitle>
+              <SongArtist>{meta.band}</SongArtist>
+            </Info>
+          </InfoContainer>
+        </Meta>
+        <Comments>
+          <DiscussionEmbed
+            shortname={"metalsubs"}
+            config={{
+              identifier: page.url,
+              title: page.title,
+            }}
+          />
+        </Comments>
+      </VideoLayout>
+    </>
+  )
+}
+
+const Template = props => (
+  <div>
+    <h1>URL: {props.path}</h1>
+    <h1>Content</h1>
+    <pre>{JSON.stringify(prepareInfo(props), null, 2)}</pre>
+  </div>
 )
 
 export default VideoTemplate
+// export default Template
+
+export const pageQuery = graphql`
+  query VideoBySlug($slug: String!) {
+    allSite {
+      nodes {
+        siteMetadata {
+          title
+          youtubeBaseURL
+          subtitleBaseURL
+          octopusWorkerURL
+          fontsBaseURL
+          videoSelector
+        }
+      }
+    }
+    markdownRemark(fields: { slug: { eq: $slug } }) {
+      frontmatter {
+        layout
+        title
+        description
+        date
+        creation_date
+        path
+        draft
+        band
+        song
+        bandID
+        songID
+        subtitle
+        translations
+        size {
+          width
+          height
+        }
+        fonts
+        youtubeID
+        covers {
+          album {
+            childImageSharp {
+              fluid(maxWidth: 800) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          song {
+            childImageSharp {
+              fluid(maxWidth: 800) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`

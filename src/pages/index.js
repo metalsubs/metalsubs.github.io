@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import { Link as GatsbyLink } from "gatsby"
 import styled from "styled-components"
+import Img from 'gatsby-image'
 
 // import Layout from "../components/layout"
 import MainLayout from "../layouts/MainLayout.jsx"
@@ -29,11 +30,12 @@ const SongContainer = styled.div`
   `}
 
   display: flex;
+  justify-content: space-evenly;
   /* margin: 0 px; */
 `
 
 const Link = styled(GatsbyLink)`
-  width: 100%;
+  /* width: 100%; */
   position: relative;
   display: flex;
   flex-direction: column;
@@ -57,12 +59,20 @@ const BackgroundLayer = styled.div`
   z-index: 12;
 `
 
-const Picture = styled.img`
-  display: block;
-  width: 100%;
-  z-index: 14;
+// const Picture = styled.img`
+//   display: block;
+//   width: 100%;
+//   z-index: 14;
+// `
+
+const SetImg = styled(Img)`
+  display: block !important;
+  margin: 0 auto;
+  // above don't really do anything in this case
+  flex-grow: 1; // use as much space as available
+  width: 700px; // or set a specific size and it'll be centered within the available space of the flex parent.
+  /* width: 100%; */
 `
-  
 
 const Description = styled.div`
   position: absolute;
@@ -82,13 +92,26 @@ const Description = styled.div`
 `
 
 const Song = ({ url, bandID, songID, title, covers }) => {
-  const image = require(`../images/bands/${bandID}/${covers.song}`)
+  // const image = require(`../images/bands/${bandID}/${covers.song}`)
+  console.log({ title, song: covers.song })
   return (
     <SongContainer data-name="SongContainer">
       <Link to={url} data-name="Link">
-        <Picture src={image} alt={title} data-name="Picture" />
+        <SetImg
+          fluid={covers.song.childImageSharp.fluid}
+          alt={title}
+          data-name="Picture"
+        />
+        {/* <Picture
+          src={covers.song.childImageSharp.fluid.src}
+          alt={title}
+          data-name="Picture"
+        /> */}
         <Description>{title}</Description>
-        <BackgroundLayer data-name="BackgroundLayer" image={image} />
+        <BackgroundLayer
+          data-name="BackgroundLayer"
+          image={covers.song.childImageSharp.fluid.base64}
+        />
       </Link>
     </SongContainer>
   )
@@ -102,20 +125,22 @@ const IndexPage = ({
   return (
     <MainLayout>
       <SEO title="Home" />
-
       <SongsContainer data-name="SongsContainer">
-        {songs.map(song => (
-          <Song
-            key={song.frontmatter.path}
-            url={song.frontmatter.path}
-            band={song.frontmatter.band}
-            title={song.frontmatter.title}
-            bandID={song.frontmatter.bandID}
-            songID={song.frontmatter.songID}
-            covers={song.frontmatter.covers}
-            data-name="Song"
-          />
-        ))}
+        {songs && songs.length === 0 && <div>Cargando...</div>}
+        {songs &&
+          songs.length > 0 &&
+          songs.map(song => (
+            <Song
+              key={song.frontmatter.path}
+              url={song.frontmatter.path}
+              band={song.frontmatter.band}
+              title={song.frontmatter.title}
+              bandID={song.frontmatter.bandID}
+              songID={song.frontmatter.songID}
+              covers={song.frontmatter.covers}
+              data-name="Song"
+            />
+          ))}
       </SongsContainer>
     </MainLayout>
   )
@@ -137,11 +162,24 @@ export const pageQuery = graphql`
           title
           path
           covers {
-            song
+            song {
+              childImageSharp {
+                fluid(maxWidth: 800) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
           bandID
           songID
           date
+          testImage {
+            childImageSharp {
+              fluid(maxWidth: 800) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
         }
       }
     }

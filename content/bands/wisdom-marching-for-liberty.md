@@ -21,6 +21,6 @@ fonts:
 - Birch.ttf
 youtubeID: v8amfLYjf9w
 covers: 
-    album: album-marching-for-liberty.jpg
-    song: marching-for-liberty.jpg
+    album: ../../src/images/bands/wisdom/album-marching-for-liberty.jpg
+    song: ../../src/images/bands/wisdom/marching-for-liberty.jpg
 ---

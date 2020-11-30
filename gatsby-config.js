@@ -25,11 +25,9 @@ module.exports = {
         path: `${__dirname}/content/bands`,
       },
     },
-    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-transformer-remark`,
-    },
+    `gatsby-transformer-sharp`,
+    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {
