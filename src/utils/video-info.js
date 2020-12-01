@@ -35,7 +35,7 @@ const prepareInfo = ({
     bandID: frontmatter.bandID,
     songID: frontmatter.songID,
     subtitle: frontmatter.subtitle,
-    translations: frontmatter.translations,
+    translations: frontmatter.translations || [],
     fonts: frontmatter.fonts,
     youtubeID: frontmatter.youtubeID,
     covers: {
