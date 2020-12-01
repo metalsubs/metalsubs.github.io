@@ -44,11 +44,13 @@ const InfoContainer = styled.div`
   `}
 `
 
-const Cover = styled.div``
+const Cover = styled.div`
+  width: 100%;
+  max-width: ${p => p.theme.breakpoints.xs};
+`
 
-const Image = styled.img`
-  width: 10rem;
-  height: 10rem;
+const CoverImage = styled(Img)`
+  width: 100%;
 `
 
 const Info = styled.div`
@@ -109,7 +111,7 @@ const VideoTemplate = (data) => {
         <Meta>
           <InfoContainer>
             <Cover>
-              <Img fluid={meta.covers.album} />
+              <CoverImage fluid={meta.covers.album} />
             </Cover>
             <Info>
               <SongTitle>{meta.song}</SongTitle>
@@ -130,14 +132,6 @@ const VideoTemplate = (data) => {
     </>
   )
 }
-
-const Template = props => (
-  <div>
-    <h1>URL: {props.path}</h1>
-    <h1>Content</h1>
-    <pre>{JSON.stringify(prepareInfo(props), null, 2)}</pre>
-  </div>
-)
 
 export default VideoTemplate
 // export default Template
