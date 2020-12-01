@@ -173,13 +173,6 @@ export const pageQuery = graphql`
           bandID
           songID
           date
-          testImage {
-            childImageSharp {
-              fluid(maxWidth: 800) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
         }
       }
     }
