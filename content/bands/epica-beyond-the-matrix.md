@@ -11,7 +11,7 @@ band: Epica
 song: Beyond the Matrix
 bandID: epica
 songID: beyond-the-matrix
-subtitle: beyond-the-matrix.br
+subtitle: beyond-the-matrix.ass
 translations:
     - es-MX
 size:
