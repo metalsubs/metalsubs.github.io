@@ -3,8 +3,6 @@ import PropTypes from "prop-types"
 import React from "react"
 import styled from 'styled-components'
 
-import media from "../utils/media-query"
-
 const Container = styled.header`
   position: fixed;
   top: 0;
@@ -72,5 +70,13 @@ const Header = ({ siteTitle }) => (
     </Content>
   </Container>
 )
+
+Header.propTypes = {
+  siteTitle: PropTypes.string,
+}
+
+Header.defaultProps = {
+  siteTitle: ``,
+}
 
 export default Header
