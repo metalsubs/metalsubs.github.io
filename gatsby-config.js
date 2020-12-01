@@ -8,6 +8,16 @@ module.exports = {
     subtitleBaseURL: "/subtitles/",
     fontsBaseURL: "/fonts/",
     videoSelector: "iframe[id^='vjs_video']",
+    languages: [
+      {
+        code: "us",
+        language: "English",
+      },
+      {
+        code: "es",
+        language: "Spanish",
+      },
+    ],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
