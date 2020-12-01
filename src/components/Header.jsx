@@ -50,7 +50,7 @@ const Menu = styled.div`
 const MenuItem = styled(Link)`
   color: white;
   text-decoration: none;
-  font-weight: normal;
+  font-weight: bold;
   padding-right: 8px;
 
   :hover {
