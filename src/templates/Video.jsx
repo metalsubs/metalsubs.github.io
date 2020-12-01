@@ -1,12 +1,11 @@
 import React from "react"
 import { DiscussionEmbed } from "disqus-react"
 import styled from "styled-components"
-import Img from 'gatsby-image'
+import Img from "gatsby-image"
 import VideoLayout from "../layouts/VideoLayout"
 import SEO from "../components/SEO"
 import Player from "../components/Player"
 import media from "../utils/media-query"
-import prepareInfo from "../utils/video-info"
 import { graphql } from "gatsby"
 
 const Container = styled.div`
@@ -91,50 +90,133 @@ const Comments = styled.div`
   }
 `
 
-const VideoTemplate = (data) => {
-  const { meta, page, sources, videoJsASSSubtitlesSwitcher } = prepareInfo(data)
-  return (
-    <>
-      <VideoLayout>
-        <SEO title={page.title} pathname={page.path} />
-        <Container>
-          <PlayerContainer>
-            <Player
-              controls
-              videoJsASSSubtitlesSwitcher={videoJsASSSubtitlesSwitcher}
-              sources={sources}
-              onPlay={() => {}}
-              playsInline
-            />
-          </PlayerContainer>
-        </Container>
-        <Meta>
-          <InfoContainer>
-            <Cover>
-              <CoverImage fluid={meta.covers.album} />
-            </Cover>
-            <Info>
-              <SongTitle>{meta.song}</SongTitle>
-              <SongArtist>{meta.band}</SongArtist>
-            </Info>
-          </InfoContainer>
-        </Meta>
-        <Comments>
-          <DiscussionEmbed
-            shortname={"metalsubs"}
-            config={{
-              identifier: page.url,
-              title: page.title,
-            }}
+const VideoTemplate = ({
+  meta,
+  page,
+  sources,
+  videoJsASSSubtitlesSwitcher,
+}) => (
+  <>
+    <VideoLayout>
+      <SEO title={page.title} pathname={page.path} />
+      <Container>
+        <PlayerContainer>
+          <Player
+            controls
+            videoJsASSSubtitlesSwitcher={videoJsASSSubtitlesSwitcher}
+            sources={sources}
+            onPlay={() => {}}
+            playsInline
           />
-        </Comments>
-      </VideoLayout>
-    </>
-  )
-}
+        </PlayerContainer>
+      </Container>
+      <Meta>
+        <InfoContainer>
+          <Cover>
+            <CoverImage fluid={meta.covers.album} />
+          </Cover>
+          <Info>
+            <SongTitle>{meta.song}</SongTitle>
+            <SongArtist>{meta.band}</SongArtist>
+          </Info>
+        </InfoContainer>
+      </Meta>
+      <Comments>
+        <DiscussionEmbed
+          shortname={"metalsubs"}
+          config={{
+            identifier: page.url,
+            title: page.title,
+          }}
+        />
+      </Comments>
+    </VideoLayout>
+  </>
+)
 
-export default VideoTemplate
-// export default Template
+const MapResponse = Component => ({
+  data: {
+    markdownRemark: { frontmatter },
+    allSite: {
+      nodes: {
+        0: { siteMetadata },
+      },
+    },
+  },
+}) =>
+  Component({
+    page: {
+      url: frontmatter.path,
+      layout: frontmatter.layout,
+      title: frontmatter.title,
+      description: frontmatter.description,
+      date: frontmatter.date,
+      creation_date: frontmatter.creation_date,
+      path: frontmatter.path,
+      draft: frontmatter.draft,
+    },
+    meta: {
+      band: frontmatter.band,
+      song: frontmatter.song,
+      bandID: frontmatter.bandID,
+      songID: frontmatter.songID,
+      subtitle: frontmatter.subtitle,
+      translations: frontmatter.translations || [],
+      fonts: frontmatter.fonts,
+      youtubeID: frontmatter.youtubeID,
+      covers: {
+        album: frontmatter.covers.album.childImageSharp.fluid,
+        song: frontmatter.covers.song.childImageSharp.fluid,
+      },
+      octopusWorkerURL: siteMetadata.octopusWorkerURL,
+    },
+    sources: [
+      {
+        src: `${siteMetadata.youtubeBaseURL}${frontmatter.youtubeID}`,
+        type: "video/youtube",
+      },
+    ],
+    videoJsASSSubtitlesSwitcher: {
+      subtitles: [
+        {
+          src: `${siteMetadata.subtitleBaseURL}${frontmatter.bandID}/${frontmatter.songID}.ass`,
+          label: "Song Language",
+          value: "song",
+          selected: true,
+        },
+      ].concat(
+        frontmatter.translations
+          ? frontmatter.translations.map(translation => ({
+              src: `${siteMetadata.subtitleBaseURL}${frontmatter.bandID}/${frontmatter.songID}.${translation}.ass`,
+              label: siteMetadata.languages.find(l =>
+                new RegExp(`^${l.code}-[A-Z]+$`).test(translation)
+              ).language,
+              value: translation,
+              selected: false,
+            }))
+          : []
+      ),
+      octopus: {
+        videoSelector: siteMetadata.videoSelector,
+        size: {
+          width: frontmatter.size.width,
+          height: frontmatter.size.height,
+          x2: frontmatter.size.x2 || false,
+        },
+        debug: false,
+        workerUrl: siteMetadata.octopusWorkerURL,
+        fonts: frontmatter.fonts.map(
+          font => `${siteMetadata.fontsBaseURL}${font}`
+        ),
+      },
+      player: {
+        aspectRatio: frontmatter.size.aspect_ratio || "16:9",
+      },
+    },
+  })
+
+export default MapResponse(VideoTemplate)
+// export default VideoTemplate
 
 export const pageQuery = graphql`
   query VideoBySlug($slug: String!) {
@@ -147,6 +229,10 @@ export const pageQuery = graphql`
           octopusWorkerURL
           fontsBaseURL
           videoSelector
+          languages {
+            code
+            language
+          }
         }
       }
     }

@@ -15,8 +15,6 @@ exports.createPages = ({ graphql, actions }) => {
     }
   ]
 
-  const pageTemplate = path.resolve(`./src/templates/Video.jsx`)
-
   return graphql(
     `
       {
@@ -29,6 +27,7 @@ exports.createPages = ({ graphql, actions }) => {
               fields {
                 slug
               }
+              html
               frontmatter {
                 title
                 path
@@ -45,25 +44,31 @@ exports.createPages = ({ graphql, actions }) => {
     }
 
     const {
-      allMarkdownRemark: { edges: videos },
+      allMarkdownRemark: { edges: pages },
     } = result.data
 
-    
-
-    // console.log(JSON.stringify(result.data, null, 2))
-
-    videos.forEach(video => {
-      const { frontmatter } = video.node
-
-      // console.log(">>> VIDEO", JSON.stringify(video, null, 2))
+    pages.forEach(page => {
+      const { frontmatter } = page.node
 
       if (frontmatter.layout === "video") {
         createPage({
-          component: pageTemplate,
+          component: path.resolve(`./src/templates/Video.jsx`),
           path: frontmatter.path,
-          slug: video.node.fields.slug,
+          slug: page.node.fields.slug,
           context: {
-            slug: video.node.fields.slug,
+            slug: page.node.fields.slug,
+          },
+        })
+      }
+
+      if (frontmatter.layout === "page") {
+        createPage({
+          component: path.resolve(`./src/templates/Page.jsx`),
+          path: frontmatter.path,
+          slug: page.node.fields.slug,
+          context: {
+            slug: page.node.fields.slug,
+            html: page.node.html,
           },
         })
       }

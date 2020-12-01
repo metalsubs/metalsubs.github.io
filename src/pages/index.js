@@ -151,6 +151,7 @@ export const pageQuery = graphql`
     allMarkdownRemark(
       limit: 1000
       sort: { order: DESC, fields: [frontmatter___date] }
+      filter: { frontmatter: { layout: { eq: "video" } } }
     ) {
       nodes {
         frontmatter {
