@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components';
 
+import MexicoFlag from './MexicoFlag'
+
 const Footer = styled.footer`
   display: flex;
   justify-content: center;
@@ -11,13 +13,25 @@ const Footer = styled.footer`
   background-color: #000;
 `
 
+const Link = styled.a`
+  color: white;
+  margin-left: 0.2rem;
+`
+
 const FooterItem = () => (
   <Footer>
-    © {new Date().getFullYear()}, Built with
-    {` `}
-    <a href="https://www.gatsbyjs.org" target="_blank" rel="noreferrer">
-      Gatsby
-    </a>
+    <p>
+      Built with ♥ from <MexicoFlag />
+    </p>
+    <p>by 
+      <Link
+        href="https://twitter.com/byoigres"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Sergio Flores
+      </Link>
+    </p>
   </Footer>
 )
 
