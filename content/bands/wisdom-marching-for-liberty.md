@@ -12,8 +12,6 @@ song: Marching for Liberty
 bandID: wisdom
 songID: marching-for-liberty
 subtitle: marching-for-liberty.ass
-translations:
-    - es-MX
 size:
     width: 1920
     height: 1080
