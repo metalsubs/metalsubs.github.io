@@ -8,6 +8,7 @@ import media from "../utils/media-query"
 const Container = styled.header`
   position: fixed;
   top: 0;
+  left: 0;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -17,15 +18,14 @@ const Container = styled.header`
   background-color: ${p => p.theme.colors.backgroundSecondary};
   max-height: 56px;
   height: 100%;
-  display: flex;
   box-shadow: 0px 4px 30px 0px rgba(25, 27, 28, 1);
 `
 
 const Content = styled.div`
-  margin: 0 1rem;
-  padding: 0;
   display: flex;
-  align-items: center;
+  padding: 16px;
+  font-family: sans-serif;
+  color: white;
 `
 
 const TitleContainer = styled.h1`
@@ -35,35 +35,42 @@ const TitleContainer = styled.h1`
 `
 
 const Title = styled(Link)`
+  padding-right: 8px;
   font-size: 1.3rem;
   color: white;
   text-decoration: none;
   font-weight: normal;
   font-family: "Cardo";
   font-family: "Holtwood One SC";
-  ${media.lessThan("md")`
-    font-size: 2.5rem;
-  `}
+`
+
+const Menu = styled.div`
+  display: flex;
+  margin-left: auto;
+`
+
+const MenuItem = styled(Link)`
+  color: white;
+  text-decoration: none;
+  font-weight: normal;
+  padding-right: 8px;
+
+  :hover {
+    text-decoration: underline;
+  }
 `
 
 const Header = ({ siteTitle }) => (
   <Container>
     <Content>
       <TitleContainer>
-        <Title to="/">
-          {siteTitle}
-        </Title>
+        <Title to="/">{siteTitle}</Title>
       </TitleContainer>
+      <Menu>
+        <MenuItem to="/faq">FAQ</MenuItem>
+      </Menu>
     </Content>
   </Container>
 )
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
 
 export default Header
