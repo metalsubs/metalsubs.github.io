@@ -40,22 +40,8 @@ const Link = styled(GatsbyLink)`
 
   :hover {
     transform: scale(1.05, 1.05);
-    ::after {
-      opacity: 1;
-    }
   }
 
-  ::after {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    border-radius: 5px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    transition: opacity 0.3s ease-in-out;
-  }
 
   ${media.greaterThan("md")`
     width: calc((100% / 2) - 3rem);
