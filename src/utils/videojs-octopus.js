@@ -15,9 +15,15 @@ class Octopus extends Plugin {
       return
     }
 
-    const { videoSelector, ...octopusOptions } = options
+    const { videoSelector, size, ...octopusOptions } = options
     const videoElement = document.querySelector(videoSelector)
     this.canvas = octopusOptions.canvas = this.createCanvasElement(videoElement)
+    this.size = size.x2
+      ? {
+          width: size.width * 2,
+          height: size.height * 2
+        }
+      : size
     octopusOptions.canvas = this.canvas
     octopusOptions.subUrl = this.player
       .ASSSubtitlesSwitcher()
@@ -125,10 +131,10 @@ class Octopus extends Plugin {
 
   resizePlayer() {
     videojs.log("octupus: resizePlayer")
-    var size = {
-      width: 1920,
-      height: 1080,
-    }
+    // var size = {
+    //   width: 1312, //1920,
+    //   height: 960 //1080,
+    // }
     this.canvas.style.display = "block"
     this.canvas.style.position = "absolute"
 
@@ -156,8 +162,8 @@ class Octopus extends Plugin {
       this.player.el_.offsetLeft !== undefined
     ) {
       this.octopus.resize(
-        size.width, //this.player.el_.offsetWidth,
-        size.height, //this.player.el_.offsetHeight,
+        this.size.width, //this.player.el_.offsetWidth,
+        this.size.height, //this.player.el_.offsetHeight,
         0, // this.player.el_.offsetTop,
         0 // this.player.el_.offsetLeft
       )

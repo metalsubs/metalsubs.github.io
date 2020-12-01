@@ -17,6 +17,8 @@ translations:
 size:
     width: 1920
     height: 1080
+    aspect_ratio: "16:9"
+    x2: false
 fonts:
     - KaushanScript-Regular.ttf
 youtubeID: zPonioDYnoY

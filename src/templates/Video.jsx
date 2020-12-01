@@ -174,6 +174,8 @@ export const pageQuery = graphql`
         size {
           width
           height
+          aspect_ratio
+          x2
         }
         fonts
         youtubeID

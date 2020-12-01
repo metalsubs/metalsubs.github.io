@@ -15,8 +15,9 @@ subtitle: flag-in-the-ground.ass
 translations:
     - es-MX
 size:
-    width: 1920
-    height: 1080
+    width: 656
+    height: 480
+    aspect_ratio: "4:3"
     x2: true
 fonts:
     - Kalam-Regular.ttf

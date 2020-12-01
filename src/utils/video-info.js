@@ -36,10 +36,6 @@ const prepareInfo = ({
     songID: frontmatter.songID,
     subtitle: frontmatter.subtitle,
     translations: frontmatter.translations,
-    size: {
-      width: frontmatter.size.width,
-      height: frontmatter.size.height,
-    },
     fonts: frontmatter.fonts,
     youtubeID: frontmatter.youtubeID,
     covers: {
@@ -76,11 +72,19 @@ const prepareInfo = ({
     ),
     octopus: {
       videoSelector: siteMetadata.videoSelector,
+      size: {
+        width: frontmatter.size.width,
+        height: frontmatter.size.height,
+        x2: frontmatter.size.x2 || false,
+      },
       debug: false,
       workerUrl: siteMetadata.octopusWorkerURL,
       fonts: frontmatter.fonts.map(
         font => `${siteMetadata.fontsBaseURL}${font}`
       ),
+    },
+    player: {
+      aspectRatio: frontmatter.size.aspect_ratio || "16:9",
     },
   },
 })
