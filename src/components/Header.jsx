@@ -14,8 +14,7 @@ const Container = styled.header`
   z-index: 2020;
   transform: translateY(0);
   transition: transform 0.3s ease;
-  background-color: #191b1c;
-  background-color: ${p => "#2d2d2d" /*p.theme.colors.backgroundSecondary*/};
+  background-color: ${p => p.theme.colors.backgroundSecondary};
   max-height: 56px;
   height: 100%;
   display: flex;
