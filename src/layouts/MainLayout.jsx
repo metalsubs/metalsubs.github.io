@@ -16,6 +16,7 @@ const Main = styled.main`
 
 const Content = styled.div`
   display: flex;
+  width: 100%;
   max-width: ${p => p.theme.breakpoints.xl};
 `
 

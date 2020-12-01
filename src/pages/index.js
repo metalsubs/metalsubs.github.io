@@ -2,48 +2,107 @@ import React from "react"
 import { graphql } from "gatsby"
 import { Link as GatsbyLink } from "gatsby"
 import styled from "styled-components"
-import Img from 'gatsby-image'
+import Img from "gatsby-image"
 
-// import Layout from "../components/layout"
 import MainLayout from "../layouts/MainLayout.jsx"
 import SEO from "../components/SEO"
 import media from "../utils/media-query"
 
-// import coverImage from "../images/bands/wisdom/marching-for-liberty/cover.jpg"
-
-const SongsContainer = styled.div`
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  /* background-color: red; */
-  /* padding: 5px; */
+const Wrapper = styled.div`
+  width: 100%;
+  margin: 0 1rem;
 `
 
-const SongContainer = styled.div`
-  /* outline: 1px solid blue; */
-  position: relative;
+const Container = styled.div`
+  width: 100%;
+  max-width: ${p => p.theme.breakpoints.xl};
+  margin: 0 auto;
+`
 
-  flex: 0 1 50%;
-
-  ${media.lessThan("md")`
-    flex: 0 1 100%;
-  `}
-
+const Songs = styled.div`
   display: flex;
-  justify-content: space-evenly;
-  /* margin: 0 px; */
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: stretch;
+  padding: 0;
+  max-width: ${p => p.theme.breakpoints.xl};
 `
 
 const Link = styled(GatsbyLink)`
-  /* width: 100%; */
+  width: 100%;
+  display: block;
+  margin: 1rem;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  margin: 10px;
-  z-index: 10;
+
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease-in-out;
+
+  :hover {
+    transform: scale(1.05, 1.05);
+    ::after {
+      opacity: 1;
+    }
+  }
+
+  ::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  ${media.greaterThan("md")`
+    width: calc((100% / 2) - 3rem);
+    height: calc(100% / 2);
+  `}
+
+  ${media.lessThan("md")`
+    width: 100%;
+    height: 100%;
+  `}
+`
+
+const CustomImage = styled(Img)`
+  width: 100%;
+`
+
+const Description = styled.div`
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.15);
+
+  transition: all 0.3s ease-in-out;
+
+  ${media.greaterThan("xl")`
+    font-size: 2rem;
+  `}
+
+  ${media.between("lg", "xl")`
+    font-size: 1.5rem;
+  `}
+
+  ${media.between("md", "lg")`
+    font-size: 1rem;
+  `}
+
+  ${media.lessThan("md")`
+    position: relative;
+    font-size: 2.5rem;
+    text-align: center;
+  `}
+  bottom: 0;
+  left: 0;
+  color: white;
+  z-index: 16;
+  width: 100%;
+  font-family: Cardo;
+  font-size: 1.5rem;
+  padding: 1rem;
 `
 
 const BackgroundLayer = styled.div`
@@ -59,92 +118,42 @@ const BackgroundLayer = styled.div`
   z-index: 12;
 `
 
-// const Picture = styled.img`
-//   display: block;
-//   width: 100%;
-//   z-index: 14;
-// `
-
-const SetImg = styled(Img)`
-  display: block !important;
-  margin: 0 auto;
-  // above don't really do anything in this case
-  flex-grow: 1; // use as much space as available
-  width: 700px; // or set a specific size and it'll be centered within the available space of the flex parent.
-  /* width: 100%; */
-`
-
-const Description = styled.div`
-  position: absolute;
-  ${media.lessThan("md")`
-    position: relative;
-    font-size: 2.5rem;
-    text-align: center;
-  `}
-  bottom: 0;
-  left: 0;
-  color: white;
-  z-index: 16;
-  width: 100%;
-  font-family: Cardo;
-  font-size: 1.5rem;
-  margin: 10px;
-`
-
-const Song = ({ url, bandID, songID, title, covers }) => {
-  // const image = require(`../images/bands/${bandID}/${covers.song}`)
-  console.log({ title, song: covers.song })
-  return (
-    <SongContainer data-name="SongContainer">
-      <Link to={url} data-name="Link">
-        <SetImg
-          fluid={covers.song.childImageSharp.fluid}
-          alt={title}
-          data-name="Picture"
-        />
-        {/* <Picture
-          src={covers.song.childImageSharp.fluid.src}
-          alt={title}
-          data-name="Picture"
-        /> */}
-        <Description>{title}</Description>
-        <BackgroundLayer
-          data-name="BackgroundLayer"
-          image={covers.song.childImageSharp.fluid.base64}
-        />
-      </Link>
-    </SongContainer>
-  )
-}
-
-const IndexPage = ({
-  data: {
-    allMarkdownRemark: { nodes: songs },
-  },
-}) => {
+const IndexPage = ({ songs }) => {
   return (
     <MainLayout>
       <SEO title="Home" />
-      <SongsContainer data-name="SongsContainer">
-        {songs && songs.length === 0 && <div>Cargando...</div>}
-        {songs &&
-          songs.length > 0 &&
-          songs.map(song => (
-            <Song
-              key={song.frontmatter.path}
-              url={song.frontmatter.path}
-              band={song.frontmatter.band}
-              title={song.frontmatter.title}
-              bandID={song.frontmatter.bandID}
-              songID={song.frontmatter.songID}
-              covers={song.frontmatter.covers}
-              data-name="Song"
-            />
-          ))}
-      </SongsContainer>
+      <Wrapper>
+        <Container>
+          <Songs>
+            {songs &&
+              songs.length > 0 &&
+              songs.map(song => (
+                <Link key={song.path} to={song.path}>
+                  <CustomImage fluid={song.image} alt={song.title} />
+                  <Description>{song.title}</Description>
+                  <BackgroundLayer
+                    data-name="BackgroundLayer"
+                    image={song.image.base64}
+                  />
+                </Link>
+              ))}
+          </Songs>
+        </Container>
+      </Wrapper>
     </MainLayout>
   )
 }
+
+const MapResponse = Component => result =>
+  Component({
+    songs: result.data.allMarkdownRemark.nodes.map(song => ({
+      path: song.frontmatter.path,
+      title: song.frontmatter.title,
+      image: song.frontmatter.covers.song.childImageSharp.fluid,
+    })),
+  })
+
+export default MapResponse(IndexPage)
 
 export const pageQuery = graphql`
   query IndexQuery {
@@ -178,5 +187,3 @@ export const pageQuery = graphql`
     }
   }
 `
-
-export default IndexPage
