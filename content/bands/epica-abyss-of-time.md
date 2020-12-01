@@ -15,7 +15,7 @@ subtitle: abyss-of-time.ass
 size:
     width: 1920
     height: 1080
-    aspect_ratio: "24:1"
+    aspect_ratio: "2.39:1"
     x2: false
 fonts:
     - KaushanScript-Regular.ttf

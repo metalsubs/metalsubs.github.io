@@ -17,6 +17,7 @@ class Player extends React.Component {
       },
       plugins: {},
       aspectRatio: videoJsASSSubtitlesSwitcher.player.aspectRatio,
+      fluid: true,
       ...rest,
     }
 
