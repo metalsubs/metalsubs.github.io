@@ -1,0 +1,611 @@
+[Script Info]
+Title: Default Aegisub file
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: [English] Bridge,Norican,90,&HFFC53165,&H000000FF,&H00E7ACC5,&H00000000,0,0,0,0,100,100,0,0,1,3,0,3,30,30,30,1
+Style: [English] Bridge (Second),Norican,90,&HFFC53165,&H000000FF,&H00E7ACC5,&H00000000,0,0,0,0,100,100,0,0,1,3,0,1,30,30,30,1
+Style: [English] Chorus,Edo,300,&H00C53165,&H000000FF,&H00E7ACC5,&H00821F4E,0,0,0,0,100,100,0,0,1,0,0,8,30,30,150,1
+Style: [English] Chorus (Second),Edo,90,&H00C53165,&H000000FF,&H00E7ACC5,&H00821F4E,0,0,0,0,100,100,0,0,1,0,0,3,30,30,30,1
+Style: [English] Verse,AnavioSmallCapitalsW01-Bold,90,&H3AA8514B,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,6,0,1,0.1,0,4,129,30,105,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:13.39,0:00:16.90,[English] Chorus (Second),,0000,0000,0000,,{\pos(1460,1000)}To
+Dialogue: 0,0:00:14.24,0:00:16.90,[English] Chorus (Second),,0000,0000,0000,,{\pos(1600,1000)}Be
+Dialogue: 0,0:00:15.37,0:00:16.90,[English] Chorus (Second),,0000,0000,0000,,{\pos(1710,1000)}Di
+Dialogue: 0,0:00:16.24,0:00:16.90,[English] Chorus (Second),,0000,0000,0000,,{\pos(1870,1000)}vine
+Dialogue: 0,0:01:04.27,0:01:07.60,[English] Verse,,0000,0000,0000,,LIVE IN\NTHIS\NMOMENT
+Dialogue: 0,0:01:08.22,0:01:11.30,[English] Verse,,0000,0000,0000,,LIKE\NTHERE\NIS NOT\NPAST
+Dialogue: 0,0:01:12.30,0:01:15.12,[English] Verse,,0000,0000,0000,,ALL THAT\NMATTER IS
+Dialogue: 0,0:01:15.50,0:01:17.50,[English] Verse,,0000,0000,0000,,{\pos(195,60)\fs90\1c&H7C3F44&\3c&HC8A6B8&}TO
+Dialogue: 0,0:01:20.22,0:01:23.56,[English] Verse,,0000,0000,0000,,BE IN\NTHIS\NMOMENT
+Dialogue: 0,0:01:24.32,0:01:27.53,[English] Verse,,0000,0000,0000,,JUDGMENTS\NWILL NOT\NLAST
+Dialogue: 0,0:01:28.22,0:01:30.89,[English] Verse,,0000,0000,0000,,URGE\NYOURSELF\NAGAIN
+Dialogue: 0,0:01:31.20,0:01:33.79,[English] Verse,,0000,0000,0000,,{\a1\pos(300,660)\fs105}TO
+Dialogue: 0,0:01:37.23,0:01:41.12,[English] Verse,,0000,0000,0000,,{\a1\pos(267,510)\fs90}TAKE\NA LEAP\NINTO\NTHE
+Dialogue: 0,0:01:45.24,0:01:47.83,[English] Verse,,0000,0000,0000,,{\pos(1191,810)\fs90}DARE TO
+Dialogue: 0,0:01:47.85,0:01:52.25,[English] Verse,,0000,0000,0000,,THE POINT\NOF NO\NRETURN\NRESTRAINS US
+Dialogue: 0,0:02:24.20,0:02:27.76,[English] Verse,,0000,0000,0000,,SHAKE OFF\NOILED\NFEATHERS
+Dialogue: 0,0:02:28.32,0:02:31.40,[English] Verse,,0000,0000,0000,,LEAVE\NYOUR\NPAST\NBEHIND
+Dialogue: 0,0:02:32.25,0:02:35.00,[English] Verse,,0000,0000,0000,,USE YOUR\NINNER FORCE
+Dialogue: 0,0:02:35.02,0:02:37.30,[English] Verse,,0000,0000,0000,,{\pos(1500,450)\fs96}TO
+Dialogue: 0,0:02:40.32,0:02:43.78,[English] Verse,,0000,0000,0000,,WHEN\NTHERE'S\NNO\NFUTURE
+Dialogue: 0,0:02:44.10,0:02:47.52,[English] Verse,,0000,0000,0000,,YOU CAN'T\NBE OCCUPIED
+Dialogue: 0,0:02:47.71,0:02:51.02,[English] Verse,,0000,0000,0000,,BY\NNON-ESSENTIAL\NWASTE
+Dialogue: 0,0:02:51.02,0:02:54.37,[English] Verse,,0000,0000,0000,,{\pos(159,615)\fs102\1c&H614142&}A{\1c&HC6999E&}ND
+Dialogue: 0,0:02:57.30,0:03:00.92,[English] Verse,,0000,0000,0000,,{\pos(1041,750)\fs93}RECREATE
+Dialogue: 0,0:03:05.22,0:03:07.56,[English] Verse,,0000,0000,0000,,{\pos(1287,705)\fs99}DARE TO
+Dialogue: 0,0:03:07.82,0:03:12.16,[English] Verse,,0000,0000,0000,,THE POINT\NOF NO\NRETURN\NRESTRAINS US
+Dialogue: 0,0:03:48.60,0:03:54.75,[English] Bridge,,0000,0000,0000,,{\t(0,0,0,)\blur3\move(1890,1050,1850,1050)\fad(100,300)}Someday you'll open up again
+Dialogue: 0,0:03:53.23,0:03:58.27,[English] Bridge (Second),,0000,0000,0000,,{\t(0,0,0,)\blur3\move(441,1050,401,1050)\fad(100,300)}To learn and grow
+Dialogue: 0,0:03:56.50,0:04:04.77,[English] Bridge,,0000,0000,0000,,{\t(0,0,0,)\blur3\move(1890,1050,1850,1050)\fad(100,300)}Someday you'll have to reach for new endeavors
+Dialogue: 0,0:04:05.19,0:04:10.72,[English] Bridge,,0000,0000,0000,,{\t(0,0,0,)\blur3\move(1890,1050,1850,1050)\fad(100,300)}To perceive your inner self
+Dialogue: 0,0:04:09.28,0:04:14.40,[English] Bridge (Second),,0000,0000,0000,,{\t(0,0,0,)\blur3\move(448,1050,408,1050)\fad(100,300)}Perceive your soul
+Dialogue: 0,0:04:12.59,0:04:20.04,[English] Bridge,,0000,0000,0000,,{\t(0,0,0,)\blur3\move(1890,1050,1850,1050)\fad(100,300)}Someday you'll start to live your life
+Dialogue: 0,0:04:20.66,0:04:20.72,[English] Chorus,chorus,0000,0000,0000,,{\org(1019,190)\frx0.6\fry0.6\frz0.6}{\a10\fs390\1a&H82&\3a&H82&}Responding
+Dialogue: 0,0:04:20.72,0:04:20.79,[English] Chorus,chorus,0000,0000,0000,,{\org(978,201)\frx0.6\fry0.6\frz0.6}{\a10\fs390\1a&H82&\3a&H82&}Responding
+Dialogue: 0,0:04:20.79,0:04:20.86,[English] Chorus,chorus,0000,0000,0000,,{\org(876,182)\frx0.6\fry0.6\frz0.6}{\a10\fs390\1a&H82&\3a&H82&}Responding
+Dialogue: 0,0:04:20.86,0:04:20.92,[English] Chorus,chorus,0000,0000,0000,,{\org(928,197)\frx0.6\fry0.6\frz0.6}{\a10\fs390\1a&H82&\3a&H82&}Responding
+Dialogue: 0,0:04:20.92,0:04:20.99,[English] Chorus,chorus,0000,0000,0000,,{\org(945,164)\frx0.6\fry0.6\frz0.6}{\a10\fs390\1a&H82&\3a&H82&}Responding
+Dialogue: 0,0:04:20.99,0:04:21.06,[English] Chorus,chorus,0000,0000,0000,,{\org(883,61)\frx0.6\fry0.6\frz0.6}{\a10\fs390\1a&H82&\3a&H82&}Responding
+Dialogue: 0,0:04:21.06,0:04:21.12,[English] Chorus,chorus,0000,0000,0000,,{\org(1055,191)\frx0.6\fry0.6\frz0.6}{\a10\fs390\1a&H82&\3a&H82&}Responding
+Dialogue: 0,0:04:21.12,0:04:21.19,[English] Chorus,chorus,0000,0000,0000,,{\org(895,245)\frx0.6\fry0.6\frz0.6}{\a10\fs390\1a&H82&\3a&H82&}Responding
+Dialogue: 0,0:04:21.19,0:04:21.26,[English] Chorus,chorus,0000,0000,0000,,{\org(915,121)\frx0.6\fry0.6\frz0.6}{\a10\fs390\1a&H82&\3a&H82&}Responding
+Dialogue: 0,0:04:21.26,0:04:21.33,[English] Chorus,chorus,0000,0000,0000,,{\org(954,186)\frx0.6\fry0.6\frz0.6}{\a10\fs390\1a&H82&\3a&H82&}Responding
+Dialogue: 0,0:04:21.33,0:04:21.39,[English] Chorus,chorus,0000,0000,0000,,{\org(975,210)\frx0.6\fry0.6\frz0.6}{\a10\fs390\1a&H82&\3a&H82&}Responding
+Dialogue: 0,0:04:21.39,0:04:21.46,[English] Chorus,chorus,0000,0000,0000,,{\org(950,86)\frx0.6\fry0.6\frz0.6}{\a10\fs390\1a&H82&\3a&H82&}Responding
+Dialogue: 0,0:04:21.46,0:04:21.53,[English] Chorus,chorus,0000,0000,0000,,{\org(992,92)\frx0.6\fry0.6\frz0.6}{\a10\fs390\1a&H82&\3a&H82&}Responding
+Dialogue: 0,0:04:21.53,0:04:21.59,[English] Chorus,chorus,0000,0000,0000,,{\org(979,78)\frx0.6\fry0.6\frz0.6}{\a10\fs390\1a&H82&\3a&H82&}Responding
+Dialogue: 0,0:04:21.59,0:04:21.66,[English] Chorus,chorus,0000,0000,0000,,{\org(1026,167)\frx0.6\fry0.6\frz0.6}{\a10\fs390\1a&H82&\3a&H82&}Responding
+Dialogue: 0,0:04:21.66,0:04:21.73,[English] Chorus,chorus,0000,0000,0000,,{\org(864,218)\frx0.6\fry0.6\frz0.6}{\a10\fs390\1a&H82&\3a&H82&}Responding
+Dialogue: 0,0:04:21.73,0:04:21.79,[English] Chorus,chorus,0000,0000,0000,,{\org(869,216)\frx0.6\fry0.6\frz0.6}{\a10\fs390\1a&H82&\3a&H82&}Responding
+Dialogue: 0,0:04:21.79,0:04:21.86,[English] Chorus,chorus,0000,0000,0000,,{\org(985,216)\frx0.6\fry0.6\frz0.6}{\a10\fs390\1a&H82&\3a&H82&}Responding
+Dialogue: 0,0:04:21.86,0:04:21.93,[English] Chorus,chorus,0000,0000,0000,,{\org(896,101)\frx0.6\fry0.6\frz0.6}{\a10\fs390\1a&H82&\3a&H82&}Responding
+Dialogue: 0,0:04:21.93,0:04:22.00,[English] Chorus,chorus,0000,0000,0000,,{\org(1045,113)\frx0.6\fry0.6\frz0.6}{\a10\fs390\1a&H82&\3a&H82&}Responding
+Dialogue: 0,0:04:22.00,0:04:22.01,[English] Chorus,chorus,0000,0000,0000,,{\org(875,121)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}with
+Dialogue: 0,0:04:22.01,0:04:22.03,[English] Chorus,chorus,0000,0000,0000,,{\org(1045,55)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}with
+Dialogue: 0,0:04:22.03,0:04:22.04,[English] Chorus,chorus,0000,0000,0000,,{\org(996,199)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}with
+Dialogue: 0,0:04:22.04,0:04:22.06,[English] Chorus,chorus,0000,0000,0000,,{\org(971,73)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}with
+Dialogue: 0,0:04:22.06,0:04:22.07,[English] Chorus,chorus,0000,0000,0000,,{\org(886,56)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}with
+Dialogue: 0,0:04:22.07,0:04:22.09,[English] Chorus,chorus,0000,0000,0000,,{\org(960,188)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}with
+Dialogue: 0,0:04:22.09,0:04:22.10,[English] Chorus,chorus,0000,0000,0000,,{\org(961,221)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}with
+Dialogue: 0,0:04:22.10,0:04:22.12,[English] Chorus,chorus,0000,0000,0000,,{\org(888,108)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}with
+Dialogue: 0,0:04:22.12,0:04:22.13,[English] Chorus,chorus,0000,0000,0000,,{\org(1036,203)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}with
+Dialogue: 0,0:04:22.13,0:04:22.15,[English] Chorus,chorus,0000,0000,0000,,{\org(999,180)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}with
+Dialogue: 0,0:04:22.15,0:04:22.16,[English] Chorus,chorus,0000,0000,0000,,{\org(1028,52)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}with
+Dialogue: 0,0:04:22.16,0:04:22.18,[English] Chorus,chorus,0000,0000,0000,,{\org(870,204)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}with
+Dialogue: 0,0:04:22.18,0:04:22.19,[English] Chorus,chorus,0000,0000,0000,,{\org(941,242)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}with
+Dialogue: 0,0:04:22.19,0:04:22.21,[English] Chorus,chorus,0000,0000,0000,,{\org(1058,127)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}with
+Dialogue: 0,0:04:22.21,0:04:22.22,[English] Chorus,chorus,0000,0000,0000,,{\org(919,104)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}with
+Dialogue: 0,0:04:22.22,0:04:22.24,[English] Chorus,chorus,0000,0000,0000,,{\org(1037,242)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}with
+Dialogue: 0,0:04:22.24,0:04:22.25,[English] Chorus,chorus,0000,0000,0000,,{\org(979,202)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}with
+Dialogue: 0,0:04:22.25,0:04:22.27,[English] Chorus,chorus,0000,0000,0000,,{\org(872,122)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}with
+Dialogue: 0,0:04:22.27,0:04:22.28,[English] Chorus,chorus,0000,0000,0000,,{\org(988,240)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}with
+Dialogue: 0,0:04:22.28,0:04:22.30,[English] Chorus,chorus,0000,0000,0000,,{\org(1010,70)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}with
+Dialogue: 0,0:04:24.60,0:04:24.67,[English] Chorus,chorus,0000,0000,0000,,{\org(895,60)\frx0.6\fry0.6\frz0.6}{\a10\fs390\1a&H82&\3a&H82&}Responding
+Dialogue: 0,0:04:24.67,0:04:24.74,[English] Chorus,chorus,0000,0000,0000,,{\org(904,79)\frx0.6\fry0.6\frz0.6}{\a10\fs390\1a&H82&\3a&H82&}Responding
+Dialogue: 0,0:04:24.74,0:04:24.81,[English] Chorus,chorus,0000,0000,0000,,{\org(946,171)\frx0.6\fry0.6\frz0.6}{\a10\fs390\1a&H82&\3a&H82&}Responding
+Dialogue: 0,0:04:24.81,0:04:24.88,[English] Chorus,chorus,0000,0000,0000,,{\org(914,215)\frx0.6\fry0.6\frz0.6}{\a10\fs390\1a&H82&\3a&H82&}Responding
+Dialogue: 0,0:04:24.88,0:04:24.95,[English] Chorus,chorus,0000,0000,0000,,{\org(917,90)\frx0.6\fry0.6\frz0.6}{\a10\fs390\1a&H82&\3a&H82&}Responding
+Dialogue: 0,0:04:24.95,0:04:25.02,[English] Chorus,chorus,0000,0000,0000,,{\org(890,204)\frx0.6\fry0.6\frz0.6}{\a10\fs390\1a&H82&\3a&H82&}Responding
+Dialogue: 0,0:04:25.02,0:04:25.09,[English] Chorus,chorus,0000,0000,0000,,{\org(870,211)\frx0.6\fry0.6\frz0.6}{\a10\fs390\1a&H82&\3a&H82&}Responding
+Dialogue: 0,0:04:25.09,0:04:25.16,[English] Chorus,chorus,0000,0000,0000,,{\org(998,79)\frx0.6\fry0.6\frz0.6}{\a10\fs390\1a&H82&\3a&H82&}Responding
+Dialogue: 0,0:04:25.16,0:04:25.23,[English] Chorus,chorus,0000,0000,0000,,{\org(1048,212)\frx0.6\fry0.6\frz0.6}{\a10\fs390\1a&H82&\3a&H82&}Responding
+Dialogue: 0,0:04:25.23,0:04:25.30,[English] Chorus,chorus,0000,0000,0000,,{\org(937,210)\frx0.6\fry0.6\frz0.6}{\a10\fs390\1a&H82&\3a&H82&}Responding
+Dialogue: 0,0:04:25.30,0:04:25.37,[English] Chorus,chorus,0000,0000,0000,,{\org(873,187)\frx0.6\fry0.6\frz0.6}{\a10\fs390\1a&H82&\3a&H82&}Responding
+Dialogue: 0,0:04:25.37,0:04:25.44,[English] Chorus,chorus,0000,0000,0000,,{\org(966,210)\frx0.6\fry0.6\frz0.6}{\a10\fs390\1a&H82&\3a&H82&}Responding
+Dialogue: 0,0:04:25.44,0:04:25.51,[English] Chorus,chorus,0000,0000,0000,,{\org(874,153)\frx0.6\fry0.6\frz0.6}{\a10\fs390\1a&H82&\3a&H82&}Responding
+Dialogue: 0,0:04:25.51,0:04:25.58,[English] Chorus,chorus,0000,0000,0000,,{\org(1000,160)\frx0.6\fry0.6\frz0.6}{\a10\fs390\1a&H82&\3a&H82&}Responding
+Dialogue: 0,0:04:25.58,0:04:25.65,[English] Chorus,chorus,0000,0000,0000,,{\org(879,180)\frx0.6\fry0.6\frz0.6}{\a10\fs390\1a&H82&\3a&H82&}Responding
+Dialogue: 0,0:04:25.65,0:04:25.72,[English] Chorus,chorus,0000,0000,0000,,{\org(874,90)\frx0.6\fry0.6\frz0.6}{\a10\fs390\1a&H82&\3a&H82&}Responding
+Dialogue: 0,0:04:25.72,0:04:25.79,[English] Chorus,chorus,0000,0000,0000,,{\org(1021,187)\frx0.6\fry0.6\frz0.6}{\a10\fs390\1a&H82&\3a&H82&}Responding
+Dialogue: 0,0:04:25.79,0:04:25.86,[English] Chorus,chorus,0000,0000,0000,,{\org(1059,185)\frx0.6\fry0.6\frz0.6}{\a10\fs390\1a&H82&\3a&H82&}Responding
+Dialogue: 0,0:04:25.86,0:04:25.94,[English] Chorus,chorus,0000,0000,0000,,{\org(1025,247)\frx0.6\fry0.6\frz0.6}{\a10\fs390\1a&H82&\3a&H82&}Responding
+Dialogue: 0,0:04:25.93,0:04:26.01,[English] Chorus,chorus,0000,0000,0000,,{\org(933,122)\frx0.6\fry0.6\frz0.6}{\a10\fs390\1a&H82&\3a&H82&}Responding
+Dialogue: 0,0:04:26.01,0:04:26.02,[English] Chorus,chorus,0000,0000,0000,,{\org(1049,240)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}with
+Dialogue: 0,0:04:26.02,0:04:26.03,[English] Chorus,chorus,0000,0000,0000,,{\org(1024,223)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}with
+Dialogue: 0,0:04:26.03,0:04:26.04,[English] Chorus,chorus,0000,0000,0000,,{\org(996,181)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}with
+Dialogue: 0,0:04:26.04,0:04:26.06,[English] Chorus,chorus,0000,0000,0000,,{\org(969,228)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}with
+Dialogue: 0,0:04:26.06,0:04:26.07,[English] Chorus,chorus,0000,0000,0000,,{\org(941,60)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}with
+Dialogue: 0,0:04:26.07,0:04:26.08,[English] Chorus,chorus,0000,0000,0000,,{\org(930,53)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}with
+Dialogue: 0,0:04:26.08,0:04:26.10,[English] Chorus,chorus,0000,0000,0000,,{\org(879,164)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}with
+Dialogue: 0,0:04:26.10,0:04:26.11,[English] Chorus,chorus,0000,0000,0000,,{\org(992,209)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}with
+Dialogue: 0,0:04:26.11,0:04:26.12,[English] Chorus,chorus,0000,0000,0000,,{\org(1055,118)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}with
+Dialogue: 0,0:04:26.12,0:04:26.14,[English] Chorus,chorus,0000,0000,0000,,{\org(900,108)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}with
+Dialogue: 0,0:04:26.14,0:04:26.15,[English] Chorus,chorus,0000,0000,0000,,{\org(938,200)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}with
+Dialogue: 0,0:04:26.15,0:04:26.16,[English] Chorus,chorus,0000,0000,0000,,{\org(973,216)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}with
+Dialogue: 0,0:04:26.16,0:04:26.17,[English] Chorus,chorus,0000,0000,0000,,{\org(965,54)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}with
+Dialogue: 0,0:04:26.17,0:04:26.19,[English] Chorus,chorus,0000,0000,0000,,{\org(920,109)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}with
+Dialogue: 0,0:04:26.19,0:04:26.20,[English] Chorus,chorus,0000,0000,0000,,{\org(901,64)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}with
+Dialogue: 0,0:04:26.20,0:04:26.21,[English] Chorus,chorus,0000,0000,0000,,{\org(1052,213)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}with
+Dialogue: 0,0:04:26.21,0:04:26.23,[English] Chorus,chorus,0000,0000,0000,,{\org(1017,80)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}with
+Dialogue: 0,0:04:26.23,0:04:26.24,[English] Chorus,chorus,0000,0000,0000,,{\org(915,104)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}with
+Dialogue: 0,0:04:26.24,0:04:26.25,[English] Chorus,chorus,0000,0000,0000,,{\org(951,209)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}with
+Dialogue: 0,0:04:26.25,0:04:26.27,[English] Chorus,chorus,0000,0000,0000,,{\org(989,104)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}with
+Dialogue: 0,0:04:44.70,0:04:44.72,[English] Chorus,,0000,0000,0000,,{\org(1026,218)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}is
+Dialogue: 0,0:04:44.72,0:04:44.74,[English] Chorus,,0000,0000,0000,,{\org(935,228)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}is
+Dialogue: 0,0:04:44.74,0:04:44.77,[English] Chorus,,0000,0000,0000,,{\org(1018,162)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}is
+Dialogue: 0,0:04:44.77,0:04:44.79,[English] Chorus,,0000,0000,0000,,{\org(1019,53)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}is
+Dialogue: 0,0:04:44.79,0:04:44.82,[English] Chorus,,0000,0000,0000,,{\org(971,226)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}is
+Dialogue: 0,0:04:44.82,0:04:44.84,[English] Chorus,,0000,0000,0000,,{\org(919,153)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}is
+Dialogue: 0,0:04:44.84,0:04:44.86,[English] Chorus,,0000,0000,0000,,{\org(981,116)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}is
+Dialogue: 0,0:04:44.86,0:04:44.89,[English] Chorus,,0000,0000,0000,,{\org(940,225)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}is
+Dialogue: 0,0:04:44.89,0:04:44.91,[English] Chorus,,0000,0000,0000,,{\org(1038,52)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}is
+Dialogue: 0,0:04:44.91,0:04:44.94,[English] Chorus,,0000,0000,0000,,{\org(910,61)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}is
+Dialogue: 0,0:04:44.94,0:04:44.96,[English] Chorus,,0000,0000,0000,,{\org(940,151)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}is
+Dialogue: 0,0:04:44.96,0:04:44.98,[English] Chorus,,0000,0000,0000,,{\org(1049,117)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}is
+Dialogue: 0,0:04:44.98,0:04:45.01,[English] Chorus,,0000,0000,0000,,{\org(1047,78)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}is
+Dialogue: 0,0:04:45.01,0:04:45.03,[English] Chorus,,0000,0000,0000,,{\org(970,60)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}is
+Dialogue: 0,0:04:45.03,0:04:45.06,[English] Chorus,,0000,0000,0000,,{\org(920,179)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}is
+Dialogue: 0,0:04:45.06,0:04:45.08,[English] Chorus,,0000,0000,0000,,{\org(1024,232)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}is
+Dialogue: 0,0:04:45.08,0:04:45.10,[English] Chorus,,0000,0000,0000,,{\org(975,161)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}is
+Dialogue: 0,0:04:45.10,0:04:45.13,[English] Chorus,,0000,0000,0000,,{\org(1048,249)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}is
+Dialogue: 0,0:04:45.13,0:04:45.15,[English] Chorus,,0000,0000,0000,,{\org(1020,96)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}is
+Dialogue: 0,0:04:45.15,0:04:45.18,[English] Chorus,,0000,0000,0000,,{\org(926,128)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}is
+Dialogue: 0,0:04:45.18,0:04:45.18,[English] Chorus,,0000,0000,0000,,{\org(930,106)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}a
+Dialogue: 0,0:04:45.18,0:04:45.19,[English] Chorus,,0000,0000,0000,,{\org(899,92)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}a
+Dialogue: 0,0:04:45.19,0:04:45.19,[English] Chorus,,0000,0000,0000,,{\org(1059,54)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}a
+Dialogue: 0,0:04:45.19,0:04:45.20,[English] Chorus,,0000,0000,0000,,{\org(901,147)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}a
+Dialogue: 0,0:04:45.20,0:04:45.21,[English] Chorus,,0000,0000,0000,,{\org(872,151)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}a
+Dialogue: 0,0:04:45.21,0:04:45.21,[English] Chorus,,0000,0000,0000,,{\org(948,90)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}a
+Dialogue: 0,0:04:45.21,0:04:45.22,[English] Chorus,,0000,0000,0000,,{\org(968,54)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}a
+Dialogue: 0,0:04:45.22,0:04:45.22,[English] Chorus,,0000,0000,0000,,{\org(1044,52)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}a
+Dialogue: 0,0:04:45.22,0:04:45.23,[English] Chorus,,0000,0000,0000,,{\org(1000,151)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}a
+Dialogue: 0,0:04:45.23,0:04:45.24,[English] Chorus,,0000,0000,0000,,{\org(1048,87)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}a
+Dialogue: 0,0:04:45.24,0:04:45.24,[English] Chorus,,0000,0000,0000,,{\org(1023,233)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}a
+Dialogue: 0,0:04:45.24,0:04:45.25,[English] Chorus,,0000,0000,0000,,{\org(991,112)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}a
+Dialogue: 0,0:04:45.25,0:04:45.25,[English] Chorus,,0000,0000,0000,,{\org(881,84)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}a
+Dialogue: 0,0:04:45.25,0:04:45.26,[English] Chorus,,0000,0000,0000,,{\org(861,220)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}a
+Dialogue: 0,0:04:45.26,0:04:45.27,[English] Chorus,,0000,0000,0000,,{\org(902,105)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}a
+Dialogue: 0,0:04:45.27,0:04:45.27,[English] Chorus,,0000,0000,0000,,{\org(868,195)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}a
+Dialogue: 0,0:04:45.27,0:04:45.28,[English] Chorus,,0000,0000,0000,,{\org(934,183)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}a
+Dialogue: 0,0:04:45.28,0:04:45.28,[English] Chorus,,0000,0000,0000,,{\org(990,133)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}a
+Dialogue: 0,0:04:45.28,0:04:45.29,[English] Chorus,,0000,0000,0000,,{\org(995,164)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}a
+Dialogue: 0,0:04:45.29,0:04:45.30,[English] Chorus,,0000,0000,0000,,{\org(868,185)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}a
+Dialogue: 0,0:04:45.30,0:04:45.31,[English] Chorus,,0000,0000,0000,,{\org(874,189)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}small
+Dialogue: 0,0:04:45.31,0:04:45.33,[English] Chorus,,0000,0000,0000,,{\org(1051,73)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}small
+Dialogue: 0,0:04:45.33,0:04:45.35,[English] Chorus,,0000,0000,0000,,{\org(972,92)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}small
+Dialogue: 0,0:04:45.35,0:04:45.37,[English] Chorus,,0000,0000,0000,,{\org(978,207)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}small
+Dialogue: 0,0:04:45.37,0:04:45.39,[English] Chorus,,0000,0000,0000,,{\org(918,73)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}small
+Dialogue: 0,0:04:45.39,0:04:45.41,[English] Chorus,,0000,0000,0000,,{\org(923,181)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}small
+Dialogue: 0,0:04:45.41,0:04:45.43,[English] Chorus,,0000,0000,0000,,{\org(995,69)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}small
+Dialogue: 0,0:04:45.42,0:04:45.44,[English] Chorus,,0000,0000,0000,,{\org(956,200)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}small
+Dialogue: 0,0:04:45.44,0:04:45.46,[English] Chorus,,0000,0000,0000,,{\org(880,106)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}small
+Dialogue: 0,0:04:45.46,0:04:45.48,[English] Chorus,,0000,0000,0000,,{\org(954,52)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}small
+Dialogue: 0,0:04:45.48,0:04:45.50,[English] Chorus,,0000,0000,0000,,{\org(920,127)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}small
+Dialogue: 0,0:04:45.50,0:04:45.52,[English] Chorus,,0000,0000,0000,,{\org(974,170)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}small
+Dialogue: 0,0:04:45.52,0:04:45.54,[English] Chorus,,0000,0000,0000,,{\org(970,115)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}small
+Dialogue: 0,0:04:45.54,0:04:45.55,[English] Chorus,,0000,0000,0000,,{\org(959,134)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}small
+Dialogue: 0,0:04:45.55,0:04:45.57,[English] Chorus,,0000,0000,0000,,{\org(905,141)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}small
+Dialogue: 0,0:04:45.57,0:04:45.59,[English] Chorus,,0000,0000,0000,,{\org(1057,64)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}small
+Dialogue: 0,0:04:45.59,0:04:45.61,[English] Chorus,,0000,0000,0000,,{\org(886,186)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}small
+Dialogue: 0,0:04:45.61,0:04:45.63,[English] Chorus,,0000,0000,0000,,{\org(985,85)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}small
+Dialogue: 0,0:04:45.63,0:04:45.65,[English] Chorus,,0000,0000,0000,,{\org(1051,241)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}small
+Dialogue: 0,0:04:45.65,0:04:45.67,[English] Chorus,,0000,0000,0000,,{\org(876,138)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}small
+Dialogue: 0,0:04:45.67,0:04:45.68,[English] Chorus,,0000,0000,0000,,{\org(952,120)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}lie
+Dialogue: 0,0:04:45.68,0:04:45.69,[English] Chorus,,0000,0000,0000,,{\org(993,239)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}lie
+Dialogue: 0,0:04:45.69,0:04:45.70,[English] Chorus,,0000,0000,0000,,{\org(873,238)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}lie
+Dialogue: 0,0:04:45.70,0:04:45.71,[English] Chorus,,0000,0000,0000,,{\org(975,132)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}lie
+Dialogue: 0,0:04:45.71,0:04:45.73,[English] Chorus,,0000,0000,0000,,{\org(896,145)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}lie
+Dialogue: 0,0:04:45.73,0:04:45.74,[English] Chorus,,0000,0000,0000,,{\org(1023,187)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}lie
+Dialogue: 0,0:04:45.74,0:04:45.75,[English] Chorus,,0000,0000,0000,,{\org(900,137)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}lie
+Dialogue: 0,0:04:45.75,0:04:45.76,[English] Chorus,,0000,0000,0000,,{\org(932,118)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}lie
+Dialogue: 0,0:04:45.76,0:04:45.77,[English] Chorus,,0000,0000,0000,,{\org(899,82)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}lie
+Dialogue: 0,0:04:45.77,0:04:45.79,[English] Chorus,,0000,0000,0000,,{\org(927,121)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}lie
+Dialogue: 0,0:04:45.79,0:04:45.80,[English] Chorus,,0000,0000,0000,,{\org(1050,128)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}lie
+Dialogue: 0,0:04:45.80,0:04:45.81,[English] Chorus,,0000,0000,0000,,{\org(952,241)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}lie
+Dialogue: 0,0:04:45.81,0:04:45.82,[English] Chorus,,0000,0000,0000,,{\org(1036,191)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}lie
+Dialogue: 0,0:04:45.82,0:04:45.83,[English] Chorus,,0000,0000,0000,,{\org(895,250)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}lie
+Dialogue: 0,0:04:45.83,0:04:45.85,[English] Chorus,,0000,0000,0000,,{\org(966,194)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}lie
+Dialogue: 0,0:04:45.85,0:04:45.86,[English] Chorus,,0000,0000,0000,,{\org(918,81)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}lie
+Dialogue: 0,0:04:45.86,0:04:45.87,[English] Chorus,,0000,0000,0000,,{\org(1055,213)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}lie
+Dialogue: 0,0:04:45.87,0:04:45.88,[English] Chorus,,0000,0000,0000,,{\org(981,201)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}lie
+Dialogue: 0,0:04:45.88,0:04:45.89,[English] Chorus,,0000,0000,0000,,{\org(912,70)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}lie
+Dialogue: 0,0:04:45.89,0:04:45.91,[English] Chorus,,0000,0000,0000,,{\org(920,190)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}lie
+Dialogue: 0,0:04:45.91,0:04:45.92,[English] Chorus,,0000,0000,0000,,{\org(872,191)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}for
+Dialogue: 0,0:04:45.92,0:04:45.93,[English] Chorus,,0000,0000,0000,,{\org(1040,151)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}for
+Dialogue: 0,0:04:45.93,0:04:45.95,[English] Chorus,,0000,0000,0000,,{\org(864,145)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}for
+Dialogue: 0,0:04:45.95,0:04:45.96,[English] Chorus,,0000,0000,0000,,{\org(943,74)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}for
+Dialogue: 0,0:04:45.96,0:04:45.98,[English] Chorus,,0000,0000,0000,,{\org(993,249)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}for
+Dialogue: 0,0:04:45.98,0:04:45.99,[English] Chorus,,0000,0000,0000,,{\org(1034,175)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}for
+Dialogue: 0,0:04:45.99,0:04:46.01,[English] Chorus,,0000,0000,0000,,{\org(964,163)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}for
+Dialogue: 0,0:04:46.01,0:04:46.02,[English] Chorus,,0000,0000,0000,,{\org(1014,187)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}for
+Dialogue: 0,0:04:46.02,0:04:46.04,[English] Chorus,,0000,0000,0000,,{\org(1004,146)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}for
+Dialogue: 0,0:04:46.04,0:04:46.05,[English] Chorus,,0000,0000,0000,,{\org(887,137)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}for
+Dialogue: 0,0:04:46.05,0:04:46.07,[English] Chorus,,0000,0000,0000,,{\org(905,224)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}for
+Dialogue: 0,0:04:46.06,0:04:46.08,[English] Chorus,,0000,0000,0000,,{\org(1030,139)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}for
+Dialogue: 0,0:04:46.08,0:04:46.09,[English] Chorus,,0000,0000,0000,,{\org(988,216)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}for
+Dialogue: 0,0:04:46.09,0:04:46.11,[English] Chorus,,0000,0000,0000,,{\org(900,94)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}for
+Dialogue: 0,0:04:46.11,0:04:46.12,[English] Chorus,,0000,0000,0000,,{\org(1024,110)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}for
+Dialogue: 0,0:04:46.12,0:04:46.14,[English] Chorus,,0000,0000,0000,,{\org(992,249)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}for
+Dialogue: 0,0:04:46.14,0:04:46.15,[English] Chorus,,0000,0000,0000,,{\org(961,248)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}for
+Dialogue: 0,0:04:46.15,0:04:46.17,[English] Chorus,,0000,0000,0000,,{\org(1009,113)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}for
+Dialogue: 0,0:04:46.17,0:04:46.18,[English] Chorus,,0000,0000,0000,,{\org(1002,237)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}for
+Dialogue: 0,0:04:46.18,0:04:46.20,[English] Chorus,,0000,0000,0000,,{\org(971,195)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}for
+Dialogue: 0,0:04:46.20,0:04:46.26,[English] Chorus,,0000,0000,0000,,{\org(931,201)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}a man
+Dialogue: 0,0:04:46.26,0:04:46.32,[English] Chorus,,0000,0000,0000,,{\org(1004,179)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}a man
+Dialogue: 0,0:04:46.32,0:04:46.38,[English] Chorus,,0000,0000,0000,,{\org(865,223)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}a man
+Dialogue: 0,0:04:46.38,0:04:46.44,[English] Chorus,,0000,0000,0000,,{\org(910,235)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}a man
+Dialogue: 0,0:04:46.44,0:04:46.50,[English] Chorus,,0000,0000,0000,,{\org(1033,165)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}a man
+Dialogue: 0,0:04:46.50,0:04:46.56,[English] Chorus,,0000,0000,0000,,{\org(1044,155)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}a man
+Dialogue: 0,0:04:46.56,0:04:46.63,[English] Chorus,,0000,0000,0000,,{\org(1032,157)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}a man
+Dialogue: 0,0:04:46.63,0:04:46.69,[English] Chorus,,0000,0000,0000,,{\org(957,237)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}a man
+Dialogue: 0,0:04:46.69,0:04:46.75,[English] Chorus,,0000,0000,0000,,{\org(906,87)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}a man
+Dialogue: 0,0:04:46.75,0:04:46.81,[English] Chorus,,0000,0000,0000,,{\org(1021,210)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}a man
+Dialogue: 0,0:04:46.81,0:04:46.87,[English] Chorus,,0000,0000,0000,,{\org(1006,78)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}a man
+Dialogue: 0,0:04:46.87,0:04:46.93,[English] Chorus,,0000,0000,0000,,{\org(882,138)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}a man
+Dialogue: 0,0:04:46.93,0:04:47.00,[English] Chorus,,0000,0000,0000,,{\org(1057,248)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}a man
+Dialogue: 0,0:04:46.99,0:04:47.06,[English] Chorus,,0000,0000,0000,,{\org(971,232)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}a man
+Dialogue: 0,0:04:47.06,0:04:47.12,[English] Chorus,,0000,0000,0000,,{\org(1007,162)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}a man
+Dialogue: 0,0:04:47.12,0:04:47.18,[English] Chorus,,0000,0000,0000,,{\org(989,240)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}a man
+Dialogue: 0,0:04:47.18,0:04:47.24,[English] Chorus,,0000,0000,0000,,{\org(944,103)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}a man
+Dialogue: 0,0:04:47.24,0:04:47.30,[English] Chorus,,0000,0000,0000,,{\org(861,62)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}a man
+Dialogue: 0,0:04:47.30,0:04:47.36,[English] Chorus,,0000,0000,0000,,{\org(888,86)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}a man
+Dialogue: 0,0:04:47.36,0:04:47.43,[English] Chorus,,0000,0000,0000,,{\org(994,73)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}a man
+Dialogue: 0,0:04:48.26,0:04:48.28,[English] Chorus,,0000,0000,0000,,{\org(909,206)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}but
+Dialogue: 0,0:04:48.28,0:04:48.31,[English] Chorus,,0000,0000,0000,,{\org(961,232)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}but
+Dialogue: 0,0:04:48.31,0:04:48.33,[English] Chorus,,0000,0000,0000,,{\org(912,59)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}but
+Dialogue: 0,0:04:48.33,0:04:48.36,[English] Chorus,,0000,0000,0000,,{\org(1009,141)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}but
+Dialogue: 0,0:04:48.36,0:04:48.39,[English] Chorus,,0000,0000,0000,,{\org(880,209)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}but
+Dialogue: 0,0:04:48.39,0:04:48.41,[English] Chorus,,0000,0000,0000,,{\org(1034,231)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}but
+Dialogue: 0,0:04:48.41,0:04:48.44,[English] Chorus,,0000,0000,0000,,{\org(998,213)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}but
+Dialogue: 0,0:04:48.44,0:04:48.46,[English] Chorus,,0000,0000,0000,,{\org(864,160)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}but
+Dialogue: 0,0:04:48.46,0:04:48.49,[English] Chorus,,0000,0000,0000,,{\org(1026,204)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}but
+Dialogue: 0,0:04:48.49,0:04:48.52,[English] Chorus,,0000,0000,0000,,{\org(872,220)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}but
+Dialogue: 0,0:04:48.52,0:04:48.54,[English] Chorus,,0000,0000,0000,,{\org(969,116)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}but
+Dialogue: 0,0:04:48.54,0:04:48.57,[English] Chorus,,0000,0000,0000,,{\org(921,57)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}but
+Dialogue: 0,0:04:48.57,0:04:48.59,[English] Chorus,,0000,0000,0000,,{\org(999,212)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}but
+Dialogue: 0,0:04:48.59,0:04:48.62,[English] Chorus,,0000,0000,0000,,{\org(948,228)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}but
+Dialogue: 0,0:04:48.62,0:04:48.65,[English] Chorus,,0000,0000,0000,,{\org(915,108)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}but
+Dialogue: 0,0:04:48.65,0:04:48.67,[English] Chorus,,0000,0000,0000,,{\org(947,148)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}but
+Dialogue: 0,0:04:48.67,0:04:48.70,[English] Chorus,,0000,0000,0000,,{\org(892,121)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}but
+Dialogue: 0,0:04:48.70,0:04:48.72,[English] Chorus,,0000,0000,0000,,{\org(1007,138)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}but
+Dialogue: 0,0:04:48.72,0:04:48.75,[English] Chorus,,0000,0000,0000,,{\org(1016,131)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}but
+Dialogue: 0,0:04:48.75,0:04:48.78,[English] Chorus,,0000,0000,0000,,{\org(921,127)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}but
+Dialogue: 0,0:04:48.78,0:04:48.79,[English] Chorus,,0000,0000,0000,,{\org(1024,183)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}a
+Dialogue: 0,0:04:48.79,0:04:48.81,[English] Chorus,,0000,0000,0000,,{\org(1059,152)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}a
+Dialogue: 0,0:04:48.81,0:04:48.83,[English] Chorus,,0000,0000,0000,,{\org(936,108)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}a
+Dialogue: 0,0:04:48.83,0:04:48.85,[English] Chorus,,0000,0000,0000,,{\org(1057,119)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}a
+Dialogue: 0,0:04:48.85,0:04:48.87,[English] Chorus,,0000,0000,0000,,{\org(941,133)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}a
+Dialogue: 0,0:04:48.87,0:04:48.89,[English] Chorus,,0000,0000,0000,,{\org(971,167)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}a
+Dialogue: 0,0:04:48.89,0:04:48.91,[English] Chorus,,0000,0000,0000,,{\org(990,158)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}a
+Dialogue: 0,0:04:48.90,0:04:48.92,[English] Chorus,,0000,0000,0000,,{\org(882,227)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}a
+Dialogue: 0,0:04:48.92,0:04:48.94,[English] Chorus,,0000,0000,0000,,{\org(1009,225)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}a
+Dialogue: 0,0:04:48.94,0:04:48.96,[English] Chorus,,0000,0000,0000,,{\org(1008,158)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}a
+Dialogue: 0,0:04:48.96,0:04:48.98,[English] Chorus,,0000,0000,0000,,{\org(1030,241)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}a
+Dialogue: 0,0:04:48.98,0:04:49.00,[English] Chorus,,0000,0000,0000,,{\org(888,69)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}a
+Dialogue: 0,0:04:49.00,0:04:49.02,[English] Chorus,,0000,0000,0000,,{\org(924,121)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}a
+Dialogue: 0,0:04:49.02,0:04:49.03,[English] Chorus,,0000,0000,0000,,{\org(1047,237)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}a
+Dialogue: 0,0:04:49.03,0:04:49.05,[English] Chorus,,0000,0000,0000,,{\org(876,80)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}a
+Dialogue: 0,0:04:49.05,0:04:49.07,[English] Chorus,,0000,0000,0000,,{\org(944,195)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}a
+Dialogue: 0,0:04:49.07,0:04:49.09,[English] Chorus,,0000,0000,0000,,{\org(932,212)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}a
+Dialogue: 0,0:04:49.09,0:04:49.11,[English] Chorus,,0000,0000,0000,,{\org(935,236)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}a
+Dialogue: 0,0:04:49.11,0:04:49.13,[English] Chorus,,0000,0000,0000,,{\org(920,174)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}a
+Dialogue: 0,0:04:49.13,0:04:49.15,[English] Chorus,,0000,0000,0000,,{\org(886,50)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}a
+Dialogue: 0,0:04:49.15,0:04:49.17,[English] Chorus,,0000,0000,0000,,{\org(1057,161)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}giant
+Dialogue: 0,0:04:49.17,0:04:49.20,[English] Chorus,,0000,0000,0000,,{\org(878,80)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}giant
+Dialogue: 0,0:04:49.20,0:04:49.22,[English] Chorus,,0000,0000,0000,,{\org(1004,155)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}giant
+Dialogue: 0,0:04:49.22,0:04:49.25,[English] Chorus,,0000,0000,0000,,{\org(977,212)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}giant
+Dialogue: 0,0:04:49.25,0:04:49.27,[English] Chorus,,0000,0000,0000,,{\org(920,88)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}giant
+Dialogue: 0,0:04:49.27,0:04:49.30,[English] Chorus,,0000,0000,0000,,{\org(982,116)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}giant
+Dialogue: 0,0:04:49.30,0:04:49.32,[English] Chorus,,0000,0000,0000,,{\org(1002,125)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}giant
+Dialogue: 0,0:04:49.32,0:04:49.35,[English] Chorus,,0000,0000,0000,,{\org(975,75)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}giant
+Dialogue: 0,0:04:49.35,0:04:49.37,[English] Chorus,,0000,0000,0000,,{\org(930,156)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}giant
+Dialogue: 0,0:04:49.37,0:04:49.40,[English] Chorus,,0000,0000,0000,,{\org(892,176)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}giant
+Dialogue: 0,0:04:49.40,0:04:49.42,[English] Chorus,,0000,0000,0000,,{\org(870,244)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}giant
+Dialogue: 0,0:04:49.42,0:04:49.45,[English] Chorus,,0000,0000,0000,,{\org(967,146)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}giant
+Dialogue: 0,0:04:49.45,0:04:49.47,[English] Chorus,,0000,0000,0000,,{\org(1031,105)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}giant
+Dialogue: 0,0:04:49.47,0:04:49.50,[English] Chorus,,0000,0000,0000,,{\org(1007,84)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}giant
+Dialogue: 0,0:04:49.50,0:04:49.52,[English] Chorus,,0000,0000,0000,,{\org(945,84)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}giant
+Dialogue: 0,0:04:49.52,0:04:49.55,[English] Chorus,,0000,0000,0000,,{\org(998,192)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}giant
+Dialogue: 0,0:04:49.55,0:04:49.57,[English] Chorus,,0000,0000,0000,,{\org(892,109)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}giant
+Dialogue: 0,0:04:49.57,0:04:49.60,[English] Chorus,,0000,0000,0000,,{\org(1012,218)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}giant
+Dialogue: 0,0:04:49.60,0:04:49.62,[English] Chorus,,0000,0000,0000,,{\org(861,87)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}giant
+Dialogue: 0,0:04:49.62,0:04:49.65,[English] Chorus,,0000,0000,0000,,{\org(983,71)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}giant
+Dialogue: 0,0:04:49.65,0:04:49.66,[English] Chorus,,0000,0000,0000,,{\org(954,206)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}blow
+Dialogue: 0,0:04:49.66,0:04:49.67,[English] Chorus,,0000,0000,0000,,{\org(972,243)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}blow
+Dialogue: 0,0:04:49.67,0:04:49.68,[English] Chorus,,0000,0000,0000,,{\org(933,182)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}blow
+Dialogue: 0,0:04:49.68,0:04:49.70,[English] Chorus,,0000,0000,0000,,{\org(1023,195)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}blow
+Dialogue: 0,0:04:49.70,0:04:49.71,[English] Chorus,,0000,0000,0000,,{\org(961,129)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}blow
+Dialogue: 0,0:04:49.71,0:04:49.72,[English] Chorus,,0000,0000,0000,,{\org(1023,219)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}blow
+Dialogue: 0,0:04:49.72,0:04:49.74,[English] Chorus,,0000,0000,0000,,{\org(1036,170)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}blow
+Dialogue: 0,0:04:49.74,0:04:49.75,[English] Chorus,,0000,0000,0000,,{\org(905,249)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}blow
+Dialogue: 0,0:04:49.75,0:04:49.76,[English] Chorus,,0000,0000,0000,,{\org(1025,72)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}blow
+Dialogue: 0,0:04:49.76,0:04:49.78,[English] Chorus,,0000,0000,0000,,{\org(1021,87)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}blow
+Dialogue: 0,0:04:49.78,0:04:49.79,[English] Chorus,,0000,0000,0000,,{\org(988,83)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}blow
+Dialogue: 0,0:04:49.79,0:04:49.80,[English] Chorus,,0000,0000,0000,,{\org(960,202)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}blow
+Dialogue: 0,0:04:49.80,0:04:49.81,[English] Chorus,,0000,0000,0000,,{\org(1005,200)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}blow
+Dialogue: 0,0:04:49.81,0:04:49.83,[English] Chorus,,0000,0000,0000,,{\org(1049,87)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}blow
+Dialogue: 0,0:04:49.83,0:04:49.84,[English] Chorus,,0000,0000,0000,,{\org(1001,53)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}blow
+Dialogue: 0,0:04:49.84,0:04:49.85,[English] Chorus,,0000,0000,0000,,{\org(912,218)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}blow
+Dialogue: 0,0:04:49.85,0:04:49.87,[English] Chorus,,0000,0000,0000,,{\org(1021,209)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}blow
+Dialogue: 0,0:04:49.87,0:04:49.88,[English] Chorus,,0000,0000,0000,,{\org(913,53)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}blow
+Dialogue: 0,0:04:49.88,0:04:49.89,[English] Chorus,,0000,0000,0000,,{\org(997,224)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}blow
+Dialogue: 0,0:04:49.89,0:04:49.91,[English] Chorus,,0000,0000,0000,,{\org(1038,174)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}blow
+Dialogue: 0,0:04:49.91,0:04:49.92,[English] Chorus,,0000,0000,0000,,{\org(973,185)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}for
+Dialogue: 0,0:04:49.92,0:04:49.94,[English] Chorus,,0000,0000,0000,,{\org(918,169)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}for
+Dialogue: 0,0:04:49.94,0:04:49.96,[English] Chorus,,0000,0000,0000,,{\org(911,148)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}for
+Dialogue: 0,0:04:49.96,0:04:49.98,[English] Chorus,,0000,0000,0000,,{\org(1018,52)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}for
+Dialogue: 0,0:04:49.98,0:04:49.99,[English] Chorus,,0000,0000,0000,,{\org(924,159)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}for
+Dialogue: 0,0:04:49.99,0:04:50.01,[English] Chorus,,0000,0000,0000,,{\org(1046,171)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}for
+Dialogue: 0,0:04:50.01,0:04:50.03,[English] Chorus,,0000,0000,0000,,{\org(941,123)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}for
+Dialogue: 0,0:04:50.03,0:04:50.05,[English] Chorus,,0000,0000,0000,,{\org(917,68)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}for
+Dialogue: 0,0:04:50.05,0:04:50.06,[English] Chorus,,0000,0000,0000,,{\org(923,184)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}for
+Dialogue: 0,0:04:50.06,0:04:50.08,[English] Chorus,,0000,0000,0000,,{\org(967,136)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}for
+Dialogue: 0,0:04:50.08,0:04:50.10,[English] Chorus,,0000,0000,0000,,{\org(897,248)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}for
+Dialogue: 0,0:04:50.10,0:04:50.12,[English] Chorus,,0000,0000,0000,,{\org(926,127)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}for
+Dialogue: 0,0:04:50.12,0:04:50.13,[English] Chorus,,0000,0000,0000,,{\org(1040,88)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}for
+Dialogue: 0,0:04:50.13,0:04:50.15,[English] Chorus,,0000,0000,0000,,{\org(861,87)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}for
+Dialogue: 0,0:04:50.15,0:04:50.17,[English] Chorus,,0000,0000,0000,,{\org(1040,84)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}for
+Dialogue: 0,0:04:50.17,0:04:50.19,[English] Chorus,,0000,0000,0000,,{\org(897,182)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}for
+Dialogue: 0,0:04:50.19,0:04:50.20,[English] Chorus,,0000,0000,0000,,{\org(887,141)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}for
+Dialogue: 0,0:04:50.20,0:04:50.22,[English] Chorus,,0000,0000,0000,,{\org(965,129)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}for
+Dialogue: 0,0:04:50.22,0:04:50.24,[English] Chorus,,0000,0000,0000,,{\org(879,204)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}for
+Dialogue: 0,0:04:50.24,0:04:50.26,[English] Chorus,,0000,0000,0000,,{\org(1055,71)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}for
+Dialogue: 0,0:04:50.26,0:04:50.32,[English] Chorus,,0000,0000,0000,,{\org(991,153)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}mankind
+Dialogue: 0,0:04:50.32,0:04:50.39,[English] Chorus,,0000,0000,0000,,{\org(994,129)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}mankind
+Dialogue: 0,0:04:50.39,0:04:50.46,[English] Chorus,,0000,0000,0000,,{\org(880,177)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}mankind
+Dialogue: 0,0:04:50.46,0:04:50.52,[English] Chorus,,0000,0000,0000,,{\org(1022,97)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}mankind
+Dialogue: 0,0:04:50.52,0:04:50.59,[English] Chorus,,0000,0000,0000,,{\org(1035,205)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}mankind
+Dialogue: 0,0:04:50.59,0:04:50.66,[English] Chorus,,0000,0000,0000,,{\org(1025,62)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}mankind
+Dialogue: 0,0:04:50.66,0:04:50.72,[English] Chorus,,0000,0000,0000,,{\org(886,202)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}mankind
+Dialogue: 0,0:04:50.72,0:04:50.79,[English] Chorus,,0000,0000,0000,,{\org(892,101)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}mankind
+Dialogue: 0,0:04:50.79,0:04:50.86,[English] Chorus,,0000,0000,0000,,{\org(1015,232)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}mankind
+Dialogue: 0,0:04:50.86,0:04:50.93,[English] Chorus,,0000,0000,0000,,{\org(1038,67)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}mankind
+Dialogue: 0,0:04:50.93,0:04:50.99,[English] Chorus,,0000,0000,0000,,{\org(1026,229)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}mankind
+Dialogue: 0,0:04:50.99,0:04:51.06,[English] Chorus,,0000,0000,0000,,{\org(909,64)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}mankind
+Dialogue: 0,0:04:51.06,0:04:51.13,[English] Chorus,,0000,0000,0000,,{\org(1032,210)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}mankind
+Dialogue: 0,0:04:51.13,0:04:51.19,[English] Chorus,,0000,0000,0000,,{\org(909,184)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}mankind
+Dialogue: 0,0:04:51.19,0:04:51.26,[English] Chorus,,0000,0000,0000,,{\org(1004,81)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}mankind
+Dialogue: 0,0:04:51.26,0:04:51.33,[English] Chorus,,0000,0000,0000,,{\org(1016,193)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}mankind
+Dialogue: 0,0:04:51.33,0:04:51.39,[English] Chorus,,0000,0000,0000,,{\org(989,75)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}mankind
+Dialogue: 0,0:04:51.39,0:04:51.46,[English] Chorus,,0000,0000,0000,,{\org(911,130)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}mankind
+Dialogue: 0,0:04:51.46,0:04:51.53,[English] Chorus,,0000,0000,0000,,{\org(900,117)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}mankind
+Dialogue: 0,0:04:51.53,0:04:51.60,[English] Chorus,,0000,0000,0000,,{\org(1032,226)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}mankind
+Dialogue: 0,0:04:56.12,0:04:56.15,[English] Chorus,,0000,0000,0000,,{\org(923,57)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}we
+Dialogue: 0,0:04:56.15,0:04:56.18,[English] Chorus,,0000,0000,0000,,{\org(1048,78)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}we
+Dialogue: 0,0:04:56.18,0:04:56.21,[English] Chorus,,0000,0000,0000,,{\org(962,208)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}we
+Dialogue: 0,0:04:56.21,0:04:56.24,[English] Chorus,,0000,0000,0000,,{\org(930,126)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}we
+Dialogue: 0,0:04:56.24,0:04:56.27,[English] Chorus,,0000,0000,0000,,{\org(883,152)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}we
+Dialogue: 0,0:04:56.27,0:04:56.30,[English] Chorus,,0000,0000,0000,,{\org(951,131)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}we
+Dialogue: 0,0:04:56.30,0:04:56.33,[English] Chorus,,0000,0000,0000,,{\org(897,68)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}we
+Dialogue: 0,0:04:56.33,0:04:56.36,[English] Chorus,,0000,0000,0000,,{\org(1058,177)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}we
+Dialogue: 0,0:04:56.36,0:04:56.39,[English] Chorus,,0000,0000,0000,,{\org(1019,88)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}we
+Dialogue: 0,0:04:56.39,0:04:56.42,[English] Chorus,,0000,0000,0000,,{\org(1033,142)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}we
+Dialogue: 0,0:04:56.42,0:04:56.45,[English] Chorus,,0000,0000,0000,,{\org(976,218)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}we
+Dialogue: 0,0:04:56.45,0:04:56.48,[English] Chorus,,0000,0000,0000,,{\org(1053,121)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}we
+Dialogue: 0,0:04:56.48,0:04:56.51,[English] Chorus,,0000,0000,0000,,{\org(985,243)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}we
+Dialogue: 0,0:04:56.51,0:04:56.54,[English] Chorus,,0000,0000,0000,,{\org(1009,87)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}we
+Dialogue: 0,0:04:56.54,0:04:56.57,[English] Chorus,,0000,0000,0000,,{\org(975,150)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}we
+Dialogue: 0,0:04:56.57,0:04:56.60,[English] Chorus,,0000,0000,0000,,{\org(986,61)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}we
+Dialogue: 0,0:04:56.60,0:04:56.63,[English] Chorus,,0000,0000,0000,,{\org(894,231)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}we
+Dialogue: 0,0:04:56.63,0:04:56.66,[English] Chorus,,0000,0000,0000,,{\org(1027,128)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}we
+Dialogue: 0,0:04:56.66,0:04:56.70,[English] Chorus,,0000,0000,0000,,{\org(939,121)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}we
+Dialogue: 0,0:04:56.69,0:04:56.73,[English] Chorus,,0000,0000,0000,,{\org(900,149)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}we
+Dialogue: 0,0:04:56.73,0:04:56.73,[English] Chorus,,0000,0000,0000,,{\org(957,230)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}have
+Dialogue: 0,0:04:56.73,0:04:56.73,[English] Chorus,,0000,0000,0000,,{\org(976,122)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}have
+Dialogue: 0,0:04:56.73,0:04:56.74,[English] Chorus,,0000,0000,0000,,{\org(866,151)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}have
+Dialogue: 0,0:04:56.74,0:04:56.74,[English] Chorus,,0000,0000,0000,,{\org(937,174)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}have
+Dialogue: 0,0:04:56.74,0:04:56.74,[English] Chorus,,0000,0000,0000,,{\org(997,172)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}have
+Dialogue: 0,0:04:56.74,0:04:56.75,[English] Chorus,,0000,0000,0000,,{\org(1033,83)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}have
+Dialogue: 0,0:04:56.75,0:04:56.75,[English] Chorus,,0000,0000,0000,,{\org(965,92)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}have
+Dialogue: 0,0:04:56.75,0:04:56.75,[English] Chorus,,0000,0000,0000,,{\org(866,75)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}have
+Dialogue: 0,0:04:56.75,0:04:56.76,[English] Chorus,,0000,0000,0000,,{\org(998,174)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}have
+Dialogue: 0,0:04:56.76,0:04:56.76,[English] Chorus,,0000,0000,0000,,{\org(1018,98)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}have
+Dialogue: 0,0:04:56.76,0:04:56.76,[English] Chorus,,0000,0000,0000,,{\org(939,224)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}have
+Dialogue: 0,0:04:56.76,0:04:56.77,[English] Chorus,,0000,0000,0000,,{\org(894,228)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}have
+Dialogue: 0,0:04:56.77,0:04:56.77,[English] Chorus,,0000,0000,0000,,{\org(946,178)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}have
+Dialogue: 0,0:04:56.77,0:04:56.77,[English] Chorus,,0000,0000,0000,,{\org(865,228)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}have
+Dialogue: 0,0:04:56.77,0:04:56.78,[English] Chorus,,0000,0000,0000,,{\org(976,183)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}have
+Dialogue: 0,0:04:56.78,0:04:56.78,[English] Chorus,,0000,0000,0000,,{\org(945,224)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}have
+Dialogue: 0,0:04:56.78,0:04:56.79,[English] Chorus,,0000,0000,0000,,{\org(878,115)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}have
+Dialogue: 0,0:04:56.78,0:04:56.79,[English] Chorus,,0000,0000,0000,,{\org(872,227)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}have
+Dialogue: 0,0:04:56.79,0:04:56.79,[English] Chorus,,0000,0000,0000,,{\org(901,198)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}have
+Dialogue: 0,0:04:56.79,0:04:56.80,[English] Chorus,,0000,0000,0000,,{\org(1028,104)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}have
+Dialogue: 0,0:04:56.80,0:04:56.81,[English] Chorus,,0000,0000,0000,,{\org(877,209)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}found
+Dialogue: 0,0:04:56.81,0:04:56.83,[English] Chorus,,0000,0000,0000,,{\org(921,111)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}found
+Dialogue: 0,0:04:56.83,0:04:56.85,[English] Chorus,,0000,0000,0000,,{\org(942,225)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}found
+Dialogue: 0,0:04:56.85,0:04:56.86,[English] Chorus,,0000,0000,0000,,{\org(1047,177)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}found
+Dialogue: 0,0:04:56.86,0:04:56.88,[English] Chorus,,0000,0000,0000,,{\org(1023,83)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}found
+Dialogue: 0,0:04:56.88,0:04:56.90,[English] Chorus,,0000,0000,0000,,{\org(981,109)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}found
+Dialogue: 0,0:04:56.90,0:04:56.91,[English] Chorus,,0000,0000,0000,,{\org(874,156)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}found
+Dialogue: 0,0:04:56.91,0:04:56.93,[English] Chorus,,0000,0000,0000,,{\org(1037,57)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}found
+Dialogue: 0,0:04:56.93,0:04:56.95,[English] Chorus,,0000,0000,0000,,{\org(1008,67)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}found
+Dialogue: 0,0:04:56.95,0:04:56.97,[English] Chorus,,0000,0000,0000,,{\org(1020,138)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}found
+Dialogue: 0,0:04:56.97,0:04:56.98,[English] Chorus,,0000,0000,0000,,{\org(1021,174)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}found
+Dialogue: 0,0:04:56.98,0:04:57.00,[English] Chorus,,0000,0000,0000,,{\org(936,244)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}found
+Dialogue: 0,0:04:57.00,0:04:57.02,[English] Chorus,,0000,0000,0000,,{\org(941,124)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}found
+Dialogue: 0,0:04:57.02,0:04:57.03,[English] Chorus,,0000,0000,0000,,{\org(1022,102)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}found
+Dialogue: 0,0:04:57.03,0:04:57.05,[English] Chorus,,0000,0000,0000,,{\org(961,156)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}found
+Dialogue: 0,0:04:57.05,0:04:57.07,[English] Chorus,,0000,0000,0000,,{\org(889,243)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}found
+Dialogue: 0,0:04:57.07,0:04:57.08,[English] Chorus,,0000,0000,0000,,{\org(1052,158)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}found
+Dialogue: 0,0:04:57.08,0:04:57.10,[English] Chorus,,0000,0000,0000,,{\org(949,134)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}found
+Dialogue: 0,0:04:57.10,0:04:57.12,[English] Chorus,,0000,0000,0000,,{\org(867,69)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}found
+Dialogue: 0,0:04:57.12,0:04:57.14,[English] Chorus,,0000,0000,0000,,{\org(1047,214)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}found
+Dialogue: 0,0:04:57.14,0:04:57.17,[English] Chorus,,0000,0000,0000,,{\org(988,151)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}the alchemy
+Dialogue: 0,0:04:57.17,0:04:57.21,[English] Chorus,,0000,0000,0000,,{\org(914,89)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}the alchemy
+Dialogue: 0,0:04:57.21,0:04:57.25,[English] Chorus,,0000,0000,0000,,{\org(1052,120)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}the alchemy
+Dialogue: 0,0:04:57.25,0:04:57.29,[English] Chorus,,0000,0000,0000,,{\org(882,139)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}the alchemy
+Dialogue: 0,0:04:57.29,0:04:57.33,[English] Chorus,,0000,0000,0000,,{\org(958,61)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}the alchemy
+Dialogue: 0,0:04:57.33,0:04:57.36,[English] Chorus,,0000,0000,0000,,{\org(898,91)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}the alchemy
+Dialogue: 0,0:04:57.36,0:04:57.40,[English] Chorus,,0000,0000,0000,,{\org(860,246)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}the alchemy
+Dialogue: 0,0:04:57.40,0:04:57.44,[English] Chorus,,0000,0000,0000,,{\org(925,99)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}the alchemy
+Dialogue: 0,0:04:57.44,0:04:57.48,[English] Chorus,,0000,0000,0000,,{\org(912,52)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}the alchemy
+Dialogue: 0,0:04:57.48,0:04:57.52,[English] Chorus,,0000,0000,0000,,{\org(971,233)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}the alchemy
+Dialogue: 0,0:04:57.52,0:04:57.55,[English] Chorus,,0000,0000,0000,,{\org(1049,124)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}the alchemy
+Dialogue: 0,0:04:57.55,0:04:57.59,[English] Chorus,,0000,0000,0000,,{\org(913,235)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}the alchemy
+Dialogue: 0,0:04:57.59,0:04:57.63,[English] Chorus,,0000,0000,0000,,{\org(909,131)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}the alchemy
+Dialogue: 0,0:04:57.63,0:04:57.67,[English] Chorus,,0000,0000,0000,,{\org(924,177)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}the alchemy
+Dialogue: 0,0:04:57.67,0:04:57.71,[English] Chorus,,0000,0000,0000,,{\org(950,96)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}the alchemy
+Dialogue: 0,0:04:57.71,0:04:57.74,[English] Chorus,,0000,0000,0000,,{\org(929,91)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}the alchemy
+Dialogue: 0,0:04:57.74,0:04:57.78,[English] Chorus,,0000,0000,0000,,{\org(926,88)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}the alchemy
+Dialogue: 0,0:04:57.78,0:04:57.82,[English] Chorus,,0000,0000,0000,,{\org(883,73)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}the alchemy
+Dialogue: 0,0:04:57.82,0:04:57.86,[English] Chorus,,0000,0000,0000,,{\org(965,93)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}the alchemy
+Dialogue: 0,0:04:57.86,0:04:57.90,[English] Chorus,,0000,0000,0000,,{\org(921,166)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}the alchemy
+Dialogue: 0,0:04:57.90,0:04:57.92,[English] Chorus,,0000,0000,0000,,{\org(974,134)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}of
+Dialogue: 0,0:04:57.92,0:04:57.94,[English] Chorus,,0000,0000,0000,,{\org(983,189)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}of
+Dialogue: 0,0:04:57.94,0:04:57.96,[English] Chorus,,0000,0000,0000,,{\org(953,104)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}of
+Dialogue: 0,0:04:57.96,0:04:57.98,[English] Chorus,,0000,0000,0000,,{\org(942,174)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}of
+Dialogue: 0,0:04:57.98,0:04:58.00,[English] Chorus,,0000,0000,0000,,{\org(946,174)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}of
+Dialogue: 0,0:04:58.00,0:04:58.02,[English] Chorus,,0000,0000,0000,,{\org(884,132)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}of
+Dialogue: 0,0:04:58.02,0:04:58.04,[English] Chorus,,0000,0000,0000,,{\org(869,202)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}of
+Dialogue: 0,0:04:58.04,0:04:58.06,[English] Chorus,,0000,0000,0000,,{\org(866,78)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}of
+Dialogue: 0,0:04:58.06,0:04:58.08,[English] Chorus,,0000,0000,0000,,{\org(881,196)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}of
+Dialogue: 0,0:04:58.08,0:04:58.10,[English] Chorus,,0000,0000,0000,,{\org(987,150)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}of
+Dialogue: 0,0:04:58.10,0:04:58.12,[English] Chorus,,0000,0000,0000,,{\org(1008,139)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}of
+Dialogue: 0,0:04:58.12,0:04:58.14,[English] Chorus,,0000,0000,0000,,{\org(1017,143)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}of
+Dialogue: 0,0:04:58.14,0:04:58.16,[English] Chorus,,0000,0000,0000,,{\org(955,97)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}of
+Dialogue: 0,0:04:58.16,0:04:58.18,[English] Chorus,,0000,0000,0000,,{\org(884,52)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}of
+Dialogue: 0,0:04:58.18,0:04:58.20,[English] Chorus,,0000,0000,0000,,{\org(883,245)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}of
+Dialogue: 0,0:04:58.20,0:04:58.22,[English] Chorus,,0000,0000,0000,,{\org(980,60)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}of
+Dialogue: 0,0:04:58.22,0:04:58.24,[English] Chorus,,0000,0000,0000,,{\org(944,166)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}of
+Dialogue: 0,0:04:58.24,0:04:58.26,[English] Chorus,,0000,0000,0000,,{\org(951,214)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}of
+Dialogue: 0,0:04:58.26,0:04:58.28,[English] Chorus,,0000,0000,0000,,{\org(971,125)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}of
+Dialogue: 0,0:04:58.28,0:04:58.30,[English] Chorus,,0000,0000,0000,,{\org(866,113)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}of
+Dialogue: 0,0:04:58.30,0:04:58.35,[English] Chorus,,0000,0000,0000,,{\org(1051,55)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}life
+Dialogue: 0,0:04:58.35,0:04:58.40,[English] Chorus,,0000,0000,0000,,{\org(1041,177)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}life
+Dialogue: 0,0:04:58.40,0:04:58.46,[English] Chorus,,0000,0000,0000,,{\org(909,125)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}life
+Dialogue: 0,0:04:58.46,0:04:58.51,[English] Chorus,,0000,0000,0000,,{\org(1060,150)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}life
+Dialogue: 0,0:04:58.51,0:04:58.57,[English] Chorus,,0000,0000,0000,,{\org(989,175)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}life
+Dialogue: 0,0:04:58.57,0:04:58.62,[English] Chorus,,0000,0000,0000,,{\org(972,157)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}life
+Dialogue: 0,0:04:58.62,0:04:58.67,[English] Chorus,,0000,0000,0000,,{\org(878,85)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}life
+Dialogue: 0,0:04:58.67,0:04:58.73,[English] Chorus,,0000,0000,0000,,{\org(900,248)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}life
+Dialogue: 0,0:04:58.73,0:04:58.78,[English] Chorus,,0000,0000,0000,,{\org(950,136)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}life
+Dialogue: 0,0:04:58.78,0:04:58.84,[English] Chorus,,0000,0000,0000,,{\org(883,109)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}life
+Dialogue: 0,0:04:58.84,0:04:58.89,[English] Chorus,,0000,0000,0000,,{\org(1043,103)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}life
+Dialogue: 0,0:04:58.89,0:04:58.94,[English] Chorus,,0000,0000,0000,,{\org(1000,52)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}life
+Dialogue: 0,0:04:58.94,0:04:59.00,[English] Chorus,,0000,0000,0000,,{\org(919,165)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}life
+Dialogue: 0,0:04:59.00,0:04:59.05,[English] Chorus,,0000,0000,0000,,{\org(979,98)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}life
+Dialogue: 0,0:04:59.05,0:04:59.11,[English] Chorus,,0000,0000,0000,,{\org(1029,249)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}life
+Dialogue: 0,0:04:59.11,0:04:59.16,[English] Chorus,,0000,0000,0000,,{\org(936,230)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}life
+Dialogue: 0,0:04:59.16,0:04:59.21,[English] Chorus,,0000,0000,0000,,{\org(911,223)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}life
+Dialogue: 0,0:04:59.21,0:04:59.27,[English] Chorus,,0000,0000,0000,,{\org(1004,60)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}life
+Dialogue: 0,0:04:59.27,0:04:59.32,[English] Chorus,,0000,0000,0000,,{\org(861,159)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}life
+Dialogue: 0,0:04:59.32,0:04:59.38,[English] Chorus,,0000,0000,0000,,{\org(942,54)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}life
+Dialogue: 0,0:05:04.21,0:05:04.23,[English] Chorus,,0000,0000,0000,,{\org(1011,192)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}we
+Dialogue: 0,0:05:04.23,0:05:04.25,[English] Chorus,,0000,0000,0000,,{\org(900,219)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}we
+Dialogue: 0,0:05:04.25,0:05:04.27,[English] Chorus,,0000,0000,0000,,{\org(907,69)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}we
+Dialogue: 0,0:05:04.27,0:05:04.29,[English] Chorus,,0000,0000,0000,,{\org(869,223)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}we
+Dialogue: 0,0:05:04.29,0:05:04.31,[English] Chorus,,0000,0000,0000,,{\org(862,106)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}we
+Dialogue: 0,0:05:04.31,0:05:04.33,[English] Chorus,,0000,0000,0000,,{\org(910,92)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}we
+Dialogue: 0,0:05:04.33,0:05:04.35,[English] Chorus,,0000,0000,0000,,{\org(915,249)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}we
+Dialogue: 0,0:05:04.35,0:05:04.37,[English] Chorus,,0000,0000,0000,,{\org(872,69)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}we
+Dialogue: 0,0:05:04.37,0:05:04.39,[English] Chorus,,0000,0000,0000,,{\org(1054,50)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}we
+Dialogue: 0,0:05:04.39,0:05:04.41,[English] Chorus,,0000,0000,0000,,{\org(920,238)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}we
+Dialogue: 0,0:05:04.41,0:05:04.43,[English] Chorus,,0000,0000,0000,,{\org(1033,244)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}we
+Dialogue: 0,0:05:04.43,0:05:04.45,[English] Chorus,,0000,0000,0000,,{\org(945,52)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}we
+Dialogue: 0,0:05:04.45,0:05:04.47,[English] Chorus,,0000,0000,0000,,{\org(973,195)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}we
+Dialogue: 0,0:05:04.47,0:05:04.49,[English] Chorus,,0000,0000,0000,,{\org(922,176)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}we
+Dialogue: 0,0:05:04.49,0:05:04.51,[English] Chorus,,0000,0000,0000,,{\org(1034,136)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}we
+Dialogue: 0,0:05:04.51,0:05:04.53,[English] Chorus,,0000,0000,0000,,{\org(907,213)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}we
+Dialogue: 0,0:05:04.53,0:05:04.55,[English] Chorus,,0000,0000,0000,,{\org(1058,140)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}we
+Dialogue: 0,0:05:04.55,0:05:04.57,[English] Chorus,,0000,0000,0000,,{\org(991,231)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}we
+Dialogue: 0,0:05:04.57,0:05:04.60,[English] Chorus,,0000,0000,0000,,{\org(951,53)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}we
+Dialogue: 0,0:05:04.59,0:05:04.62,[English] Chorus,,0000,0000,0000,,{\org(1047,51)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}we
+Dialogue: 0,0:05:04.62,0:05:04.63,[English] Chorus,,0000,0000,0000,,{\org(933,61)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}are
+Dialogue: 0,0:05:04.63,0:05:04.65,[English] Chorus,,0000,0000,0000,,{\org(886,196)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}are
+Dialogue: 0,0:05:04.65,0:05:04.66,[English] Chorus,,0000,0000,0000,,{\org(1001,201)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}are
+Dialogue: 0,0:05:04.66,0:05:04.68,[English] Chorus,,0000,0000,0000,,{\org(886,237)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}are
+Dialogue: 0,0:05:04.68,0:05:04.70,[English] Chorus,,0000,0000,0000,,{\org(900,101)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}are
+Dialogue: 0,0:05:04.70,0:05:04.71,[English] Chorus,,0000,0000,0000,,{\org(1001,187)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}are
+Dialogue: 0,0:05:04.71,0:05:04.73,[English] Chorus,,0000,0000,0000,,{\org(1019,194)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}are
+Dialogue: 0,0:05:04.73,0:05:04.74,[English] Chorus,,0000,0000,0000,,{\org(982,55)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}are
+Dialogue: 0,0:05:04.74,0:05:04.76,[English] Chorus,,0000,0000,0000,,{\org(989,57)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}are
+Dialogue: 0,0:05:04.76,0:05:04.78,[English] Chorus,,0000,0000,0000,,{\org(998,134)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}are
+Dialogue: 0,0:05:04.78,0:05:04.79,[English] Chorus,,0000,0000,0000,,{\org(942,82)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}are
+Dialogue: 0,0:05:04.79,0:05:04.81,[English] Chorus,,0000,0000,0000,,{\org(919,130)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}are
+Dialogue: 0,0:05:04.81,0:05:04.82,[English] Chorus,,0000,0000,0000,,{\org(916,163)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}are
+Dialogue: 0,0:05:04.82,0:05:04.84,[English] Chorus,,0000,0000,0000,,{\org(860,120)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}are
+Dialogue: 0,0:05:04.84,0:05:04.86,[English] Chorus,,0000,0000,0000,,{\org(879,110)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}are
+Dialogue: 0,0:05:04.86,0:05:04.87,[English] Chorus,,0000,0000,0000,,{\org(989,211)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}are
+Dialogue: 0,0:05:04.87,0:05:04.89,[English] Chorus,,0000,0000,0000,,{\org(863,87)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}are
+Dialogue: 0,0:05:04.89,0:05:04.90,[English] Chorus,,0000,0000,0000,,{\org(1026,111)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}are
+Dialogue: 0,0:05:04.90,0:05:04.92,[English] Chorus,,0000,0000,0000,,{\org(972,103)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}are
+Dialogue: 0,0:05:04.92,0:05:04.94,[English] Chorus,,0000,0000,0000,,{\org(966,208)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}are
+Dialogue: 0,0:05:04.94,0:05:04.95,[English] Chorus,,0000,0000,0000,,{\org(964,73)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}the
+Dialogue: 0,0:05:04.95,0:05:04.96,[English] Chorus,,0000,0000,0000,,{\org(881,159)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}the
+Dialogue: 0,0:05:04.96,0:05:04.97,[English] Chorus,,0000,0000,0000,,{\org(873,238)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}the
+Dialogue: 0,0:05:04.97,0:05:04.98,[English] Chorus,,0000,0000,0000,,{\org(946,112)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}the
+Dialogue: 0,0:05:04.98,0:05:05.00,[English] Chorus,,0000,0000,0000,,{\org(943,118)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}the
+Dialogue: 0,0:05:05.00,0:05:05.01,[English] Chorus,,0000,0000,0000,,{\org(877,204)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}the
+Dialogue: 0,0:05:05.01,0:05:05.02,[English] Chorus,,0000,0000,0000,,{\org(1015,82)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}the
+Dialogue: 0,0:05:05.02,0:05:05.03,[English] Chorus,,0000,0000,0000,,{\org(881,113)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}the
+Dialogue: 0,0:05:05.03,0:05:05.04,[English] Chorus,,0000,0000,0000,,{\org(1046,194)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}the
+Dialogue: 0,0:05:05.04,0:05:05.06,[English] Chorus,,0000,0000,0000,,{\org(906,243)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}the
+Dialogue: 0,0:05:05.06,0:05:05.07,[English] Chorus,,0000,0000,0000,,{\org(864,228)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}the
+Dialogue: 0,0:05:05.07,0:05:05.08,[English] Chorus,,0000,0000,0000,,{\org(876,193)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}the
+Dialogue: 0,0:05:05.08,0:05:05.09,[English] Chorus,,0000,0000,0000,,{\org(1021,177)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}the
+Dialogue: 0,0:05:05.09,0:05:05.10,[English] Chorus,,0000,0000,0000,,{\org(921,232)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}the
+Dialogue: 0,0:05:05.10,0:05:05.12,[English] Chorus,,0000,0000,0000,,{\org(1041,161)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}the
+Dialogue: 0,0:05:05.12,0:05:05.13,[English] Chorus,,0000,0000,0000,,{\org(1012,235)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}the
+Dialogue: 0,0:05:05.13,0:05:05.14,[English] Chorus,,0000,0000,0000,,{\org(980,218)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}the
+Dialogue: 0,0:05:05.14,0:05:05.15,[English] Chorus,,0000,0000,0000,,{\org(919,161)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}the
+Dialogue: 0,0:05:05.15,0:05:05.16,[English] Chorus,,0000,0000,0000,,{\org(870,202)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}the
+Dialogue: 0,0:05:05.16,0:05:05.18,[English] Chorus,,0000,0000,0000,,{\org(930,60)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}the
+Dialogue: 0,0:05:05.18,0:05:05.20,[English] Chorus,,0000,0000,0000,,{\org(876,221)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}force
+Dialogue: 0,0:05:05.20,0:05:05.22,[English] Chorus,,0000,0000,0000,,{\org(870,219)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}force
+Dialogue: 0,0:05:05.22,0:05:05.24,[English] Chorus,,0000,0000,0000,,{\org(894,185)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}force
+Dialogue: 0,0:05:05.24,0:05:05.27,[English] Chorus,,0000,0000,0000,,{\org(884,163)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}force
+Dialogue: 0,0:05:05.27,0:05:05.29,[English] Chorus,,0000,0000,0000,,{\org(966,249)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}force
+Dialogue: 0,0:05:05.29,0:05:05.31,[English] Chorus,,0000,0000,0000,,{\org(861,191)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}force
+Dialogue: 0,0:05:05.31,0:05:05.33,[English] Chorus,,0000,0000,0000,,{\org(1013,54)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}force
+Dialogue: 0,0:05:05.33,0:05:05.36,[English] Chorus,,0000,0000,0000,,{\org(888,102)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}force
+Dialogue: 0,0:05:05.36,0:05:05.38,[English] Chorus,,0000,0000,0000,,{\org(956,198)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}force
+Dialogue: 0,0:05:05.38,0:05:05.40,[English] Chorus,,0000,0000,0000,,{\org(924,178)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}force
+Dialogue: 0,0:05:05.40,0:05:05.42,[English] Chorus,,0000,0000,0000,,{\org(972,158)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}force
+Dialogue: 0,0:05:05.42,0:05:05.45,[English] Chorus,,0000,0000,0000,,{\org(1002,97)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}force
+Dialogue: 0,0:05:05.45,0:05:05.47,[English] Chorus,,0000,0000,0000,,{\org(907,228)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}force
+Dialogue: 0,0:05:05.47,0:05:05.49,[English] Chorus,,0000,0000,0000,,{\org(993,151)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}force
+Dialogue: 0,0:05:05.49,0:05:05.51,[English] Chorus,,0000,0000,0000,,{\org(894,203)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}force
+Dialogue: 0,0:05:05.51,0:05:05.54,[English] Chorus,,0000,0000,0000,,{\org(927,65)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}force
+Dialogue: 0,0:05:05.54,0:05:05.56,[English] Chorus,,0000,0000,0000,,{\org(873,121)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}force
+Dialogue: 0,0:05:05.56,0:05:05.58,[English] Chorus,,0000,0000,0000,,{\org(927,83)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}force
+Dialogue: 0,0:05:05.58,0:05:05.60,[English] Chorus,,0000,0000,0000,,{\org(930,147)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}force
+Dialogue: 0,0:05:05.60,0:05:05.63,[English] Chorus,,0000,0000,0000,,{\org(1040,237)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}force
+Dialogue: 0,0:05:05.63,0:05:05.64,[English] Chorus,,0000,0000,0000,,{\org(897,106)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}in
+Dialogue: 0,0:05:05.64,0:05:05.66,[English] Chorus,,0000,0000,0000,,{\org(961,105)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}in
+Dialogue: 0,0:05:05.66,0:05:05.68,[English] Chorus,,0000,0000,0000,,{\org(875,66)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}in
+Dialogue: 0,0:05:05.67,0:05:05.69,[English] Chorus,,0000,0000,0000,,{\org(875,198)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}in
+Dialogue: 0,0:05:05.69,0:05:05.71,[English] Chorus,,0000,0000,0000,,{\org(1058,116)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}in
+Dialogue: 0,0:05:05.71,0:05:05.72,[English] Chorus,,0000,0000,0000,,{\org(897,63)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}in
+Dialogue: 0,0:05:05.72,0:05:05.74,[English] Chorus,,0000,0000,0000,,{\org(1003,243)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}in
+Dialogue: 0,0:05:05.74,0:05:05.76,[English] Chorus,,0000,0000,0000,,{\org(903,101)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}in
+Dialogue: 0,0:05:05.76,0:05:05.77,[English] Chorus,,0000,0000,0000,,{\org(941,249)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}in
+Dialogue: 0,0:05:05.77,0:05:05.79,[English] Chorus,,0000,0000,0000,,{\org(1033,231)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}in
+Dialogue: 0,0:05:05.79,0:05:05.81,[English] Chorus,,0000,0000,0000,,{\org(953,240)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}in
+Dialogue: 0,0:05:05.81,0:05:05.82,[English] Chorus,,0000,0000,0000,,{\org(969,229)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}in
+Dialogue: 0,0:05:05.82,0:05:05.84,[English] Chorus,,0000,0000,0000,,{\org(907,237)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}in
+Dialogue: 0,0:05:05.84,0:05:05.86,[English] Chorus,,0000,0000,0000,,{\org(1055,218)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}in
+Dialogue: 0,0:05:05.86,0:05:05.87,[English] Chorus,,0000,0000,0000,,{\org(1038,51)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}in
+Dialogue: 0,0:05:05.87,0:05:05.89,[English] Chorus,,0000,0000,0000,,{\org(1037,241)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}in
+Dialogue: 0,0:05:05.89,0:05:05.91,[English] Chorus,,0000,0000,0000,,{\org(1010,71)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}in
+Dialogue: 0,0:05:05.91,0:05:05.92,[English] Chorus,,0000,0000,0000,,{\org(951,72)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}in
+Dialogue: 0,0:05:05.92,0:05:05.94,[English] Chorus,,0000,0000,0000,,{\org(923,125)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}in
+Dialogue: 0,0:05:05.94,0:05:05.96,[English] Chorus,,0000,0000,0000,,{\org(1018,81)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}in
+Dialogue: 0,0:05:05.96,0:05:06.04,[English] Chorus,,0000,0000,0000,,{\org(948,195)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}control
+Dialogue: 0,0:05:06.04,0:05:06.12,[English] Chorus,,0000,0000,0000,,{\org(865,95)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}control
+Dialogue: 0,0:05:06.12,0:05:06.21,[English] Chorus,,0000,0000,0000,,{\org(882,231)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}control
+Dialogue: 0,0:05:06.21,0:05:06.29,[English] Chorus,,0000,0000,0000,,{\org(1042,179)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}control
+Dialogue: 0,0:05:06.29,0:05:06.38,[English] Chorus,,0000,0000,0000,,{\org(1039,93)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}control
+Dialogue: 0,0:05:06.38,0:05:06.46,[English] Chorus,,0000,0000,0000,,{\org(932,238)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}control
+Dialogue: 0,0:05:06.46,0:05:06.55,[English] Chorus,,0000,0000,0000,,{\org(1017,167)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}control
+Dialogue: 0,0:05:06.55,0:05:06.63,[English] Chorus,,0000,0000,0000,,{\org(1016,213)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}control
+Dialogue: 0,0:05:06.63,0:05:06.72,[English] Chorus,,0000,0000,0000,,{\org(976,182)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}control
+Dialogue: 0,0:05:06.72,0:05:06.80,[English] Chorus,,0000,0000,0000,,{\org(1056,190)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}control
+Dialogue: 0,0:05:06.80,0:05:06.89,[English] Chorus,,0000,0000,0000,,{\org(864,113)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}control
+Dialogue: 0,0:05:06.88,0:05:06.97,[English] Chorus,,0000,0000,0000,,{\org(984,139)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}control
+Dialogue: 0,0:05:06.97,0:05:07.05,[English] Chorus,,0000,0000,0000,,{\org(938,159)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}control
+Dialogue: 0,0:05:07.05,0:05:07.14,[English] Chorus,,0000,0000,0000,,{\org(896,125)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}control
+Dialogue: 0,0:05:07.14,0:05:07.22,[English] Chorus,,0000,0000,0000,,{\org(1039,54)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}control
+Dialogue: 0,0:05:07.22,0:05:07.31,[English] Chorus,,0000,0000,0000,,{\org(970,100)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}control
+Dialogue: 0,0:05:07.31,0:05:07.39,[English] Chorus,,0000,0000,0000,,{\org(1055,121)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}control
+Dialogue: 0,0:05:07.39,0:05:07.48,[English] Chorus,,0000,0000,0000,,{\org(1060,243)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}control
+Dialogue: 0,0:05:07.48,0:05:07.56,[English] Chorus,,0000,0000,0000,,{\org(873,101)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}control
+Dialogue: 0,0:05:07.56,0:05:07.65,[English] Chorus,,0000,0000,0000,,{\org(866,158)\frx0.6\fry0.6\frz0.6}{\a10\fs500\1a&H82&\3a&H82&}control

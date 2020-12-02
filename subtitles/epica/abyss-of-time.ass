@@ -1,0 +1,87 @@
+[Script Info]
+Title: Default Aegisub file
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Simone,Kaushan Script,100,&H00E3E7FB,&H000000FF,&H007C8BC9,&H00000000,0,0,0,0,100,100,0,0,1,2,2,2,10,20,20,1
+Style: Mark,Creepster,80,&H000F0A19,&H000000FF,&H003021D5,&H003021D5,0,-1,0,0,100,100,0,0,1,2,2,2,10,20,20,1
+Style: Simone-Mark,Kaushan Script,100,&H000F0A19,&H000000FF,&H00796BEE,&H00000000,0,0,0,0,100,100,0,0,1,2,2,2,10,20,20,1
+Style: Narrative,Goldman,90,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,2,2,2,10,20,20,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:05.00,Default,,0000,0000,0000,,
+Dialogue: 0,0:00:25.81,0:00:28.56,Mark,,0000,0000,0000,,Fill the void in me
+Dialogue: 0,0:00:28.82,0:00:31.90,Simone,,0000,0000,0000,,See life beyond the veil
+Dialogue: 0,0:00:32.22,0:00:35.40,Mark,,0000,0000,0000,,Replace all thoughts from the abyss
+Dialogue: 0,0:00:35.59,0:00:38.78,Simone,,0000,0000,0000,,With cosmic energy
+Dialogue: 0,0:00:39.04,0:00:42.32,Mark,,0000,0000,0000,,Ignite the flame in thee
+Dialogue: 0,0:00:42.42,0:00:45.72,Simone,,0000,0000,0000,,Fill out the tree of your life
+Dialogue: 0,0:00:45.83,0:00:49.02,Simone-Mark,,0000,0000,0000,,We are rooted deep in the darkness
+Dialogue: 0,0:00:49.02,0:00:52.38,Simone-Mark,,0000,0000,0000,,And keep growing towards the light
+Dialogue: 0,0:00:52.38,0:00:55.32,Simone,,0000,0000,0000,,Be without your fears
+Dialogue: 0,0:00:55.40,0:00:57.50,Simone,,0000,0000,0000,,For a thousand years
+Dialogue: 0,0:00:57.52,0:01:02.45,Simone,,0000,0000,0000,,Search for stillness deep inside
+Dialogue: 0,0:01:03.46,0:01:08.28,Simone,,0000,0000,0000,,One thought that grows in the abyss of time
+Dialogue: 0,0:01:08.64,0:01:13.37,Simone,,0000,0000,0000,,Fills up the vast space with matter and life
+Dialogue: 0,0:01:13.83,0:01:18.70,Simone,,0000,0000,0000,,Free of the darkness that fetters the soul
+Dialogue: 0,0:01:18.90,0:01:24.32,Simone,,0000,0000,0000,,Find at the source the end of your goal
+Dialogue: 0,0:01:38.22,0:01:41.13,Mark,,0000,0000,0000,,Find the spark in me
+Dialogue: 0,0:01:41.24,0:01:44.45,Simone,,0000,0000,0000,,See life beyond the dream
+Dialogue: 0,0:01:44.64,0:01:47.90,Mark,,0000,0000,0000,,Replace your darkest emotions
+Dialogue: 0,0:01:48.08,0:01:51.10,Simone,,0000,0000,0000,,With pure divinity
+Dialogue: 0,0:01:51.62,0:01:54.78,Mark,,0000,0000,0000,,Ignite the flame in me
+Dialogue: 0,0:01:54.92,0:01:58.10,Simone,,0000,0000,0000,,Unite with your inner light
+Dialogue: 0,0:01:58.34,0:02:01.35,Simone-Mark,,0000,0000,0000,,We should free ourselves from the shadows
+Dialogue: 0,0:02:01.37,0:02:04.71,Simone-Mark,,0000,0000,0000,,And the bondage of the night
+Dialogue: 0,0:02:04.92,0:02:07.74,Simone,,0000,0000,0000,,Be without your fears
+Dialogue: 0,0:02:07.84,0:02:10.01,Simone,,0000,0000,0000,,For a thousand years
+Dialogue: 0,0:02:10.03,0:02:14.95,Simone,,0000,0000,0000,,Be the master of your life
+Dialogue: 0,0:02:16.04,0:02:20.72,Simone,,0000,0000,0000,,One thought that grows in the abyss of time
+Dialogue: 0,0:02:21.05,0:02:25.82,Simone,,0000,0000,0000,,Fills up the vast space with matter and life
+Dialogue: 0,0:02:26.16,0:02:31.00,Simone,,0000,0000,0000,,Free of the darkness that fetters the soul
+Dialogue: 0,0:02:31.42,0:02:36.68,Simone,,0000,0000,0000,,Find at the source the end of your goal
+Dialogue: 0,0:02:45.46,0:02:50.48,Simone,,0000,0000,0000,,Fight back your fears forever
+Dialogue: 0,0:02:50.64,0:02:57.70,Simone,,0000,0000,0000,,Be the master of your life
+Dialogue: 0,0:02:59.11,0:03:01.96,Simone,,0000,0000,0000,,Learn to unlearn
+Dialogue: 0,0:03:01.96,0:03:03.96,Default,,0000,0000,0000,,
+Dialogue: 0,0:03:02.56,0:03:07.69,Narrative,,0000,0000,0000,,In the beginning there was a timeless, space-less, nothingness
+Dialogue: 0,0:03:08.47,0:03:11.30,Narrative,,0000,0000,0000,,And into that nothingness came a thought
+Dialogue: 0,0:03:11.68,0:03:16.52,Narrative,,0000,0000,0000,,purposeful, all-pervading. So ended the Void
+Dialogue: 0,0:03:30.05,0:03:33.10,Mark,,0000,0000,0000,,Surge, the Demiurge
+Dialogue: 0,0:03:33.44,0:03:36.18,Mark,,0000,0000,0000,,Shaper of a false universe
+Dialogue: 0,0:03:36.92,0:03:39.86,Mark,,0000,0000,0000,,Search that deadly urge
+Dialogue: 0,0:03:39.91,0:03:43.28,Mark,,0000,0000,0000,,Your walls of self-protection are
+Dialogue: 0,0:03:43.86,0:03:48.81,Simone-Mark,,0000,0000,0000,,Walls of self-imprisonment
+Dialogue: 0,0:04:07.00,0:04:09.92,Simone,,0000,0000,0000,,Be without your fears
+Dialogue: 0,0:04:10.00,0:04:12.07,Simone,,0000,0000,0000,,For a thousand years
+Dialogue: 0,0:04:12.10,0:04:16.91,Simone,,0000,0000,0000,,Search for stillness deep inside
+Dialogue: 0,0:04:17.21,0:04:22.35,Simone,,0000,0000,0000,,Strive for harmony in duality
+Dialogue: 0,0:04:22.43,0:04:27.53,Simone,,0000,0000,0000,,To revise the book of life
+Dialogue: 0,0:04:27.59,0:04:33.08,Simone,,0000,0000,0000,,There was one thought that grew in the abyss of time
+Dialogue: 0,0:04:33.41,0:04:38.24,Simone,,0000,0000,0000,,It filled up the vast space with matter and life
+Dialogue: 0,0:04:38.57,0:04:43.37,Simone,,0000,0000,0000,,Freed from the darkness that fettered the soul
+Dialogue: 0,0:04:43.52,0:04:49.58,Simone,,0000,0000,0000,,We found at the end our reason, our goal
+Dialogue: 0,0:05:01.71,0:05:03.31,Simone,,0000,0000,0000,,We march on
+Dialogue: 0,0:05:03.44,0:05:04.95,Simone,,0000,0000,0000,,We're counting down
+Dialogue: 0,0:05:05.18,0:05:08.46,Simone,,0000,0000,0000,,To singularity
+Dialogue: 0,0:05:08.68,0:05:10.03,Simone,,0000,0000,0000,,While we drown
+Dialogue: 0,0:05:10.30,0:05:11.75,Simone,,0000,0000,0000,,We're moving on
+Dialogue: 0,0:05:12.08,0:05:15.06,Simone,,0000,0000,0000,,To master wisdom
+Dialogue: 0,0:05:15.06,0:05:18.96,Simone-Mark,,0000,0000,0000,,To be free
