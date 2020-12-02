@@ -9,13 +9,14 @@ PlayResY: 1080
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Simone,Kaushan Script,100,&H00E3E7FB,&H000000FF,&H007C8BC9,&H00000000,0,0,0,0,100,100,0,0,1,2,2,2,10,20,20,1
-Style: Mark,Creepster,80,&H000F0A19,&H000000FF,&H003021D5,&H003021D5,0,-1,0,0,100,100,0,0,1,2,2,2,10,20,20,1
-Style: Simone-Mark,Kaushan Script,100,&H000F0A19,&H000000FF,&H00796BEE,&H00000000,0,0,0,0,100,100,0,0,1,2,2,2,10,20,20,1
+Style: Simone,Kaushan Script,100,&H00E3E7FB,&HFF0000FF,&H007C8BC9,&H00000000,0,0,0,0,100,100,0,0,1,2,2,3,10,50,50,1
+Style: Mark,Creepster,100,&H63000000,&H000000FF,&H51482BDD,&H00000000,0,0,0,0,100,100,0,0,1,2,5,1,50,20,50,1
 Style: Narrative,Goldman,90,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,2,2,2,10,20,20,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:00.00,Mark,,0000,0000,0000,,!retime("syl",math.floor((j-1)*(0.05*syl.duration)),-math.floor((maxj-j)*(0.05*syl.duration)))!{\t(50,NaN,1,\org(NaN,NaN,NaN,NaN)\frx0.6\fry0.6\frz0.6)\fad(0,NaN)}
+Dialogue: 0,0:00:00.00,0:00:00.00,Simone,,0000,0000,0000,,!retime("line",0,-300)!{\t(0,0,NaN,)\blur3\move(NaN,NaN,NaN,NaN)\fad(100,300)}
 Dialogue: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,,
 Dialogue: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,,
 Dialogue: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,,
@@ -24,17 +25,16 @@ Dialogue: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,,
 Dialogue: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,,
 Dialogue: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,,
 Dialogue: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,,
-Dialogue: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,,
-Dialogue: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,,
-Dialogue: 0,0:00:00.00,0:00:05.00,Default,,0000,0000,0000,,
-Dialogue: 0,0:00:25.81,0:00:28.56,Mark,,0000,0000,0000,,Fill the void in me
+Dialogue: 0,0:00:25.81,0:00:28.56,Mark,,0000,0000,0000,,{\k72}Fill {\k20}the {\k42}void {\k44}in {\k97}me
 Dialogue: 0,0:00:28.82,0:00:31.90,Simone,,0000,0000,0000,,See life beyond the veil
-Dialogue: 0,0:00:32.22,0:00:35.40,Mark,,0000,0000,0000,,Replace all thoughts from the abyss
+Dialogue: 0,0:00:32.22,0:00:35.40,Mark,,0000,0000,0000,,{\k111}Replace {\k23}all {\k38}thoughts {\k29}from {\k22}the {\k95}abyss
 Dialogue: 0,0:00:35.59,0:00:38.78,Simone,,0000,0000,0000,,With cosmic energy
-Dialogue: 0,0:00:39.04,0:00:42.32,Mark,,0000,0000,0000,,Ignite the flame in thee
+Dialogue: 0,0:00:39.04,0:00:42.32,Mark,,0000,0000,0000,,{\k109}Ignite {\k18}the {\k56}flame {\k34}in {\k111}thee
 Dialogue: 0,0:00:42.42,0:00:45.72,Simone,,0000,0000,0000,,Fill out the tree of your life
-Dialogue: 0,0:00:45.83,0:00:49.02,Simone-Mark,,0000,0000,0000,,We are rooted deep in the darkness
-Dialogue: 0,0:00:49.02,0:00:52.38,Simone-Mark,,0000,0000,0000,,And keep growing towards the light
+Dialogue: 0,0:00:45.92,0:00:49.02,Simone,,0000,0000,0000,,We are rooted deep in the darkness
+Dialogue: 0,0:00:45.92,0:00:49.02,Mark,,0000,0000,0000,,{\k27}We {\k20}are {\k90}rooted {\k43}deep {\k20}in {\k19}the {\k91}darkness
+Dialogue: 0,0:00:49.02,0:00:52.38,Simone,,0000,0000,0000,,And keep growing towards the light
+Dialogue: 0,0:00:49.02,0:00:52.38,Mark,,0000,0000,0000,,{\k40}And {\k31}keep {\k85}growing {\k55}towards {\k44}the {\k81}light
 Dialogue: 0,0:00:52.38,0:00:55.32,Simone,,0000,0000,0000,,Be without your fears
 Dialogue: 0,0:00:55.40,0:00:57.50,Simone,,0000,0000,0000,,For a thousand years
 Dialogue: 0,0:00:57.52,0:01:02.45,Simone,,0000,0000,0000,,Search for stillness deep inside
@@ -42,14 +42,16 @@ Dialogue: 0,0:01:03.46,0:01:08.28,Simone,,0000,0000,0000,,One thought that grows
 Dialogue: 0,0:01:08.64,0:01:13.37,Simone,,0000,0000,0000,,Fills up the vast space with matter and life
 Dialogue: 0,0:01:13.83,0:01:18.70,Simone,,0000,0000,0000,,Free of the darkness that fetters the soul
 Dialogue: 0,0:01:18.90,0:01:24.32,Simone,,0000,0000,0000,,Find at the source the end of your goal
-Dialogue: 0,0:01:38.22,0:01:41.13,Mark,,0000,0000,0000,,Find the spark in me
+Dialogue: 0,0:01:38.22,0:01:41.13,Mark,,0000,0000,0000,,{\k65}Find {\k18}the {\k49}spark {\k46}in {\k113}me
 Dialogue: 0,0:01:41.24,0:01:44.45,Simone,,0000,0000,0000,,See life beyond the dream
-Dialogue: 0,0:01:44.64,0:01:47.90,Mark,,0000,0000,0000,,Replace your darkest emotions
+Dialogue: 0,0:01:44.64,0:01:47.90,Mark,,0000,0000,0000,,{\k112}Replace {\k23}your {\k59}darkest {\k132}emotions
 Dialogue: 0,0:01:48.08,0:01:51.10,Simone,,0000,0000,0000,,With pure divinity
-Dialogue: 0,0:01:51.62,0:01:54.78,Mark,,0000,0000,0000,,Ignite the flame in me
+Dialogue: 0,0:01:51.62,0:01:54.78,Mark,,0000,0000,0000,,{\k101}Ignite {\k22}the {\k38}flame {\k44}in {\k111}me
 Dialogue: 0,0:01:54.92,0:01:58.10,Simone,,0000,0000,0000,,Unite with your inner light
-Dialogue: 0,0:01:58.34,0:02:01.35,Simone-Mark,,0000,0000,0000,,We should free ourselves from the shadows
-Dialogue: 0,0:02:01.37,0:02:04.71,Simone-Mark,,0000,0000,0000,,And the bondage of the night
+Dialogue: 0,0:01:58.39,0:02:01.35,Simone,,0000,0000,0000,,We should free ourselves from the shadows
+Dialogue: 0,0:01:58.39,0:02:01.35,Mark,,0000,0000,0000,,{\k22}We {\k24}should {\k66}free {\k68}ourselves {\k14}from {\k18}the {\k84}shadows
+Dialogue: 0,0:02:01.37,0:02:04.71,Simone,,0000,0000,0000,,And the bondage of the night
+Dialogue: 0,0:02:01.37,0:02:04.71,Mark,,0000,0000,0000,,{\k48}And {\k41}the {\k90}bondage {\k41}of {\k45}the {\k69}night
 Dialogue: 0,0:02:04.92,0:02:07.74,Simone,,0000,0000,0000,,Be without your fears
 Dialogue: 0,0:02:07.84,0:02:10.01,Simone,,0000,0000,0000,,For a thousand years
 Dialogue: 0,0:02:10.03,0:02:14.95,Simone,,0000,0000,0000,,Be the master of your life
@@ -64,11 +66,11 @@ Dialogue: 0,0:03:01.96,0:03:03.96,Default,,0000,0000,0000,,
 Dialogue: 0,0:03:02.56,0:03:07.69,Narrative,,0000,0000,0000,,In the beginning there was a timeless, space-less, nothingness
 Dialogue: 0,0:03:08.47,0:03:11.30,Narrative,,0000,0000,0000,,And into that nothingness came a thought
 Dialogue: 0,0:03:11.68,0:03:16.52,Narrative,,0000,0000,0000,,purposeful, all-pervading. So ended the Void
-Dialogue: 0,0:03:30.05,0:03:33.10,Mark,,0000,0000,0000,,Surge, the Demiurge
-Dialogue: 0,0:03:33.44,0:03:36.18,Mark,,0000,0000,0000,,Shaper of a false universe
-Dialogue: 0,0:03:36.92,0:03:39.86,Mark,,0000,0000,0000,,Search that deadly urge
-Dialogue: 0,0:03:39.91,0:03:43.28,Mark,,0000,0000,0000,,Your walls of self-protection are
-Dialogue: 0,0:03:43.86,0:03:48.81,Simone-Mark,,0000,0000,0000,,Walls of self-imprisonment
+Dialogue: 0,0:03:30.05,0:03:33.10,Mark,,0000,0000,0000,,{\k132}Surge {\k42}the {\k131}Demiurge
+Dialogue: 0,0:03:33.44,0:03:36.18,Mark,,0000,0000,0000,,{\k57}Shaper {\k20}of {\k20}a {\k40}false {\k137}universe
+Dialogue: 0,0:03:36.92,0:03:39.86,Mark,,0000,0000,0000,,{\k141}Search {\k37}that {\k41}deadly {\k75}urge
+Dialogue: 0,0:03:39.91,0:03:43.28,Mark,,0000,0000,0000,,{\k48}Your {\k14}walls {\k24}of {\k28}self {\k105}protection {\k118}are
+Dialogue: 0,0:03:43.86,0:03:48.81,Simone,,0000,0000,0000,,Walls of self-imprisonment
 Dialogue: 0,0:04:07.00,0:04:09.92,Simone,,0000,0000,0000,,Be without your fears
 Dialogue: 0,0:04:10.00,0:04:12.07,Simone,,0000,0000,0000,,For a thousand years
 Dialogue: 0,0:04:12.10,0:04:16.91,Simone,,0000,0000,0000,,Search for stillness deep inside
@@ -84,4 +86,6 @@ Dialogue: 0,0:05:05.18,0:05:08.46,Simone,,0000,0000,0000,,To singularity
 Dialogue: 0,0:05:08.68,0:05:10.03,Simone,,0000,0000,0000,,While we drown
 Dialogue: 0,0:05:10.30,0:05:11.75,Simone,,0000,0000,0000,,We're moving on
 Dialogue: 0,0:05:12.08,0:05:15.06,Simone,,0000,0000,0000,,To master wisdom
-Dialogue: 0,0:05:15.06,0:05:18.96,Simone-Mark,,0000,0000,0000,,To be free
+Dialogue: 0,0:05:12.08,0:05:15.06,Mark,,0000,0000,0000,,{\k47}To {\k80}master {\k171}wisdom
+Dialogue: 0,0:05:15.06,0:05:18.96,Simone,,0000,0000,0000,,To be free
+Dialogue: 0,0:05:15.06,0:05:18.96,Mark,,0000,0000,0000,,{\k95}To {\k86}be {\k209}free
