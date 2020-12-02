@@ -202,6 +202,7 @@ const MapResponse = Component => ({
           width: frontmatter.size.width,
           height: frontmatter.size.height,
           x2: frontmatter.size.x2 || false,
+          aspectRatio: frontmatter.size.aspect_ratio || "16:9",
         },
         debug: false,
         workerUrl: siteMetadata.octopusWorkerURL,

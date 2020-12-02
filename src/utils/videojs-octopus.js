@@ -24,6 +24,12 @@ class Octopus extends Plugin {
           height: size.height * 2
         }
       : size
+    // this.size = size
+    this.aspectRatio = {
+      value: size.aspectRatio,
+      width: size.aspectRatio.split(":")[0],
+      height: size.aspectRatio.split(":")[1],
+    }
     octopusOptions.canvas = this.canvas
     octopusOptions.subUrl = this.player
       .ASSSubtitlesSwitcher()
@@ -38,7 +44,7 @@ class Octopus extends Plugin {
     const canvasParent = document.createElement("div")
     canvas.className = "libassjs-canvas"
     canvas.style.display = "none"
-    // canvas.style.border = "1px solid green"
+    // canvas.style.border = "2px solid red"
 
     canvasParent.className = "libassjs-canvas-parent"
     canvasParent.appendChild(canvas)
@@ -113,8 +119,6 @@ class Octopus extends Plugin {
       )
     })
 
-    // const __resize = () => this.resizePlayerWithTimeout();
-
     document.addEventListener("fullscreenchange", this.resizePlayerWithTimeout)
     document.addEventListener("mozfullscreenchange", this.resizePlayerWithTimeout)
     document.addEventListener("webkitfullscreenchange", this.resizePlayerWithTimeout)
@@ -122,7 +126,6 @@ class Octopus extends Plugin {
     window.addEventListener("resize", this.resizePlayerWithTimeout)
 
     if (this.player.videoWidth() > 0) {
-      // instance.resize(840, 460, 0, 0);
       this.resizePlayerWithTimeout()
     } else {
       this.player.on("loadedmetadata", this.resizePlayerWithTimeout)
@@ -131,27 +134,6 @@ class Octopus extends Plugin {
 
   resizePlayer() {
     videojs.log("octupus: resizePlayer")
-    // var size = {
-    //   width: 1312, //1920,
-    //   height: 960 //1080,
-    // }
-    this.canvas.style.display = "block"
-    this.canvas.style.position = "absolute"
-
-    if (this.player && this.player.el_) {
-      if (this.player.el_.offsetWidth) {
-        this.canvas.style.width = this.player.el_.offsetWidth + "px"
-      }
-
-      if (this.player.el_.offsetHeight) {
-        this.canvas.style.height = this.player.el_.offsetHeight + "px"
-      }
-    }
-
-    this.canvas.style.height = this.player.el_.offsetHeight + "px"
-    this.canvas.style.top = "0px" //this.player.el_.offsetTop + "px";
-    this.canvas.style.left = "0px" // this.player.el_.offsetLeft + "px";
-    this.canvas.style.pointerEvents = "none"
 
     if (
       this.player &&
@@ -161,11 +143,35 @@ class Octopus extends Plugin {
       this.player.el_.offsetTop !== undefined &&
       this.player.el_.offsetLeft !== undefined
     ) {
+      const ratioWidth =
+        (this.player.el_.offsetHeight / this.aspectRatio.height) *
+        this.aspectRatio.width
+      const ratioOffsetWidth = (this.player.el_.offsetWidth - ratioWidth) / 2
+
+      if (ratioWidth < 1280) {
+        this.canvas.width = this.size.width
+        this.canvas.height = this.size.height
+      } else {
+        this.canvas.width = ratioWidth
+        this.canvas.height = this.player.el_.offsetHeight
+      }
+      this.canvas.style.display = "block"
+      this.canvas.style.position = "absolute"
+      this.canvas.style.width = ratioWidth + "px"
+      this.canvas.style.height = this.player.el_.offsetHeight + "px"
+      this.canvas.style.top = "0px"
+      this.canvas.style.left = ratioOffsetWidth + "px"
+      this.canvas.style.pointerEvents = "none"
+
       this.octopus.resize(
-        this.size.width, //this.player.el_.offsetWidth,
-        this.size.height, //this.player.el_.offsetHeight,
-        0, // this.player.el_.offsetTop,
-        0 // this.player.el_.offsetLeft
+        ratioWidth,
+        this.player.el_.offsetHeight,
+        this.player.el_.offsetTop, 
+        ratioOffsetWidth
+      )
+
+      this.octopus.setCurrentTime(
+        this.player.currentTime() + this.octopus.timeOffset
       )
     }
   }
