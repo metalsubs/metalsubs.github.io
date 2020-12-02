@@ -22,7 +22,6 @@ const Container = styled.header`
 const Content = styled.div`
   display: flex;
   padding: 16px;
-  font-family: sans-serif;
   color: white;
 `
 
@@ -38,8 +37,9 @@ const Title = styled(Link)`
   color: white;
   text-decoration: none;
   font-weight: normal;
-  font-family: "Cardo";
-  font-family: "Holtwood One SC";
+  /* font-family: "Cardo"; */
+  /* font-family: "Holtwood One SC"; */
+  font-family: "${p => p.theme.fonts.families.logo}";
 `
 
 const Menu = styled.div`

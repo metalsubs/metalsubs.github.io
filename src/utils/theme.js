@@ -26,11 +26,8 @@ const theme = {
   },
   fonts: {
     families: {
-      body: "georgia, serif",
-      logo: "Yellowtail",
-      quote: "Merriweather",
-      header: "Kanit",
-      code: `"Space Mono", Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace`,
+      body: "Cardo",
+      logo: "Holtwood One SC"
     },
     sizes: {
       base: "16px",

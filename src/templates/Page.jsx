@@ -1,10 +1,15 @@
 import React from "react"
+import styled from 'styled-components'
 
 import MainLayout from "../layouts/MainLayout"
 
+const Page = styled.div`
+  font-size: 1.5rem;
+`
+
 const PageTemplate = ({ pathContext: { html } }) => (
   <MainLayout>
-    <div dangerouslySetInnerHTML={{ __html: html }}></div>
+    <Page dangerouslySetInnerHTML={{ __html: html }} />
   </MainLayout>
 )
 
