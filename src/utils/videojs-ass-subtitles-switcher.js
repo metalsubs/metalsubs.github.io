@@ -6,6 +6,8 @@ const VideoJsComponent = videojs.getComponent("Component")
 const VideoJsMenuItem = videojs.getComponent("MenuItem")
 const VideoJsDom = videojs.dom
 
+const __LS_SUBTITLE_LANGUAGE__ = "__LS_SUBTITLE_LANGUAGE__"
+
 class ConcreteButton extends VideoJsMenuButton {
   createMenu() {
     const menu = new VideoJsMenu(this.player, { menuButton: this })
@@ -72,7 +74,10 @@ class ASSSubtitlesSwitcher extends Plugin {
     this.settings = {}
     this.subtitles = options.subtitles
     this.subtitleItems = []
-    this.currentSubtitle = this.subtitles.find(subtitle => subtitle.selected)
+
+    this.setInitialSubtitle()
+
+    // this.currentSubtitle = this.subtitles.find(subtitle => subtitle.selected)
     this.subtitleButton = this.createSubtitleButton(player)
 
     // Whenever the player emits a playing or paused event, we update the
@@ -84,6 +89,58 @@ class ASSSubtitlesSwitcher extends Plugin {
   dispose() {
     super.dispose()
     videojs.log("the advanced plugin is being disposed")
+  }
+
+  setInitialSubtitle() {
+    const languageCode = window.localStorage.getItem(__LS_SUBTITLE_LANGUAGE__)
+
+    let selectedSubtitle
+
+    if (languageCode) {
+      selectedSubtitle = this.subtitles.find(
+        subtitle => subtitle.value === languageCode
+      )
+
+      // if (selectedSubtitle) {
+      //   this.currentSubtitle = selectedSubtitle
+      // } else {
+      //   selectedSubtitle = this.subtitles.find(
+      //     subtitle => subtitle.value === "song"
+      //   )
+      // }
+    } else {
+      selectedSubtitle = this.subtitles.find(subtitle => subtitle.selected)
+    }
+
+    if (selectedSubtitle) {
+      this.currentSubtitle = selectedSubtitle
+
+      this.subtitles.forEach(subtitle => {
+        subtitle.selected = subtitle.value === selectedSubtitle.value
+      })
+
+      window.localStorage.setItem(
+        __LS_SUBTITLE_LANGUAGE__,
+        selectedSubtitle.value
+      )
+    } else {
+      selectedSubtitle = this.subtitles.find(
+        subtitle => subtitle.value === "song"
+      )
+
+      this.currentSubtitle = selectedSubtitle
+
+      this.subtitles.forEach(subtitle => {
+        subtitle.selected = subtitle.value === selectedSubtitle.value
+      })
+    }
+
+    // this.currentSubtitle = selectedSubtitle
+
+    // window.localStorage.setItem(
+    //   __LS_SUBTITLE_LANGUAGE__,
+    //   selectedSubtitle.value
+    // )
   }
 
   updateState() {
@@ -159,6 +216,11 @@ class ASSSubtitlesSwitcher extends Plugin {
   setCurrentSubtitle(subtitle) {
     this.currentSubtitle = subtitle
     this.player.Octopus().setTrackByUrl(subtitle.src)
+
+    window.localStorage.setItem(
+      __LS_SUBTITLE_LANGUAGE__,
+      this.currentSubtitle.value
+    )
   }
 
   getCurrentSubtitle() {
