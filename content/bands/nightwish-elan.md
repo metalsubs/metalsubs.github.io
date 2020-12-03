@@ -2,8 +2,8 @@
 layout: video
 title: Nightwish - Élan
 description: Nightwish - Élan
-date: 2020-09-25T11:13:00.00Z
-creation_date: 2020-09-25T11:13:00.00Z
+date: 2020-09-08T19:53:44.00Z
+creation_date: 2015-06-23T19:53:44.00Z
 path: /nightwish/elan
 draft: false
 

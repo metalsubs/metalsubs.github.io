@@ -2,8 +2,8 @@
 layout: video
 title: Wisdom - Marching for Liberty
 description: Wisdom - Marching for Liberty
-date: 2020-09-25T11:13:00.00Z
-creation_date: 2020-09-25T11:13:00.00Z
+date: 2020-09-09T11:13:00.00Z
+creation_date: 2015-07-04T23:47:50.00Z
 path: /wisdom/marching-for-liberty
 draft: false
 

@@ -2,8 +2,8 @@
 layout: video
 title: Sonata Arctica - Flag in the Ground
 description: Sonata Arctica - Flag in the Ground
-date: 2020-09-25T11:13:00.00Z
-creation_date: 2020-09-25T11:13:00.00Z
+date: 2020-09-07T11:13:00.00Z
+creation_date: 2010-04-19T18:09:12.00Z
 path: /sonata-arctica/flag-in-the-ground
 draft: false
 
