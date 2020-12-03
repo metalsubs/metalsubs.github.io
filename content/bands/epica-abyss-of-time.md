@@ -12,6 +12,8 @@ song: Abyss of Time
 bandID: epica
 songID: abyss-of-time
 subtitle: abyss-of-time.ass
+translations:
+    - es-MX
 size:
     width: 1920
     height: 1080
