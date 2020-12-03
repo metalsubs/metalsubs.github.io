@@ -18,7 +18,7 @@ size:
     width: 656
     height: 480
     aspect_ratio: "4:3"
-    x2: true
+    x2: false
 fonts:
     - Kalam-Regular.ttf
     - GochiHand-Regular.ttf
