@@ -21,7 +21,7 @@ class Octopus extends Plugin {
     this.size = size.x2
       ? {
           width: size.width * 2,
-          height: size.height * 2
+          height: size.height * 2,
         }
       : size
     // this.size = size
@@ -120,9 +120,18 @@ class Octopus extends Plugin {
     })
 
     document.addEventListener("fullscreenchange", this.resizePlayerWithTimeout)
-    document.addEventListener("mozfullscreenchange", this.resizePlayerWithTimeout)
-    document.addEventListener("webkitfullscreenchange", this.resizePlayerWithTimeout)
-    document.addEventListener("msfullscreenchange", this.resizePlayerWithTimeout)
+    document.addEventListener(
+      "mozfullscreenchange",
+      this.resizePlayerWithTimeout
+    )
+    document.addEventListener(
+      "webkitfullscreenchange",
+      this.resizePlayerWithTimeout
+    )
+    document.addEventListener(
+      "msfullscreenchange",
+      this.resizePlayerWithTimeout
+    )
     window.addEventListener("resize", this.resizePlayerWithTimeout)
 
     if (this.player.videoWidth() > 0) {
@@ -143,30 +152,46 @@ class Octopus extends Plugin {
       this.player.el_.offsetTop !== undefined &&
       this.player.el_.offsetLeft !== undefined
     ) {
+      let ratioHeight =
+        (this.player.el_.offsetWidth / this.aspectRatio.width) *
+        this.aspectRatio.height
+
+      if (ratioHeight > this.player.el_.offsetHeight) {
+        ratioHeight = this.player.el_.offsetHeight
+      }
+      let ratioOffsetHeight = (this.player.el_.offsetHeight - ratioHeight) / 2
+
+      if (ratioOffsetHeight < 0) {
+        ratioOffsetHeight = ratioOffsetHeight * -1
+      }
       const ratioWidth =
-        (this.player.el_.offsetHeight / this.aspectRatio.height) *
-        this.aspectRatio.width
-      const ratioOffsetWidth = (this.player.el_.offsetWidth - ratioWidth) / 2
+        (ratioHeight / this.aspectRatio.height) * this.aspectRatio.width
+      let ratioOffsetWidth = (this.player.el_.offsetWidth - ratioWidth) / 2
+
+      if (ratioOffsetWidth < 0) {
+        ratioOffsetWidth = ratioOffsetWidth * -1
+      }
 
       if (ratioWidth < 1280) {
         this.canvas.width = this.size.width
         this.canvas.height = this.size.height
       } else {
         this.canvas.width = ratioWidth
-        this.canvas.height = this.player.el_.offsetHeight
+        this.canvas.height = ratioHeight
       }
+
       this.canvas.style.display = "block"
       this.canvas.style.position = "absolute"
       this.canvas.style.width = ratioWidth + "px"
-      this.canvas.style.height = this.player.el_.offsetHeight + "px"
-      this.canvas.style.top = "0px"
+      this.canvas.style.height = ratioHeight + "px"
+      this.canvas.style.top = ratioOffsetHeight + "px"
       this.canvas.style.left = ratioOffsetWidth + "px"
       this.canvas.style.pointerEvents = "none"
 
       this.octopus.resize(
         ratioWidth,
-        this.player.el_.offsetHeight,
-        this.player.el_.offsetTop, 
+        ratioHeight,
+        ratioOffsetHeight,
         ratioOffsetWidth
       )
 
@@ -189,13 +214,22 @@ class Octopus extends Plugin {
     super.dispose()
     this.octopus.dispose()
 
-    document.removeEventListener("fullscreenchange", this.resizePlayerWithTimeout)
-    document.removeEventListener("mozfullscreenchange", this.resizePlayerWithTimeout)
+    document.removeEventListener(
+      "fullscreenchange",
+      this.resizePlayerWithTimeout
+    )
+    document.removeEventListener(
+      "mozfullscreenchange",
+      this.resizePlayerWithTimeout
+    )
     document.removeEventListener(
       "webkitfullscreenchange",
       this.resizePlayerWithTimeout
     )
-    document.removeEventListener("msfullscreenchange", this.resizePlayerWithTimeout)
+    document.removeEventListener(
+      "msfullscreenchange",
+      this.resizePlayerWithTimeout
+    )
     window.removeEventListener("resize", this.resizePlayerWithTimeout)
 
     videojs.log("the Octupus plugin is being disposed")
