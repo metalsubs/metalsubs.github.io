@@ -40,4 +40,4 @@ as possible.
 ## Can you please add the lyrics for this song?
 
 Probably no, it's a lot of work to make these subtitles but hey, if you can
-create one share it with me know, I'll give you credit. 🙂
+create one share it with me, I'll give you credit. 🙂
