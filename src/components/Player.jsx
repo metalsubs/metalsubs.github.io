@@ -19,6 +19,18 @@ class Player extends React.Component {
       aspectRatio: videoJsASSSubtitlesSwitcher.player.aspectRatio,
       fluid: true,
       ...rest,
+      youtube: {
+        customVars: {
+          autoplay: 1,
+          cc_load_policy: 0,
+          // color: "black",
+          disablekb: 0,
+          controls: 0,
+          iv_load_policy: 0,
+          rel: 0,
+          modestbranding: 0
+        },
+      },
     }
 
     this.player = videojs(this.videoNode, options, function onPlayerReady() {
@@ -27,6 +39,7 @@ class Player extends React.Component {
         subtitles: videoJsASSSubtitlesSwitcher.subtitles,
       })
       this.Octopus(videoJsASSSubtitlesSwitcher.octopus)
+      this.play()
     });
 
     this.player.landscapeFullscreen({
