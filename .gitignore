@@ -1,4 +1,6 @@
 *.Identifier
+subtitles/
+*.bak
 # Logs
 logs
 *.log
