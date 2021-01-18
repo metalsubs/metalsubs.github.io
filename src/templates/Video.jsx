@@ -113,7 +113,11 @@ const VideoTemplate = ({
       <Meta>
         <InfoContainer>
           <Cover>
-            <CoverImage fluid={meta.covers.album} />
+            <CoverImage
+              fluid={meta.covers.album}
+              fadeIn={false}
+              loading="eager"
+            />
           </Cover>
           <Info>
             <SongTitle>{meta.song}</SongTitle>

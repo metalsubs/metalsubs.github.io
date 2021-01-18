@@ -115,7 +115,12 @@ const IndexPage = ({ songs }) => {
               songs.length > 0 &&
               songs.map(song => (
                 <Link key={song.path} to={song.path}>
-                  <CustomImage fluid={song.image} alt={song.title} />
+                  <CustomImage
+                    fluid={song.image}
+                    alt={song.title}
+                    fadeIn={false}
+                    loading="eager"
+                  />
                   <Description>{song.title}</Description>
                   <BackgroundLayer
                     data-name="BackgroundLayer"
@@ -130,15 +135,17 @@ const IndexPage = ({ songs }) => {
   )
 }
 
-const MapResponse = Component => result =>
-  Component({
+const MapResponse = Component => result => {
+  console.log(result)
+
+  return Component({
     songs: result.data.allMarkdownRemark.nodes.map(song => ({
       path: song.frontmatter.path,
       title: song.frontmatter.title,
       image: song.frontmatter.covers.song.childImageSharp.fluid,
     })),
   })
-
+}
 export default MapResponse(IndexPage)
 
 export const pageQuery = graphql`
