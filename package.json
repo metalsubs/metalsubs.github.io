@@ -19,7 +19,7 @@
     "gatsby-remark-images": "^3.6.0",
     "gatsby-source-filesystem": "^2.6.1",
     "gatsby-transformer-json": "^2.4.11",
-    "gatsby-transformer-remark": "^2.11.1",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^2.5.13",
     "libass-wasm": "^4.0.0",
     "normalize.css": "^8.0.1",
